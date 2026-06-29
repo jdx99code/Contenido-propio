@@ -284,11 +284,26 @@
     ]
   },
   "paraQuien": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "fit": [],
-    "notFit": []
+    "eyebrow": "PARA QUIÉN ES",
+    "title": "Es para ti si te ves aquí.",
+    "lead": "No trabajamos con todo el mundo. Trabajamos con creadores que se reconocen en esto:",
+    "fit": [
+      "Tienes un canal (o quieres empezar uno) y la edición te roba las horas que no tienes.",
+      "Grabas con ganas, pero los vídeos se acumulan sin editar y el canal se queda parado.",
+      "Quieres publicar cada semana de forma constante, pero solo no llegas a todo el proceso.",
+      "Sabes que la miniatura y el título deciden el CTR, y no quieres seguir improvisándolos.",
+      "Prefieres dedicar tu tiempo a lo que sabes hacer y delegar la producción a alguien que entienda YouTube de verdad.",
+      "Ves tu canal como un activo de marca a largo plazo, no como un experimento de fin de semana."
+    ],
+    "notFit": {
+      "title": "No es para ti si…",
+      "items": [
+        "Buscas el editor más barato y vas a comparar solo por precio.",
+        "Esperas hacerte viral en dos semanas sin constancia ni estrategia.",
+        "Quieres subir vídeos sueltos sin un plan detrás."
+      ],
+      "closing": "Si te reconoces arriba, hablemos. Si es lo de abajo, probablemente no somos tu mejor opción — y prefiero decírtelo."
+    }
   },
   "faq": {
     "eyebrow": "",
