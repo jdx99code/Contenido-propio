@@ -306,9 +306,42 @@
     }
   },
   "faq": {
-    "eyebrow": "",
-    "title": "",
-    "items": []
+    "eyebrow": "PREGUNTAS FRECUENTES",
+    "title": "Lo que sueles querer saber antes de empezar.",
+    "items": [
+      {
+        "question": "¿Qué es exactamente un canal faceless?",
+        "answer": "Un canal donde no apareces en cámara. El valor está en el contenido —guion, voz, imágenes, edición— no en tu cara. Funciona muy bien en nichos como finanzas, historia, tecnología o educación, y nos permite producir sin que tengas que grabarte."
+      },
+      {
+        "question": "¿Puedo tener un canal sin mostrar mi cara?",
+        "answer": "Sí. Trabajamos tanto canales faceless completos como canales donde tú grabas voz o material y nosotros hacemos el resto. Tú decides cuánto apareces."
+      },
+      {
+        "question": "¿Funciona en mi nicho?",
+        "answer": "Lo estudiamos antes de decir que sí. Investigamos demanda, competencia y formatos de tu sector. Si vemos recorrido, te lo decimos con un plan; si no, también te lo decimos. No vendemos humo."
+      },
+      {
+        "question": "¿Cuánto cuesta?",
+        "answer": "Depende del volumen y del tipo de canal (faceless completo vs. tú grabas). No trabajamos por vídeos sueltos baratos, sino por un sistema de producción constante. En la llamada inicial te damos un presupuesto claro y sin compromiso."
+      },
+      {
+        "question": "¿Pierdo el control de mi canal?",
+        "answer": "Al contrario. Tú apruebas el plan y las miniaturas antes de publicar. Nosotros ejecutamos; las decisiones importantes siguen siendo tuyas. El canal es tuyo, siempre."
+      },
+      {
+        "question": "¿En cuánto tiempo veo resultados?",
+        "answer": "YouTube premia la constancia, no los milagros. Montamos un sistema para publicar bien y de forma sostenida; los resultados llegan con el tiempo y la mejora continua. No prometemos cifras mágicas en dos semanas."
+      },
+      {
+        "question": "¿También trabajáis con canales que ya existen?",
+        "answer": "Sí. Si ya tienes canal pero la edición te frena o el contenido se ve inconsistente, entramos a mejorar imagen, retención, miniaturas y estrategia sobre lo que ya tienes."
+      },
+      {
+        "question": "¿Cómo empezamos?",
+        "answer": "Con una llamada de 20 minutos, sin compromiso. Nos cuentas tu canal y tus objetivos, y te explicamos exactamente cómo podríamos ayudarte. Si encaja, empezamos; si no, te lo decimos con honestidad."
+      }
+    ]
   },
   "ctaFinal": {
     "eyebrow": "",
