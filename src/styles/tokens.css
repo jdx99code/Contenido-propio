@@ -1,0 +1,178 @@
+/*
+  Contenido Propio design tokens
+  --------------------------------
+  Editorial premium, claro y con aire. Todas las decisiones visuales
+  reutilizables viven aqui para mantener componentes y contenido desacoplados.
+*/
+
+:root {
+  /*
+    Color: superficies
+    Fondo principal crema calido, nunca blanco puro. El segundo crema permite
+    bloques alternos y tarjetas sin romper la lectura editorial.
+  */
+  --color-cream-100: #f7f4ef;
+  --color-cream-200: #eee8dd;
+  --color-cream-300: #e4dccf;
+
+  /*
+    Color: tinta y grises calidos
+    La tinta principal evita el negro puro para suavizar el contraste en
+    grandes bloques de texto sin perder legibilidad AA.
+  */
+  --color-ink-900: #1a1714;
+  --color-ink-800: #2a251f;
+  --color-ink-700: #403a33;
+  --ink-warm: #766554;
+  --color-stone-600: #6f665c;
+  --color-stone-500: #8a8175;
+  --color-stone-300: #cfc6b8;
+  --color-stone-200: #ded6ca;
+
+  /*
+    Color: acento
+    Rojo YouTube reservado a detalles: etiquetas, puntos, subrayados finos,
+    iconos pequenos, datos destacados y estados hover. No usar como fondo
+    dominante ni como boton primario.
+  */
+  --color-accent-red: #e62117;
+  --color-accent-red-dark: #b71912;
+  --color-accent-red-soft: #f4d4d1;
+
+  /*
+    Color: contraste editorial
+    Tono oscuro para cierres, CTA finales y franjas de alto impacto.
+  */
+  --color-night-950: #11100e;
+  --color-night-900: #181512;
+  --color-night-800: #24201b;
+
+  /*
+    Tipografia
+    Fraunces Variable para titulares editoriales de alto contraste. Inter
+    Variable para cuerpo, navegacion e interfaz. Las fuentes se cargan
+    self-hosted desde @fontsource con font-display: swap.
+  */
+  --font-display: "Fraunces Variable", Georgia, serif;
+  --font-sans: "Inter Variable", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display-opsz-xl: 144;
+  --font-display-opsz-lg: 112;
+  --font-display-opsz-md: 84;
+  --font-display-opsz-sm: 48;
+
+  /*
+    Escala tipografica amplia
+    Los tamanos usan clamp para una adaptacion fluida sin depender solo del
+    ancho de viewport. Los line-height estan ajustados por rol.
+  */
+  --text-display: clamp(4.5rem, 12vw, 10rem);
+  --text-h1: clamp(3.5rem, 8vw, 7rem);
+  --text-h2: clamp(2.75rem, 6vw, 5.25rem);
+  --text-h3: clamp(2rem, 4vw, 3.5rem);
+  --text-h4: clamp(1.5rem, 2.5vw, 2.25rem);
+  --text-h5: clamp(1.25rem, 1.6vw, 1.5rem);
+  --text-lead: clamp(1.25rem, 1.5vw, 1.5rem);
+  --text-body: 1.125rem;
+  --text-body-sm: 1rem;
+  --text-caption: 0.875rem;
+  --text-label: 0.75rem;
+
+  --leading-display: 0.94;
+  --leading-h1: 0.96;
+  --leading-heading: 0.98;
+  --leading-title: 1.08;
+  --leading-lead: 1.45;
+  --leading-body: 1.7;
+  --leading-tight: 1.2;
+
+  --tracking-display: 0.002em;
+  --tracking-h1: 0.001em;
+  --tracking-heading: -0.004em;
+  --tracking-body: 0;
+  --tracking-label: 0.08em;
+
+  /*
+    Espaciado
+    Escala generosa para que la landing respire y mantenga cadencia de revista.
+  */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-6xl: 11rem;
+
+  /*
+    Layout
+    Contenedor ancho para composiciones premium, con gutters responsive.
+  */
+  --container-max: 1180px;
+  --container-reading: 760px;
+  --container-gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-padding-y: clamp(5rem, 10vw, 9rem);
+
+  /*
+    Forma
+    Radios suaves y editoriales; nada excesivamente redondeado.
+  */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-pill: 999px;
+
+  /*
+    Bordes y sombras
+    Sombras calidas por nivel. Capas apiladas para que los objetos despeguen
+    del papel sin verse pesados ni frios.
+  */
+  --border-subtle: 1px solid color-mix(in srgb, var(--color-ink-900) 10%, transparent);
+  --border-strong: 1px solid color-mix(in srgb, var(--color-ink-900) 18%, transparent);
+  --elevation-raised: 0 0.08rem 0.18rem rgba(26, 23, 20, 0.08), 0 0.75rem 1.75rem rgba(74, 58, 43, 0.08);
+  --elevation-floating: 0 0.16rem 0.35rem rgba(26, 23, 20, 0.09), 0 1.2rem 2.8rem rgba(74, 58, 43, 0.13), 0 3rem 5rem rgba(74, 58, 43, 0.08);
+  --elevation-overlay: 0 0.25rem 0.7rem rgba(26, 23, 20, 0.11), 0 2rem 4.5rem rgba(74, 58, 43, 0.18), 0 5rem 8rem rgba(74, 58, 43, 0.12);
+  --shadow-soft: var(--elevation-raised);
+  --shadow-card: var(--elevation-raised);
+  --shadow-hover: var(--elevation-floating);
+
+  /*
+    Grano de papel
+    Textura SVG tileable, fija y de opacidad baja. Para desactivarla, establecer
+    --paper-grain-opacity: 0 en cualquier scope.
+  */
+  --paper-grain-opacity: 0.04;
+  --paper-grain-size: 140px;
+  --paper-grain-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='table' tableValues='0 .45'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.42'/%3E%3C/svg%3E");
+
+  /*
+    Botones
+    El primario nunca usa rojo de fondo. El rojo queda como detalle de borde
+    en hover secundario, dentro de la regla de acento disciplinado.
+  */
+  --button-primary-bg: var(--color-ink-900);
+  --button-primary-bg-hover: var(--color-ink-800);
+  --button-primary-text: var(--color-cream-100);
+  --button-secondary-border: color-mix(in srgb, var(--color-ink-900) 24%, transparent);
+  --button-secondary-bg-hover: color-mix(in srgb, var(--color-ink-900) 5%, transparent);
+  --button-inverse-bg: var(--color-cream-100);
+  --button-inverse-bg-hover: var(--color-cream-200);
+  --button-inverse-text: var(--color-ink-900);
+
+  /*
+    Animacion
+    Curvas suaves para entradas y microinteracciones. Toda animacion debe
+    respetar prefers-reduced-motion desde base.css.
+  */
+  --duration-fast: 180ms;
+  --duration-standard: 300ms;
+  --duration-slow: 600ms;
+  --ease-signature: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --reveal-distance: 1.5rem;
+}

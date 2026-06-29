@@ -1,0 +1,97 @@
+---
+import "@fontsource-variable/inter";
+import "@fontsource-variable/fraunces/full.css";
+import content from "../content/es.json";
+import "../styles/tokens.css";
+import "../styles/base.css";
+
+interface AlternateLanguage {
+  lang: string;
+  href: string;
+}
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  alternates?: AlternateLanguage[];
+  noindex?: boolean;
+}
+
+const {
+  title = content.site.title || content.site.name,
+  description = content.site.description,
+  ogImage = content.site.ogImage || "/og-image.jpg",
+  canonical,
+  alternates = [],
+  noindex = false,
+} = Astro.props;
+
+const siteName = content.site.name;
+const pageTitle = title === siteName ? title : `${title} | ${siteName}`;
+const canonicalUrl = canonical ?? new URL(Astro.url.pathname, Astro.url.origin).toString();
+const ogImageUrl = new URL(ogImage, Astro.url.origin).toString();
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{pageTitle}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:title" content={pageTitle} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    {description && <meta name="twitter:description" content={description} />}
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    {alternates.map(({ lang, href }) => <link rel="alternate" hreflang={lang} href={href} />)}
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+  </head>
+  <body>
+    <slot />
+    <script>
+      import Lenis from "lenis";
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+      if (!reduceMotion.matches) {
+        const lenis = new Lenis({
+          lerp: 0.075,
+          wheelMultiplier: 0.9,
+          touchMultiplier: 1.1,
+          smoothWheel: true,
+        });
+
+        const raf = (time) => {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        };
+
+        requestAnimationFrame(raf);
+        reduceMotion.addEventListener("change", (event) => {
+          if (event.matches) {
+            lenis.destroy();
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

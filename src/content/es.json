@@ -1,0 +1,207 @@
+{
+  "site": {
+    "name": "Contenido Propio",
+    "locale": "es",
+    "title": "Contenido Propio",
+    "description": "Agencia de contenido estratégico para YouTube: edición, miniaturas, SEO y publicación para creadores.",
+    "ogImage": "",
+    "url": ""
+  },
+  "navigation": {
+    "items": []
+  },
+  "header": {
+    "logoLabel": "Contenido Propio",
+    "cta": {
+      "label": "Hablemos",
+      "href": "#formulario"
+    }
+  },
+  "hero": {
+    "eyebrow": "PARA CREADORES DE YOUTUBE",
+    "title": {
+      "primary": "Tú graba.",
+      "secondary": "Nosotros hacemos que crezca."
+    },
+    "lead": "Edición, miniaturas, SEO y publicación semanal — el sistema completo para que tu canal no pare. Tú solo grabas.",
+    "primaryCta": {
+      "label": "Quiero que mi canal crezca →",
+      "href": "#formulario"
+    },
+    "secondaryCta": {
+      "label": "Ver cómo funciona",
+      "href": "#proceso"
+    },
+    "socialProof": {
+      "avatars": ["MC", "AR", "LV", "NS"],
+      "text": "+40 creadores ya confían en nosotros"
+    },
+    "dashboard": {
+      "channel": {
+        "name": "Contenido Propio",
+        "meta": "12.4K suscriptores",
+        "status": "Activo"
+      },
+      "videos": [
+        {
+          "title": "Cómo invertir desde 0 en 2025",
+          "meta": "124K vistas · 8.4% CTR"
+        },
+        {
+          "title": "Productividad: el método que cambió todo",
+          "meta": "89K vistas · 7.1% CTR"
+        },
+        {
+          "title": "Finanzas personales en 10 minutos",
+          "meta": "201K vistas · 9.2% CTR"
+        }
+      ],
+      "stats": [
+        {
+          "value": "4 vídeos",
+          "label": ""
+        },
+        {
+          "value": "8.2% CTR promedio",
+          "label": ""
+        },
+        {
+          "value": "64% retención",
+          "label": ""
+        }
+      ],
+      "badges": {
+        "growth": "Suscriptores +34% este mes",
+        "time": "Tiempo ahorrado ~12h / semana"
+      }
+    }
+  },
+  "resultados": {
+    "eyebrow": "RESULTADOS REALES DE CANALES QUE GESTIONAMOS",
+    "metrics": [
+      {
+        "value": "4,3M",
+        "delta": "+16%",
+        "label": "Visualizaciones (últimos 28 días)",
+        "count": {
+          "target": 4.3,
+          "decimals": 1,
+          "prefix": "",
+          "suffix": "M",
+          "decimalSeparator": ",",
+          "thousandsSeparator": "."
+        }
+      },
+      {
+        "value": "328,5K",
+        "delta": "+14%",
+        "label": "Horas de visualización",
+        "count": {
+          "target": 328.5,
+          "decimals": 1,
+          "prefix": "",
+          "suffix": "K",
+          "decimalSeparator": ",",
+          "thousandsSeparator": "."
+        }
+      },
+      {
+        "value": "+40,2K",
+        "delta": "+18%",
+        "label": "Nuevos suscriptores",
+        "count": {
+          "target": 40.2,
+          "decimals": 1,
+          "prefix": "+",
+          "suffix": "K",
+          "decimalSeparator": ",",
+          "thousandsSeparator": "."
+        }
+      },
+      {
+        "value": "10.341 €",
+        "delta": "+17%",
+        "label": "Ingresos estimados",
+        "count": {
+          "target": 10341,
+          "decimals": 0,
+          "prefix": "",
+          "suffix": " €",
+          "decimalSeparator": ",",
+          "thousandsSeparator": "."
+        }
+      }
+    ],
+    "note": "Datos agregados de canales gestionados. Los resultados individuales varían según el nicho, la consistencia y el punto de partida."
+  },
+  "problemaSolucion": {
+    "problem": {
+      "eyebrow": "EL PROBLEMA",
+      "title": "Grabar es lo fácil. Lo que viene después es lo que te frena.",
+      "body": "El montaje, los subtítulos, la miniatura, el SEO, la publicación. Cada vídeo se convierte en un proyecto entero después de grabar — y cuando no hay tiempo, el canal se detiene. No es falta de ideas. Es que el proceso te come."
+    },
+    "solution": {
+      "eyebrow": "LA SOLUCIÓN",
+      "title": "Tú grabas. Nosotros hacemos el resto.",
+      "body": "Edición, miniatura, SEO y publicación, semana tras semana, sin que toques nada después de grabar. Un sistema que mantiene tu canal vivo y creciendo mientras tú te dedicas solo a lo que sabes hacer."
+    }
+  },
+  "servicios": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "items": []
+  },
+  "especializacion": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "items": []
+  },
+  "proceso": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "steps": []
+  },
+  "entregables": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "items": []
+  },
+  "paraQuien": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "fit": [],
+    "notFit": []
+  },
+  "faq": {
+    "eyebrow": "",
+    "title": "",
+    "items": []
+  },
+  "ctaFinal": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "cta": {
+      "label": "",
+      "href": ""
+    }
+  },
+  "formulario": {
+    "eyebrow": "",
+    "title": "",
+    "lead": "",
+    "fields": [],
+    "submitLabel": "",
+    "successMessage": "",
+    "errorMessage": ""
+  },
+  "footer": {
+    "legal": "",
+    "links": []
+  }
+}

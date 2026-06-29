@@ -1,0 +1,524 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const colors = [
+  ["--color-cream-100", "#F7F4EF", "Fondo principal"],
+  ["--color-cream-200", "#EEE8DD", "Superficie alterna"],
+  ["--color-cream-300", "#E4DCCF", "Borde cálido"],
+  ["--color-ink-900", "#1A1714", "Tinta principal"],
+  ["--color-ink-800", "#2A251F", "Tinta hover"],
+  ["--color-ink-700", "#403A33", "Texto enfático"],
+  ["--ink-warm", "#766554", "Tinta cálida"],
+  ["--color-stone-600", "#6F665C", "Texto secundario"],
+  ["--color-stone-500", "#8A8175", "Texto auxiliar"],
+  ["--color-stone-300", "#CFC6B8", "Línea suave"],
+  ["--color-accent-red", "#E62117", "Acento YouTube"],
+  ["--color-accent-red-dark", "#B71912", "Acento hover"],
+  ["--color-night-950", "#11100E", "CTA oscuro"],
+];
+
+const typeScale = [
+  ["Display", "display", "Estrategia editorial para canales que quieren crecer con criterio."],
+  ["H1", "h1", "Contenido que convierte visión en audiencia."],
+  ["H2", "h2", "Un sistema visual y verbal con pulso propio."],
+  ["H3", "h3", "Miniaturas, edición y SEO trabajando como una sola pieza."],
+  ["H4", "h4", "Cadencia clara para publicar sin improvisar."],
+  ["H5", "h5", "Interfaz y titulares de soporte."],
+  ["Lead", "lead", "Texto introductorio amplio, pensado para abrir secciones con claridad y ritmo editorial."],
+  ["Body", "", "Cuerpo legible para explicar procesos, decisiones y beneficios sin perder precisión ni comodidad de lectura."],
+  ["Body small", "body-sm", "Texto secundario para notas, metadatos y aclaraciones de baja jerarquía."],
+  ["Caption", "caption", "Etiqueta breve para pies, estados y detalles auxiliares."],
+];
+
+const elevations = [
+  [
+    "Raised",
+    "elevation-raised",
+    "0 0.08rem 0.18rem rgba(26, 23, 20, 0.08), 0 0.75rem 1.75rem rgba(74, 58, 43, 0.08)"
+  ],
+  [
+    "Floating",
+    "elevation-floating",
+    "0 0.16rem 0.35rem rgba(26, 23, 20, 0.09), 0 1.2rem 2.8rem rgba(74, 58, 43, 0.13), 0 3rem 5rem rgba(74, 58, 43, 0.08)"
+  ],
+  [
+    "Overlay",
+    "elevation-overlay",
+    "0 0.25rem 0.7rem rgba(26, 23, 20, 0.11), 0 2rem 4.5rem rgba(74, 58, 43, 0.18), 0 5rem 8rem rgba(74, 58, 43, 0.12)"
+  ]
+];
+---
+
+<Layout
+  title="Styleguide"
+  description="Sistema visual base de Contenido Propio."
+  noindex
+>
+  <main class="styleguide-main">
+    <section class="styleguide-hero section">
+      <div class="container">
+        <p class="eyebrow">Sistema de diseño</p>
+        <h1 class="h1">Tú graba. <span class="warm-ink">Nosotros hacemos que crezca.</span></h1>
+        <p class="lead reading">
+          Fundación visual para una landing editorial premium: crema cálido, tinta profunda,
+          tipografía expresiva y rojo usado con disciplina.
+        </p>
+      </div>
+    </section>
+
+    <section class="styleguide-section section surface-alt" aria-labelledby="colors-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Paleta</p>
+          <h2 id="colors-title" class="h3">Color con contraste cálido</h2>
+        </div>
+
+        <div class="color-grid">
+          {colors.map(([token, hex, label]) => (
+            <article class="color-swatch">
+              <div class="swatch" style={`--swatch-color: var(${token});`} aria-hidden="true"></div>
+              <div>
+                <h3>{label}</h3>
+                <p>{token}</p>
+                <p>{hex}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section section" aria-labelledby="type-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Tipografía</p>
+          <h2 id="type-title" class="h3">Escala editorial amplia</h2>
+        </div>
+
+        <div class="type-list">
+          {typeScale.map(([label, className, sample]) => (
+            <article class="type-row">
+              <p class="type-label">{label}</p>
+              <p class:list={[className]}>{sample}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section section surface-alt" aria-labelledby="primitives-title">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Primitivos premium</p>
+          <h2 id="primitives-title" class="h3">Papel, elevación y movimiento</h2>
+          <span class="rule-draw" aria-hidden="true"></span>
+        </div>
+
+        <div class="primitive-grid">
+          <article class="primitive-panel primitive-wide">
+            <div>
+              <p class="demo-label">Grano activo</p>
+              <div class="grain-sample">
+                <span>Crema con textura de papel fino</span>
+              </div>
+            </div>
+            <div>
+              <p class="demo-label">Grano desactivado</p>
+              <div class="grain-sample grain-off">
+                <span>Mismo fondo sin textura</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="primitive-panel primitive-wide">
+            <p class="demo-label">Elevación</p>
+            <div class="elevation-grid">
+              {elevations.map(([label, className, shadow]) => (
+                <div class:list={["elevation-card", className]}>
+                  <h3>{label}</h3>
+                  <p>{shadow}</p>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article class="primitive-panel">
+            <p class="demo-label">Reveal con máscara</p>
+            <p class="h4 reveal-mask-demo">El contenido aparece como si se descubriera tras un borde.</p>
+          </article>
+
+          <article class="primitive-panel">
+            <p class="demo-label">Regla roja</p>
+            <span class="rule-draw rule-demo" aria-hidden="true"></span>
+            <p class="body-sm">Línea fina para subrayados puntuales bajo etiquetas o aperturas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section section" aria-labelledby="components-title">
+      <div class="container components-layout">
+        <div class="section-heading">
+          <p class="eyebrow">Componentes base</p>
+          <h2 id="components-title" class="h3">Botones, tarjeta y ritmo</h2>
+          <p class="body-sm reading">
+            El botón primario usa tinta sobre crema. El rojo queda reservado a detalles y estados
+            secundarios.
+          </p>
+        </div>
+
+        <div class="component-examples">
+          <div class="button-showcase" aria-label="Ejemplos de botones">
+            <article class="button-demo">
+              <p class="demo-label">Primario</p>
+              <div class="button-row">
+                <a class="button button-primary" href="/styleguide">Base</a>
+                <a class="button button-primary is-hover" href="/styleguide" aria-label="Botón primario en estado hover">Hover</a>
+              </div>
+            </article>
+
+            <article class="button-demo">
+              <p class="demo-label">Secundario</p>
+              <div class="button-row">
+                <a class="button button-secondary" href="/styleguide">Base</a>
+                <a class="button button-secondary is-hover" href="/styleguide" aria-label="Botón secundario en estado hover">Hover</a>
+              </div>
+            </article>
+
+            <article class="button-demo button-demo-dark">
+              <p class="demo-label">Sobre fondo oscuro</p>
+              <div class="button-row">
+                <a class="button button-inverse" href="/styleguide">Base</a>
+                <a class="button button-inverse is-hover" href="/styleguide" aria-label="Botón sobre fondo oscuro en estado hover">Hover</a>
+              </div>
+            </article>
+          </div>
+
+          <article class="card sample-card">
+            <p class="eyebrow">Ejemplo</p>
+            <h3 class="h4">Tarjeta editorial</h3>
+            <p>
+              Superficie crema, borde bajo y sombra suave para jerarquizar información sin
+              convertir la página en una cuadrícula genérica.
+            </p>
+            <hr class="accent-rule" />
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="styleguide-section section surface-alt" aria-labelledby="accent-title">
+      <div class="container accent-demo">
+        <div>
+          <p class="eyebrow">Acento rojo</p>
+          <h2 id="accent-title" class="h3">Presencia pequeña, intención alta</h2>
+        </div>
+
+        <div class="accent-panel">
+          <span class="accent-dot" aria-hidden="true"></span>
+          <p>
+            El rojo aparece como punto, subrayado fino o dato marcado:
+            <strong>+18%</strong> de claridad visual sin dominar la superficie.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .styleguide-main {
+    overflow: clip;
+  }
+
+  .styleguide-hero {
+    min-height: 78vh;
+    display: grid;
+    align-items: end;
+  }
+
+  .styleguide-hero .container {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  .warm-ink {
+    color: var(--ink-warm);
+    font-weight: 720;
+  }
+
+  .styleguide-section .container {
+    display: grid;
+    gap: var(--space-2xl);
+  }
+
+  .section-heading {
+    display: grid;
+    gap: var(--space-md);
+    max-width: 760px;
+  }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+
+  .color-swatch {
+    display: grid;
+    gap: var(--space-md);
+    border: var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    background: var(--color-cream-100);
+  }
+
+  .swatch {
+    min-height: 6rem;
+    border: var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--swatch-color);
+  }
+
+  .color-swatch h3 {
+    color: var(--color-ink-900);
+    font-size: var(--text-body-sm);
+    line-height: var(--leading-tight);
+  }
+
+  .color-swatch p {
+    color: var(--color-stone-600);
+    font-size: var(--text-caption);
+    line-height: 1.5;
+  }
+
+  .type-list {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  .type-row {
+    display: grid;
+    grid-template-columns: minmax(7rem, 0.18fr) 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+    padding-block-end: var(--space-xl);
+    border-bottom: var(--border-subtle);
+  }
+
+  .type-label {
+    color: var(--color-accent-red);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: var(--tracking-label);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+  }
+
+  .components-layout {
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1fr);
+    align-items: start;
+  }
+
+  .component-examples {
+    display: grid;
+    gap: var(--space-xl);
+  }
+
+  .primitive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-lg);
+  }
+
+  .primitive-panel {
+    display: grid;
+    gap: var(--space-lg);
+    border: var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    background: color-mix(in srgb, var(--color-cream-100) 88%, var(--color-cream-200));
+  }
+
+  .primitive-wide {
+    grid-column: 1 / -1;
+  }
+
+  .grain-sample {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    min-height: 8rem;
+    place-items: center;
+    overflow: hidden;
+    border: var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-cream-100);
+    color: var(--color-ink-700);
+    font-weight: 750;
+  }
+
+  .grain-sample::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: var(--paper-grain-image);
+    background-size: var(--paper-grain-size) var(--paper-grain-size);
+    content: "";
+    opacity: var(--paper-grain-opacity);
+  }
+
+  .grain-off {
+    --paper-grain-opacity: 0;
+  }
+
+  .elevation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-md);
+  }
+
+  .elevation-card {
+    display: grid;
+    gap: var(--space-sm);
+    min-height: 10rem;
+    align-content: center;
+    border: 1px solid color-mix(in srgb, var(--color-ink-900) 10%, transparent);
+    border-radius: var(--radius-md);
+    background: var(--color-cream-100);
+    padding: var(--space-lg);
+  }
+
+  .elevation-card h3 {
+    color: var(--color-ink-900);
+    font-size: var(--text-body-sm);
+    line-height: var(--leading-tight);
+  }
+
+  .elevation-card p {
+    color: var(--color-stone-600);
+    font-size: 0.72rem;
+    line-height: 1.45;
+  }
+
+  .reveal-mask-demo {
+    animation: styleguide-mask-reveal var(--duration-slow) var(--ease-signature) both;
+  }
+
+  .rule-demo {
+    max-width: 100%;
+  }
+
+  @keyframes styleguide-mask-reveal {
+    from {
+      clip-path: inset(0 0 100% 0);
+      opacity: 0;
+      transform: translateY(var(--reveal-distance));
+    }
+
+    to {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .button-showcase {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .button-demo {
+    display: grid;
+    gap: var(--space-sm);
+    border: var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    background: var(--color-cream-100);
+  }
+
+  .button-demo-dark {
+    border-color: color-mix(in srgb, var(--color-cream-100) 18%, transparent);
+    background: var(--color-night-950);
+    color: var(--color-cream-100);
+  }
+
+  .demo-label {
+    color: var(--color-stone-600);
+    font-size: var(--text-label);
+    font-weight: 700;
+    letter-spacing: var(--tracking-label);
+    line-height: var(--leading-tight);
+    text-transform: uppercase;
+  }
+
+  .button-demo-dark .demo-label {
+    color: var(--color-stone-300);
+  }
+
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .sample-card {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-xl);
+  }
+
+  .sample-card p:not(.eyebrow) {
+    color: var(--color-stone-600);
+  }
+
+  .accent-demo {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(280px, 1fr);
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .accent-panel {
+    display: flex;
+    gap: var(--space-md);
+    align-items: flex-start;
+    border-left: 2px solid var(--color-accent-red);
+    padding: var(--space-lg) 0 var(--space-lg) var(--space-lg);
+    color: var(--color-ink-700);
+    font-size: var(--text-lead);
+    line-height: var(--leading-lead);
+  }
+
+  .accent-panel strong {
+    color: var(--color-accent-red);
+    font-weight: 800;
+  }
+
+  .accent-dot {
+    flex: 0 0 auto;
+    width: 0.65rem;
+    height: 0.65rem;
+    margin-top: 0.55rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-red);
+  }
+
+  @media (max-width: 800px) {
+    .type-row,
+    .components-layout,
+    .accent-demo,
+    .primitive-grid,
+    .elevation-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .primitive-wide {
+      grid-column: auto;
+    }
+
+    .styleguide-hero {
+      min-height: 68vh;
+    }
+  }
+</style>

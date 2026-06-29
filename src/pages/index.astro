@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Hero from "../components/Hero.astro";
+import Resultados from "../components/Resultados.astro";
+import ProblemaSolucion from "../components/ProblemaSolucion.astro";
+import content from "../content/es.json";
+---
+
+<Layout title={content.site.name} description={content.site.description || undefined}>
+  <Header />
+  <main id="main-content">
+    <Hero />
+    <Resultados />
+    <ProblemaSolucion />
+  </main>
+</Layout>

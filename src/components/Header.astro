@@ -1,0 +1,77 @@
+---
+import content from "../content/es.json";
+
+const { id = "header" } = Astro.props;
+const { site, header } = content;
+---
+
+<header class="site-header" data-section={id}>
+  <div class="container header-inner">
+    <a class="header-brand" href="/" aria-label={site.name}>
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>{header.logoLabel || site.name}</span>
+    </a>
+
+    {header.cta.label && (
+      <a class="button button-secondary header-cta" href={header.cta.href}>
+        {header.cta.label}
+      </a>
+    )}
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-ink-900) 8%, transparent);
+    background: color-mix(in srgb, var(--color-cream-100) 88%, transparent);
+    backdrop-filter: blur(18px);
+  }
+
+  .header-inner {
+    display: flex;
+    min-height: 4.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-lg);
+  }
+
+  .header-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-sm);
+    color: var(--color-ink-900);
+    font-size: var(--text-body-sm);
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-red);
+  }
+
+  .header-cta {
+    min-height: 2.55rem;
+    padding-inline: 1rem;
+  }
+
+  @media (max-width: 640px) {
+    .site-header {
+      position: static;
+    }
+
+    .header-inner {
+      min-height: 4rem;
+    }
+
+    .header-cta {
+      width: auto;
+    }
+  }
+</style>
