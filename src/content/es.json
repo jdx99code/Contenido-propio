@@ -284,34 +284,119 @@
     ]
   },
   "paraQuien": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "fit": [],
-    "notFit": []
-  },
-  "faq": {
-    "eyebrow": "",
-    "title": "",
-    "items": []
-  },
-  "ctaFinal": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "cta": {
-      "label": "",
-      "href": ""
+    "eyebrow": "PARA QUIÉN ES",
+    "title": "Es para ti si te ves aquí.",
+    "lead": "No trabajamos con todo el mundo. Trabajamos con creadores que se reconocen en esto:",
+    "fit": [
+      "Tienes un canal (o quieres empezar uno) y la edición te roba las horas que no tienes.",
+      "Grabas con ganas, pero los vídeos se acumulan sin editar y el canal se queda parado.",
+      "Quieres publicar cada semana de forma constante, pero solo no llegas a todo el proceso.",
+      "Sabes que la miniatura y el título deciden el CTR, y no quieres seguir improvisándolos.",
+      "Prefieres dedicar tu tiempo a lo que sabes hacer y delegar la producción a alguien que entienda YouTube de verdad.",
+      "Ves tu canal como un activo de marca a largo plazo, no como un experimento de fin de semana."
+    ],
+    "notFit": {
+      "title": "No es para ti si…",
+      "items": [
+        "Buscas el editor más barato y vas a comparar solo por precio.",
+        "Esperas hacerte viral en dos semanas sin constancia ni estrategia.",
+        "Quieres subir vídeos sueltos sin un plan detrás."
+      ],
+      "closing": "Si te reconoces arriba, hablemos. Si es lo de abajo, probablemente no somos tu mejor opción — y prefiero decírtelo."
     }
   },
+  "faq": {
+    "eyebrow": "PREGUNTAS FRECUENTES",
+    "title": "Lo que sueles querer saber antes de empezar.",
+    "items": [
+      {
+        "question": "¿Qué es exactamente un canal faceless?",
+        "answer": "Un canal donde no apareces en cámara. El valor está en el contenido —guion, voz, imágenes, edición— no en tu cara. Funciona muy bien en nichos como finanzas, historia, tecnología o educación, y nos permite producir sin que tengas que grabarte."
+      },
+      {
+        "question": "¿Puedo tener un canal sin mostrar mi cara?",
+        "answer": "Sí. Trabajamos tanto canales faceless completos como canales donde tú grabas voz o material y nosotros hacemos el resto. Tú decides cuánto apareces."
+      },
+      {
+        "question": "¿Funciona en mi nicho?",
+        "answer": "Lo estudiamos antes de decir que sí. Investigamos demanda, competencia y formatos de tu sector. Si vemos recorrido, te lo decimos con un plan; si no, también te lo decimos. No vendemos humo."
+      },
+      {
+        "question": "¿Cuánto cuesta?",
+        "answer": "Depende del volumen y del tipo de canal (faceless completo vs. tú grabas). No trabajamos por vídeos sueltos baratos, sino por un sistema de producción constante. En la llamada inicial te damos un presupuesto claro y sin compromiso."
+      },
+      {
+        "question": "¿Pierdo el control de mi canal?",
+        "answer": "Al contrario. Tú apruebas el plan y las miniaturas antes de publicar. Nosotros ejecutamos; las decisiones importantes siguen siendo tuyas. El canal es tuyo, siempre."
+      },
+      {
+        "question": "¿En cuánto tiempo veo resultados?",
+        "answer": "YouTube premia la constancia, no los milagros. Montamos un sistema para publicar bien y de forma sostenida; los resultados llegan con el tiempo y la mejora continua. No prometemos cifras mágicas en dos semanas."
+      },
+      {
+        "question": "¿También trabajáis con canales que ya existen?",
+        "answer": "Sí. Si ya tienes canal pero la edición te frena o el contenido se ve inconsistente, entramos a mejorar imagen, retención, miniaturas y estrategia sobre lo que ya tienes."
+      },
+      {
+        "question": "¿Cómo empezamos?",
+        "answer": "Con una llamada de 20 minutos, sin compromiso. Nos cuentas tu canal y tus objetivos, y te explicamos exactamente cómo podríamos ayudarte. Si encaja, empezamos; si no, te lo decimos con honestidad."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "DA EL PRIMER PASO",
+    "title": {
+      "line1": "Deja de editar.",
+      "line2": "Empieza a publicar."
+    },
+    "lead": "Cuéntanos cómo es tu canal y te explicamos exactamente cómo podemos ayudarte. Sin compromiso y sin coste.",
+    "trust": "Respondemos en 24-48h · Sin compromiso · No es una llamada de venta agresiva."
+  },
   "formulario": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "fields": [],
-    "submitLabel": "",
-    "successMessage": "",
-    "errorMessage": ""
+    "fields": {
+      "name": {
+        "label": "Nombre",
+        "placeholder": "Tu nombre",
+        "required": true
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "tu@email.com",
+        "required": true
+      },
+      "channel": {
+        "label": "Enlace a tu canal de YouTube",
+        "placeholder": "Si ya tienes canal (opcional)",
+        "required": false
+      },
+      "message": {
+        "label": "Cuéntanos",
+        "placeholder": "Cuéntanos brevemente tu canal y qué necesitas",
+        "required": true
+      }
+    },
+    "consent": {
+      "prefix": "He leído y acepto la ",
+      "linkLabel": "política de privacidad",
+      "linkHref": "/privacidad",
+      "suffix": " y el tratamiento de mis datos para gestionar mi solicitud."
+    },
+    "submit": "Quiero que mi canal crezca →",
+    "microcopy": "Sin contratos. Sin compromisos. Solo una conversación.",
+    "states": {
+      "sending": "Enviando…",
+      "success": {
+        "title": "¡Gracias, ya hemos recibido tu mensaje!",
+        "body": "Te responderemos en 24-48h. Mientras tanto, puedes revisar las preguntas frecuentes más arriba."
+      },
+      "error": "Algo salió mal. Por favor, inténtalo de nuevo."
+    },
+    "errors": {
+      "required": "Este campo es obligatorio.",
+      "email": "Por favor, introduce un email válido.",
+      "url": "Por favor, introduce una URL válida (ej: https://youtube.com/…).",
+      "consent": "Debes aceptar la política de privacidad para continuar."
+    }
   },
   "footer": {
     "legal": "",
