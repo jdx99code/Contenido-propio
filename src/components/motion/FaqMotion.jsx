@@ -13,6 +13,11 @@ import { signatureSpring, softSpring, reducedTransition } from "./motionConfig";
     evitando que la animación "cierre" visible al hidratarse.
   • `hasInteracted`: habilita el spring SOLO después de la primera acción
     del usuario — el snap inicial siempre es instantáneo (duration: 0).
+
+  ANIMACIONES DE ESTILO:
+  • Número editorial (01–08) en Fraunces — columna fija izquierda.
+  • Barra de acento roja (2 px) que se dibuja desde arriba al abrir (scaleY 0→1).
+  • Capa de fondo cálida que aparece con fade al abrir el ítem.
 */
 
 function FaqItem({ item, index, shouldAnimate, isInView }) {
@@ -45,6 +50,9 @@ function FaqItem({ item, index, shouldAnimate, isInView }) {
   const rowDelay = 0.08 + index * 0.055;
   const rowAnimState = !shouldAnimate || isInView ? "visible" : "hidden";
 
+  /* Número editorial: "01", "02" … "08" */
+  const numStr = String(index + 1).padStart(2, "0");
+
   return (
     <motion.li
       className={`faq-item${isOpen ? " is-open" : ""}`}
@@ -61,6 +69,28 @@ function FaqItem({ item, index, shouldAnimate, isInView }) {
         ? { whileHover: { x: 3, transition: softSpring } }
         : {})}
     >
+      {/* ── Capa de fondo: fade suave al abrir ───────────────── */}
+      <motion.span
+        className="faq-item-bg"
+        aria-hidden="true"
+        initial={false}
+        animate={{ opacity: isOpen ? 1 : 0 }}
+        transition={contentTransition}
+      />
+
+      {/* ── Barra de acento: se dibuja de arriba a abajo ─────── */}
+      <motion.span
+        className="faq-accent-bar"
+        aria-hidden="true"
+        initial={false}
+        animate={{
+          scaleY: isOpen ? 1 : 0,
+          opacity: isOpen ? 1 : 0,
+        }}
+        style={{ transformOrigin: "top center" }}
+        transition={contentTransition}
+      />
+
       {/*
         <details open={...}>
         — SSR / antes de ready: sin atributo `open` → cerrado por defecto.
@@ -74,6 +104,11 @@ function FaqItem({ item, index, shouldAnimate, isInView }) {
           aria-expanded={isOpen}
           aria-controls={`faq-body-${index}`}
         >
+          {/* Número editorial — columna fija izquierda */}
+          <span className="faq-num" aria-hidden="true">
+            {numStr}
+          </span>
+
           <span className="faq-question-text">{item.question}</span>
 
           {/* Indicador +/× — rojo acento SOLO cuando está abierto */}

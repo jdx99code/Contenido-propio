@@ -12,8 +12,19 @@ const { faq } = content;
      FAQ — acordeón de preguntas frecuentes
      Semántica: <details>/<summary> como base accesible y SEO.
      Framer Motion anima la altura y el icono encima.
-     Rojo permitido SOLO como micro-detalle del indicador activo.
+
+     CAPAS DE ESTILO:
+     • Números editoriales 01–08 en Fraunces (columna fija izquierda).
+     • Barra de acento roja (2 px) que se dibuja al abrir.
+     • Fondo cálido que aparece en el ítem activo.
+     Rojo permitido SOLO como micro-detalle: barra + indicador activo.
   ========================================================= */
+
+  /* Variables locales del componente */
+  .faq-list {
+    --faq-num-w: 2.75rem;
+    --faq-col-gap: clamp(0.9rem, 1.5vw, 1.4rem);
+  }
 
   .faq-section {
     position: relative;
@@ -74,24 +85,56 @@ const { faq } = content;
   ========================================================= */
 
   .faq-item {
+    position: relative;          /* ancla la barra y el fondo */
     border-bottom: 1px solid color-mix(in srgb, var(--color-ink-900) 10%, transparent);
-    transition: none; /* Framer Motion maneja el x hover */
+    transition: none;            /* Framer Motion maneja el x hover */
   }
 
-  /* El elemento <details> no tiene estilos propios */
+  /* ── Capa de fondo ───────────────────────────────────────
+     Un rect absoluto que cubre todo el ítem; aparece con fade
+     cuando está abierto. Crea la sensación de "ítem activo"
+     sin borders llamativos. */
+  .faq-item-bg {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--color-cream-100) 65%, transparent);
+    border-radius: var(--radius-xs, 4px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* ── Barra de acento ─────────────────────────────────────
+     2 px roja anclada al borde izquierdo del ítem.
+     Framer Motion anima scaleY 0→1 desde arriba + opacity.
+     Es el único rojo estructural permitido aquí. */
+  .faq-accent-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: var(--color-accent-red);
+    border-radius: 0 1px 1px 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* details encima de las capas decorativas */
   .faq-item details {
-    /* reset */
+    position: relative;
+    z-index: 2;
   }
 
   /* =========================================================
      SUMMARY — cabecera clicable de cada ítem
+     Grid de 3 columnas: número | pregunta | icono
   ========================================================= */
 
   .faq-summary {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: var(--faq-num-w) 1fr auto;
+    column-gap: var(--faq-col-gap);
     align-items: center;
-    gap: clamp(1rem, 2vw, 1.75rem);
     padding-block: clamp(1.1rem, 2vw, 1.5rem);
     cursor: pointer;
     list-style: none; /* elimina el triángulo nativo en Firefox */
@@ -120,12 +163,41 @@ const { faq } = content;
     color: var(--color-ink-900);
   }
 
+  .faq-item:hover .faq-num {
+    color: color-mix(in srgb, var(--color-ink-900) 42%, transparent);
+  }
+
+  /* =========================================================
+     NÚMERO EDITORIAL — columna izquierda
+     Fraunces tabular, mudo por defecto.
+     Se oscurece/calienta al abrir.
+  ========================================================= */
+
+  .faq-num {
+    display: block;
+    color: color-mix(in srgb, var(--color-ink-900) 22%, transparent);
+    font-family: var(--font-display);
+    font-size: clamp(0.775rem, 0.9vw, 0.875rem);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    font-variation-settings: "opsz" var(--font-display-opsz-sm, 14), "SOFT" 0, "WONK" 0;
+    transition: color var(--duration-standard) var(--ease-signature);
+    /* Alinea con la primera línea del texto de la pregunta */
+    padding-top: 0.2em;
+  }
+
+  /* Número más visible cuando el ítem está abierto */
+  .faq-item.is-open .faq-num {
+    color: color-mix(in srgb, var(--color-ink-900) 60%, transparent);
+  }
+
   /* =========================================================
      TEXTO DE LA PREGUNTA
   ========================================================= */
 
   .faq-question-text {
-    flex: 1;
     color: var(--color-ink-800);
     font-family: var(--font-sans);
     font-size: clamp(1rem, 1.25vw, 1.15rem);
@@ -172,6 +244,7 @@ const { faq } = content;
 
   /* =========================================================
      CUERPO — contenido de la respuesta (altura animada)
+     Indentado para alinearse con el texto de la pregunta.
   ========================================================= */
 
   .faq-body {
@@ -181,6 +254,8 @@ const { faq } = content;
   .faq-answer-text {
     max-width: 64ch;
     padding-bottom: clamp(1.1rem, 2vw, 1.5rem);
+    /* Indenta con el texto de la pregunta: num + gap */
+    padding-left: calc(var(--faq-num-w) + var(--faq-col-gap));
     color: var(--color-stone-600);
     font-size: var(--text-body);
     line-height: var(--leading-body);
@@ -188,16 +263,20 @@ const { faq } = content;
   }
 
   /* =========================================================
-     RESPONSIVE — una columna a todo lo ancho
+     RESPONSIVE
   ========================================================= */
 
   @media (max-width: 640px) {
+    .faq-list {
+      --faq-num-w: 2.25rem;
+      --faq-col-gap: 0.75rem;
+    }
+
     .faq-title {
       font-size: clamp(2rem, 9vw, 3rem);
     }
 
     .faq-summary {
-      gap: var(--space-md);
       padding-block: clamp(1rem, 4vw, 1.25rem);
     }
 
@@ -208,16 +287,33 @@ const { faq } = content;
     }
   }
 
+  /* En pantallas muy pequeñas ocultamos el número para ganar espacio */
+  @media (max-width: 380px) {
+    .faq-list {
+      --faq-num-w: 0px;
+    }
+
+    .faq-num {
+      display: none;
+    }
+
+    .faq-summary {
+      grid-template-columns: 1fr auto;
+    }
+
+    .faq-answer-text {
+      padding-left: 0;
+    }
+  }
+
   /* =========================================================
      REDUCED MOTION
   ========================================================= */
 
   @media (prefers-reduced-motion: reduce) {
-    .faq-icon {
-      transition: none;
-    }
-
-    .faq-question-text {
+    .faq-icon,
+    .faq-question-text,
+    .faq-num {
       transition: none;
     }
   }
