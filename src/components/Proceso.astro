@@ -1,5 +1,280 @@
 ---
-const { id = "proceso" } = Astro.props;
+import content from "../content/es.json";
+import ProcesoMotion from "./motion/ProcesoMotion.jsx";
+
+const { proceso } = content;
 ---
 
-<section data-section={id}></section>
+<ProcesoMotion proceso={proceso} client:load />
+
+<style is:global>
+  .process-section {
+    position: relative;
+    overflow: clip;
+    padding-block: clamp(4.5rem, 8vw, 7rem);
+    background: var(--color-cream-100);
+  }
+
+  .process-shell {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.92fr) minmax(0, 1.08fr);
+    gap: clamp(1.75rem, 4vw, 3rem);
+    align-items: start;
+  }
+
+  .process-sticky {
+    position: sticky;
+    top: var(--process-sticky-top, 7rem);
+    align-self: start;
+  }
+
+  .process-sticky-inner {
+    display: grid;
+    gap: clamp(1.2rem, 2.2vw, 1.75rem);
+    padding-right: clamp(0.5rem, 1vw, 1rem);
+  }
+
+  .process-kicker {
+    display: grid;
+    width: fit-content;
+    gap: var(--space-sm);
+  }
+
+  .process-eyebrow {
+    justify-self: start;
+  }
+
+  .process-rule {
+    max-width: 5.25rem;
+    animation: none;
+    transform: scaleX(1);
+  }
+
+  .process-title {
+    max-width: 13ch;
+    color: var(--color-ink-900);
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 4.7vw, 4.6rem);
+    font-weight: 820;
+    letter-spacing: var(--tracking-heading);
+    line-height: 0.98;
+    font-variation-settings: "opsz" var(--font-display-opsz-lg), "SOFT" 0, "WONK" 1;
+  }
+
+  .process-lead {
+    max-width: 32rem;
+    color: var(--color-stone-600);
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+  }
+
+  .process-indicator {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-lg);
+    padding-top: var(--space-xs);
+  }
+
+  .process-rail {
+    position: relative;
+    width: 0.75rem;
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--color-ink-900) 8%, transparent);
+    overflow: hidden;
+  }
+
+  .process-rail-fill {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(230, 33, 23, 0.45), var(--color-accent-red));
+    transform-origin: top center;
+  }
+
+  .process-steps-list {
+    display: grid;
+    gap: 0.65rem;
+    list-style: none;
+  }
+
+  .process-step-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: var(--radius-md);
+    padding: 0.45rem 0.55rem;
+    color: var(--color-stone-500);
+    font-size: var(--text-body-sm);
+    font-weight: 700;
+    line-height: 1.2;
+    transition:
+      color var(--duration-standard) var(--ease-signature),
+      background-color var(--duration-standard) var(--ease-signature),
+      transform var(--duration-standard) var(--ease-signature);
+  }
+
+  .process-step-link-number {
+    width: 2rem;
+    color: var(--color-stone-500);
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+  }
+
+  .process-step-link.is-active {
+    background: color-mix(in srgb, var(--color-accent-red) 7%, transparent);
+    color: var(--color-ink-900);
+    transform: translateX(0.2rem);
+  }
+
+  .process-step-link.is-active .process-step-link-number {
+    color: var(--color-accent-red);
+  }
+
+  .process-scroll {
+    display: grid;
+    gap: clamp(1rem, 2.6vw, 1.5rem);
+  }
+
+  .process-step {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(1rem, 2.5vw, 2rem);
+    min-height: clamp(20rem, 74vh, 34rem);
+    align-content: center;
+    overflow: hidden;
+    border: 1px solid color-mix(in srgb, var(--color-ink-900) 9%, transparent);
+    border-radius: var(--radius-lg);
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0)),
+      color-mix(in srgb, var(--color-cream-100) 90%, var(--color-cream-200));
+    box-shadow: var(--elevation-raised);
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    transition:
+      transform var(--duration-standard) var(--ease-signature),
+      box-shadow var(--duration-standard) var(--ease-signature),
+      border-color var(--duration-standard) var(--ease-signature);
+    will-change: transform;
+  }
+
+  .process-step::before {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at top right, rgba(230, 33, 23, 0.06), transparent 20%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.12), transparent);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--duration-standard) var(--ease-signature);
+  }
+
+  .process-step.is-active {
+    border-color: color-mix(in srgb, var(--color-accent-red) 18%, transparent);
+    box-shadow: var(--elevation-floating);
+  }
+
+  .process-step.is-active::before {
+    opacity: 1;
+  }
+
+  .process-step-number {
+    color: var(--color-ink-900);
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 8vw, 6.25rem);
+    font-weight: 850;
+    letter-spacing: var(--tracking-display);
+    line-height: 0.88;
+    font-variation-settings: "opsz" var(--font-display-opsz-xl), "SOFT" 0, "WONK" 1;
+  }
+
+  .process-step-copy {
+    display: grid;
+    gap: var(--space-md);
+    align-content: center;
+    min-width: 0;
+    padding-top: 0.45rem;
+  }
+
+  .process-step-copy h3 {
+    max-width: 16ch;
+    color: var(--color-ink-900);
+    font-size: clamp(1.4rem, 1.9vw, 2rem);
+    font-weight: 850;
+    line-height: 1.08;
+  }
+
+  .process-step-copy p {
+    max-width: 34rem;
+    color: var(--color-stone-600);
+    font-size: clamp(1rem, 1.2vw, 1.12rem);
+    line-height: 1.64;
+  }
+
+  .process-step-accent {
+    position: absolute;
+    inset-inline: 1.5rem auto;
+    top: 1.4rem;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: var(--radius-pill);
+    background: var(--color-accent-red);
+    opacity: 0;
+    transform: scale(0.85);
+    transition:
+      opacity var(--duration-standard) var(--ease-signature),
+      transform var(--duration-standard) var(--ease-signature);
+  }
+
+  .process-step.is-active .process-step-accent {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  @media (max-width: 980px) {
+    .process-shell {
+      grid-template-columns: 1fr;
+    }
+
+    .process-sticky {
+      position: static;
+    }
+
+    .process-title {
+      max-width: 16ch;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .process-step {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      gap: var(--space-md);
+    }
+
+    .process-step-number {
+      font-size: clamp(3.2rem, 13vw, 4.8rem);
+    }
+
+    .process-step-copy h3 {
+      max-width: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .process-sticky {
+      position: static;
+    }
+
+    .process-rail-fill {
+      transform: scaleY(1) !important;
+    }
+
+    .process-step,
+    .process-step-link {
+      transition: none;
+    }
+  }
+</style>

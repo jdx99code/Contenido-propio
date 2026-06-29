@@ -121,10 +121,19 @@ export default function ResultadosMotion({ resultados }) {
         </header>
 
         {/*
-          Slot preparado para una captura REAL de YouTube Studio.
-          Cuando exista la imagen, insertar aqui un marco limpio con className="studio-frame elevation-overlay".
-          No usar replicas falsas de la interfaz.
+          Captura real de YouTube Studio.
+          Mantenerla como referencia visual, no redibujar la interfaz a mano.
         */}
+
+        <MotionReveal as="div" className="results-studio-shell" delay={0.12}>
+          <div className="studio-frame elevation-overlay">
+            <img
+              className="studio-image"
+              src="/images/youtube-studio-analytics.png"
+              alt="Captura real de YouTube Studio con estadísticas del canal"
+            />
+          </div>
+        </MotionReveal>
 
         <div className="results-grid" data-results-grid>
           {resultados.metrics.map((metric, index) => (

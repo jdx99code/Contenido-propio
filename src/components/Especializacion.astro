@@ -1,5 +1,165 @@
 ---
-const { id = "especializacion" } = Astro.props;
+import content from "../content/es.json";
+import EspecializacionMotion from "./motion/EspecializacionMotion.jsx";
+
+const { especializacion } = content;
 ---
 
-<section data-section={id}></section>
+<EspecializacionMotion especializacion={especializacion} client:load />
+
+<style is:global>
+  .specialization-section {
+    position: relative;
+    overflow: clip;
+    padding-block: clamp(5rem, 9vw, 8rem);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(122, 106, 90, 0.035), transparent 26%),
+      color-mix(in srgb, var(--color-cream-100) 94%, var(--color-cream-200));
+  }
+
+  .specialization-inner {
+    display: grid;
+    justify-items: center;
+    gap: clamp(1.2rem, 2.4vw, 1.7rem);
+    text-align: center;
+  }
+
+  .specialization-eyebrow {
+    justify-self: center;
+  }
+
+  .specialization-brand {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem;
+    flex-wrap: wrap;
+  }
+
+  .specialization-youtube {
+    position: relative;
+    display: inline-grid;
+    width: 4.6rem;
+    height: 3.25rem;
+    place-items: center;
+    border-radius: 0.95rem;
+  }
+
+  .specialization-youtube-body {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #ff2a21, var(--color-accent-red));
+    box-shadow: 0 0.75rem 1.4rem rgba(230, 33, 23, 0.16);
+  }
+
+  .specialization-youtube-play {
+    position: relative;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin-left: 0.22rem;
+    border-top: 0.58rem solid transparent;
+    border-bottom: 0.58rem solid transparent;
+    border-left: 0.9rem solid var(--color-cream-100);
+    filter: drop-shadow(0 0.05rem 0.1rem rgba(26, 23, 20, 0.18));
+  }
+
+  .specialization-brand-name {
+    color: var(--color-ink-900);
+    font-size: clamp(2.4rem, 4.6vw, 4.25rem);
+    font-weight: 850;
+    letter-spacing: var(--tracking-heading);
+    line-height: 0.96;
+  }
+
+  .specialization-body {
+    max-width: 56rem;
+    color: var(--color-ink-800);
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 2.4vw, 2.4rem);
+    line-height: 1.28;
+    text-wrap: balance;
+  }
+
+  .specialization-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.9rem, 2vw, 1.25rem);
+    width: min(100%, 56rem);
+    margin-top: clamp(0.5rem, 1.2vw, 0.9rem);
+  }
+
+  .specialization-pillar {
+    display: grid;
+    justify-items: center;
+    gap: 0.8rem;
+    border: 1px solid color-mix(in srgb, var(--color-ink-900) 8%, transparent);
+    border-radius: var(--radius-lg);
+    background: color-mix(in srgb, var(--color-cream-100) 88%, var(--color-cream-200));
+    box-shadow: var(--elevation-raised);
+    padding: clamp(1.1rem, 2vw, 1.45rem);
+    transition:
+      transform var(--duration-standard) var(--ease-signature),
+      box-shadow var(--duration-standard) var(--ease-signature),
+      border-color var(--duration-standard) var(--ease-signature);
+  }
+
+  .specialization-pillar:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--color-accent-red) 22%, transparent);
+    box-shadow: var(--elevation-floating);
+  }
+
+  .specialization-pillar-icon {
+    display: inline-grid;
+    width: 2.3rem;
+    height: 2.3rem;
+    place-items: center;
+    color: var(--color-ink-900);
+    transition: color var(--duration-standard) var(--ease-signature);
+  }
+
+  .specialization-pillar:hover .specialization-pillar-icon {
+    color: var(--color-accent-red);
+  }
+
+  .specialization-pillar-icon svg {
+    width: 1.45rem;
+    height: 1.45rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5;
+  }
+
+  .specialization-pillar-label {
+    color: var(--color-ink-900);
+    font-size: var(--text-body-sm);
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  @media (max-width: 860px) {
+    .specialization-pillars {
+      grid-template-columns: 1fr;
+      width: min(100%, 34rem);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .specialization-brand-name {
+      font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    .specialization-body {
+      font-size: clamp(1.2rem, 5.8vw, 1.65rem);
+    }
+
+    .specialization-youtube {
+      width: 4rem;
+      height: 2.8rem;
+    }
+  }
+</style>

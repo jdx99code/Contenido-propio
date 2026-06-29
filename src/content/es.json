@@ -147,22 +147,103 @@
     }
   },
   "servicios": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "items": []
+    "eyebrow": "SERVICIOS",
+    "title": "Todo lo que hace falta para que tu canal no pare.",
+    "lead": "El sistema completo de producción de YouTube, en un solo sitio.",
+    "cta": {
+      "label": "Solicitar información →",
+      "href": "#formulario"
+    },
+    "items": [
+      {
+        "icon": "edit",
+        "title": "Edición profesional",
+        "description": "Montaje limpio, ritmo, subtítulos, música y efectos. Pensado para que la gente llegue al final del vídeo, no para que lo cierre a los 30 segundos."
+      },
+      {
+        "icon": "thumbnail",
+        "title": "Miniaturas que convierten",
+        "description": "Cada miniatura tiene un único objetivo: que hagan clic. Diseñadas para destacar en el feed y subir el CTR sin caer en lo cutre."
+      },
+      {
+        "icon": "seo",
+        "title": "SEO y publicación",
+        "description": "Títulos, descripciones, etiquetas, capítulos y publicación programada. Optimizamos cada vídeo para que se encuentre. Tú no tocas nada."
+      },
+      {
+        "icon": "calendar",
+        "title": "Calendario editorial",
+        "description": "Planificación mensual con ideas que tienen demanda real. Tu canal publica con constancia, sin depender de la inspiración."
+      },
+      {
+        "icon": "management",
+        "title": "Gestión completa del canal",
+        "description": "Llevamos tu canal de principio a fin: producción, subida y organización. Tú solo apruebas lo que se publica."
+      },
+      {
+        "icon": "niche",
+        "title": "Estrategia de nicho",
+        "description": "Investigación de palabras clave, formatos y ángulos para que cada vídeo tenga una razón de existir y un sitio donde crecer."
+      }
+    ]
   },
   "especializacion": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "items": []
+    "eyebrow": "ESPECIALIZADOS EN",
+    "brand": {
+      "label": "YouTube"
+    },
+    "body": "No somos una agencia de contenido genérica. Solo hacemos YouTube — y por eso lo hacemos bien. Conocemos el algoritmo, los formatos que retienen, cómo se diseña una miniatura que convierte y cómo posicionar un vídeo desde el primer día.",
+    "pillars": [
+      {
+        "icon": "retention",
+        "label": "Retención de audiencia"
+      },
+      {
+        "icon": "click",
+        "label": "CTR de miniaturas"
+      },
+      {
+        "icon": "search",
+        "label": "SEO en YouTube"
+      }
+    ]
   },
   "proceso": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "steps": []
+    "eyebrow": "CÓMO FUNCIONA",
+    "title": "De cero a vídeo publicado en YouTube, en 6 pasos",
+    "lead": "Una secuencia anclada donde cada paso aparece en el momento justo: tú apruebas, nosotros movemos el peso.",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Hablamos de tu canal",
+        "description": "Una llamada de 20 minutos para entender tu nicho, tu audiencia y tus objetivos. Sin compromiso."
+      },
+      {
+        "number": "02",
+        "title": "Preparamos el mes",
+        "description": "Temas con demanda real, calendario editorial y plan de contenido listo para que lo apruebes."
+      },
+      {
+        "number": "03",
+        "title": "Tú apruebas",
+        "description": "Das el visto bueno al plan. Si algo no encaja, lo ajustamos antes de producir nada."
+      },
+      {
+        "number": "04",
+        "title": "Editamos cada vídeo",
+        "description": "Montaje, subtítulos, música y ritmo pensados para que la gente llegue al final."
+      },
+      {
+        "number": "05",
+        "title": "Miniatura y título",
+        "description": "Diseñamos cada pieza para maximizar el CTR. Sin esto, el mejor vídeo pasa desapercibido."
+      },
+      {
+        "number": "06",
+        "title": "Publicamos por ti",
+        "description": "Subida, SEO y programación. Tu vídeo sale optimizado y a la hora correcta. Tú no tocas nada."
+      }
+    ]
   },
   "entregables": {
     "eyebrow": "",
