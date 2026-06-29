@@ -246,10 +246,42 @@
     ]
   },
   "entregables": {
-    "eyebrow": "",
-    "title": "",
-    "lead": "",
-    "items": []
+    "eyebrow": "LO QUE INCLUYE",
+    "title": "Nosotros lo hacemos. Tú no tocas nada.",
+    "lead": "Todo lo que necesita un vídeo para vivir en YouTube — producido, empaquetado y publicado. Tú solo grabas; del resto, te olvidas.",
+    "cta": {
+      "label": "Quiero delegarlo todo →",
+      "href": "#formulario"
+    },
+    "groups": [
+      {
+        "label": "PRODUCCIÓN",
+        "items": [
+          "Edición del vídeo",
+          "Subtítulos",
+          "Música y sonido",
+          "Recursos visuales"
+        ]
+      },
+      {
+        "label": "EMPAQUETADO",
+        "items": [
+          "Diseño de miniaturas",
+          "Títulos optimizados",
+          "Descripciones SEO",
+          "Etiquetas y capítulos"
+        ]
+      },
+      {
+        "label": "ESTRATEGIA Y PUBLICACIÓN",
+        "items": [
+          "Estrategia de nicho",
+          "Ideas con demanda real",
+          "Calendario editorial",
+          "Publicación programada"
+        ]
+      }
+    ]
   },
   "paraQuien": {
     "eyebrow": "",
