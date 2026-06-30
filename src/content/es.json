@@ -2,10 +2,9 @@
   "site": {
     "name": "Contenido Propio",
     "locale": "es",
-    "title": "Contenido Propio",
-    "description": "Agencia de contenido estratégico para YouTube: edición, miniaturas, SEO y publicación para creadores.",
-    "ogImage": "",
-    "url": ""
+    "title": "Contenido Propio — Producción premium de YouTube: edición, miniaturas y SEO",
+    "description": "Delegamos tu producción de YouTube: edición, miniaturas, SEO y publicación semanal para que grabes y tu canal siga creciendo.",
+    "ogImage": "/og-image.jpg"
   },
   "navigation": {
     "items": []
