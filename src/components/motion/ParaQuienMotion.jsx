@@ -163,6 +163,7 @@ export default function ParaQuienMotion({ data }) {
 
   return (
     <section
+      id="para-quien"
       className="pq-section"
       data-section="para-quien"
       aria-label={data.eyebrow}

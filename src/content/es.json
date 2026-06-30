@@ -3,14 +3,32 @@
     "name": "Contenido Propio",
     "locale": "es",
     "ogLocale": "es_ES",
-    "title": "Contenido Propio — Producción premium de YouTube: edición, miniaturas y SEO",
-    "description": "Delegamos tu producción de YouTube: edición, miniaturas, SEO y publicación semanal para que grabes y tu canal siga creciendo.",
+    "title": "Agencia de YouTube — Edición y faceless | Contenido Propio",
+    "description": "Agencia de YouTube para creadores: edición, miniaturas, SEO y canales faceless listos para publicar sin que el canal se frene.",
     "ogImage": "/og-image.jpg",
     "logo": "/logo-512.png",
     "sameAs": []
   },
   "navigation": {
-    "items": []
+    "label": "Navegación principal",
+    "items": [
+      {
+        "label": "Servicios",
+        "href": "#servicios"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "#proceso"
+      },
+      {
+        "label": "Para quién",
+        "href": "#para-quien"
+      },
+      {
+        "label": "Preguntas",
+        "href": "#faq"
+      }
+    ]
   },
   "header": {
     "logoLabel": "Contenido Propio",
@@ -151,8 +169,8 @@
   },
   "servicios": {
     "eyebrow": "SERVICIOS",
-    "title": "Todo lo que hace falta para que tu canal no pare.",
-    "lead": "El sistema completo de producción de YouTube, en un solo sitio.",
+    "title": "Una agencia de YouTube para publicar mejor, cada semana.",
+    "lead": "Sistema completo de producción: edición, miniaturas, SEO y publicación, sin convertir cada vídeo en una carga.",
     "cta": {
       "label": "Solicitar información →",
       "href": "#formulario"
@@ -161,7 +179,7 @@
       {
         "icon": "edit",
         "title": "Edición profesional",
-        "description": "Montaje limpio, ritmo, subtítulos, música y efectos. Pensado para que la gente llegue al final del vídeo, no para que lo cierre a los 30 segundos."
+        "description": "Montaje limpio, ritmo, subtítulos, música y efectos. Un editor de YouTube enfocado en retención, no solo en que el vídeo se vea bonito."
       },
       {
         "icon": "thumbnail",
@@ -190,12 +208,29 @@
       }
     ]
   },
+  "faceless": {
+    "eyebrow": "DOS FORMAS DE TRABAJAR",
+    "title": "¿Prefieres dar la cara… o crear un canal faceless?",
+    "lead": "La misma agencia de YouTube puede adaptarse a dos modelos: tú como cara del canal, o un sistema faceless completo sin aparecer en cámara.",
+    "cards": [
+      {
+        "kicker": "CON TU PRESENCIA",
+        "title": "Tú grabas, nosotros hacemos el resto",
+        "body": "Para creadores que aparecen en cámara y quieren delegar edición, miniaturas, SEO y publicación sin perder su voz ni su criterio."
+      },
+      {
+        "kicker": "SIN APARECER",
+        "title": "Canales faceless completos",
+        "body": "Para quien quiere construir un canal faceless sin dar la cara: preparamos el empaquetado, la producción y la publicación con un sistema claro."
+      }
+    ]
+  },
   "especializacion": {
     "eyebrow": "ESPECIALIZADOS EN",
     "brand": {
       "label": "YouTube"
     },
-    "body": "No somos una agencia de contenido genérica. Solo hacemos YouTube — y por eso lo hacemos bien. Conocemos el algoritmo, los formatos que retienen, cómo se diseña una miniatura que convierte y cómo posicionar un vídeo desde el primer día.",
+    "body": "No somos una agencia de contenido genérica. Somos una agencia de YouTube — y por eso lo hacemos bien. Conocemos el algoritmo, los formatos que retienen, cómo se diseña una miniatura que convierte y cómo posicionar un vídeo desde el primer día.",
     "pillars": [
       {
         "icon": "retention",

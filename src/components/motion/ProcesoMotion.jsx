@@ -55,6 +55,7 @@ export default function ProcesoMotion({ proceso }) {
 
   return (
     <section
+      id="proceso"
       ref={sectionRef}
       className={`process-section ${shouldReduceMotion ? "is-reduced" : ""}`}
       data-section="proceso"

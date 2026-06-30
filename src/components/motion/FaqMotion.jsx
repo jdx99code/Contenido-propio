@@ -166,6 +166,7 @@ export default function FaqMotion({ data }) {
 
   return (
     <section
+      id="faq"
       className="faq-section"
       data-section="faq"
       aria-label={data.eyebrow}

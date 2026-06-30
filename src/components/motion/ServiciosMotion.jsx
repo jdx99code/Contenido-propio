@@ -82,7 +82,7 @@ export default function ServiciosMotion({ servicios }) {
   const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="services-section" data-section="servicios" aria-labelledby="services-title">
+    <section id="servicios" className="services-section" data-section="servicios" aria-labelledby="services-title">
       <div className="container services-inner">
         <header className="services-header">
           <div className="services-kicker">
