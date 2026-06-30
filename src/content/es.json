@@ -2,9 +2,12 @@
   "site": {
     "name": "Contenido Propio",
     "locale": "es",
+    "ogLocale": "es_ES",
     "title": "Contenido Propio — Producción premium de YouTube: edición, miniaturas y SEO",
     "description": "Delegamos tu producción de YouTube: edición, miniaturas, SEO y publicación semanal para que grabes y tu canal siga creciendo.",
-    "ogImage": "/og-image.jpg"
+    "ogImage": "/og-image.jpg",
+    "logo": "/favicon.svg",
+    "sameAs": []
   },
   "navigation": {
     "items": []
@@ -33,6 +36,7 @@
     },
     "socialProof": {
       "avatars": ["MC", "AR", "LV", "NS"],
+      "avatarAltPrefix": "Iniciales de creador",
       "text": "+40 creadores ya confían en nosotros"
     },
     "dashboard": {
@@ -396,6 +400,34 @@
       "url": "Por favor, introduce una URL válida (ej: https://youtube.com/…).",
       "consent": "Debes aceptar la política de privacidad para continuar."
     }
+  },
+  "privacidad": {
+    "title": "Política de privacidad",
+    "description": "Información sobre cómo Contenido Propio trata los datos enviados a través del formulario de contacto.",
+    "eyebrow": "LEGAL",
+    "intro": "Esta política explica cómo tratamos los datos que nos envías cuando contactas con Contenido Propio.",
+    "sections": [
+      {
+        "title": "Responsable",
+        "body": "Contenido Propio es responsable del tratamiento de los datos enviados mediante el formulario de contacto de esta web."
+      },
+      {
+        "title": "Finalidad",
+        "body": "Usamos tus datos para responder a tu solicitud, entender las necesidades de tu canal y mantener la comunicación relacionada con nuestros servicios."
+      },
+      {
+        "title": "Datos tratados",
+        "body": "Podemos tratar tu nombre, email, enlace a tu canal de YouTube y el mensaje que decidas enviarnos."
+      },
+      {
+        "title": "Conservación",
+        "body": "Conservaremos los datos solo durante el tiempo necesario para gestionar tu consulta y las comunicaciones derivadas."
+      },
+      {
+        "title": "Derechos",
+        "body": "Puedes solicitar acceso, rectificación o eliminación de tus datos escribiéndonos por el mismo canal de contacto."
+      }
+    ]
   },
   "footer": {
     "legal": "",

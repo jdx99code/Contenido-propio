@@ -101,9 +101,15 @@ export default function HeroMotion({ hero }) {
             animate={{ opacity: 1, y: 0 }}
             transition={shouldReduceMotion ? reducedTransition : { ...signatureSpring, delay: 0.56 }}
           >
-            <div className="avatar-stack" aria-hidden="true">
+            <div className="avatar-stack" aria-label={hero.socialProof.text}>
               {hero.socialProof.avatars.map((avatar, index) => (
-                <span className="avatar" style={{ "--avatar-index": index }} key={avatar}>
+                <span
+                  className="avatar"
+                  style={{ "--avatar-index": index }}
+                  key={avatar}
+                  role="img"
+                  aria-label={`${hero.socialProof.avatarAltPrefix} ${avatar}`}
+                >
                   {avatar}
                 </span>
               ))}

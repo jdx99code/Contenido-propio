@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import content from "../content/es.json";
+
+const { privacidad } = content;
+---
+
+<Layout title={`${privacidad.title} | ${content.site.name}`} description={privacidad.description}>
+  <Header />
+  <main id="main-content" class="privacy-main">
+    <section class="section privacy-hero">
+      <div class="container privacy-shell">
+        <p class="eyebrow">{privacidad.eyebrow}</p>
+        <h1>{privacidad.title}</h1>
+        <p class="lead reading">{privacidad.intro}</p>
+      </div>
+    </section>
+
+    <section class="privacy-content section surface-alt" aria-label={privacidad.title}>
+      <div class="container privacy-shell">
+        {privacidad.sections.map((section) => (
+          <article class="privacy-block">
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .privacy-main {
+    min-height: 100vh;
+  }
+
+  .privacy-hero {
+    padding-block: clamp(5rem, 10vw, 8rem) clamp(3rem, 6vw, 5rem);
+  }
+
+  .privacy-shell {
+    max-width: var(--container-reading);
+  }
+
+  .privacy-shell h1 {
+    margin-top: var(--space-md);
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    font-weight: 760;
+    line-height: var(--leading-heading);
+    color: var(--color-ink-900);
+  }
+
+  .privacy-content {
+    padding-block: clamp(3rem, 7vw, 5rem);
+  }
+
+  .privacy-block {
+    padding-block: var(--space-xl);
+    border-top: var(--border-subtle);
+  }
+
+  .privacy-block h2 {
+    margin-bottom: var(--space-sm);
+    font-size: var(--text-h5);
+    line-height: var(--leading-title);
+  }
+
+  .privacy-block p {
+    color: var(--color-stone-600);
+  }
+</style>

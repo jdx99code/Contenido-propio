@@ -14,7 +14,7 @@ import Conversion from "../components/Conversion.astro";
 import content from "../content/es.json";
 ---
 
-<Layout title={content.site.title} description={content.site.description || undefined}>
+<Layout title={content.site.title} description={content.site.description || undefined} includeFaqSchema>
   <Header />
   <main id="main-content">
     <Hero />
