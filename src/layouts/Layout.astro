@@ -35,7 +35,7 @@ const pageTitle = title;
 const canonicalUrl = canonical ? new URL(canonical, Astro.site).toString() : new URL(Astro.url.pathname, Astro.site).toString();
 const ogImageUrl = new URL(ogImage, Astro.site).toString();
 const siteUrl = new URL("/", Astro.site).toString();
-const logoUrl = new URL(content.site.logo || "/favicon.svg", Astro.site).toString();
+const logoUrl = new URL(content.site.logo || "/logo-512.png", Astro.site).toString();
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -87,8 +87,9 @@ const faqSchema = {
     {alternates.map(({ lang, href }) => <link rel="alternate" hreflang={lang} href={href} />)}
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/png" href="/logo-512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/logo-512.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     {includeFaqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
