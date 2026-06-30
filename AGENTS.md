@@ -165,8 +165,8 @@ Diseno actual:
 
 - Panel editorial con cuatro metricas integradas.
 - Count-up al entrar en viewport.
+- Captura real de YouTube Studio insertada como referencia visual.
 - Nota legal discreta.
-- Hay un slot comentado para captura real de YouTube Studio; no inventar replicas falsas.
 
 ### Problema / Solucion
 
@@ -183,6 +183,92 @@ Diseno:
 - Problema: mas apagada, menor elevacion.
 - Solucion: mas luminosa, mayor elevacion, detalle rojo minimo.
 - Escala ya reducida para no verse demasiado grande.
+
+### Servicios
+
+Archivos:
+
+- `src/components/Servicios.astro`
+- `src/components/motion/ServiciosMotion.jsx`
+
+Contenido bajo `servicios` en `es.json`.
+
+Diseno:
+
+- Cabecera centrada con CTA a formulario.
+- 6 tarjetas sobrias con iconos de linea fina.
+- Micro-acento rojo solo en hover.
+
+### Especializacion
+
+Archivos:
+
+- `src/components/Especializacion.astro`
+- `src/components/motion/EspecializacionMotion.jsx`
+
+Contenido bajo `especializacion` en `es.json`.
+
+Diseno:
+
+- Bloque centrado y de respiro.
+- Logo de YouTube hecho con CSS/SVG.
+- Tres pilares centrados debajo.
+
+### Proceso
+
+Archivos:
+
+- `src/components/Proceso.astro`
+- `src/components/motion/ProcesoMotion.jsx`
+
+Contenido bajo `proceso` en `es.json`.
+
+Diseno:
+
+- Seccion estrella con sticky scroll en escritorio.
+- Indicador izquierdo con lista de pasos y barra de progreso vertical.
+- Columna derecha con 6 pasos anclados y revelado blindado.
+- En movil: lista vertical simple, sin sticky.
+
+### Entregables
+
+Archivos:
+
+- `src/components/Entregables.astro`
+
+Contenido bajo `entregables` en `es.json`.
+
+### Para Quien
+
+Archivos:
+
+- `src/components/ParaQuien.astro`
+- `src/components/motion/ParaQuienMotion.jsx`
+
+Contenido bajo `paraQuien` en `es.json`.
+
+### FAQ
+
+Archivos:
+
+- `src/components/FAQ.astro`
+- `src/components/motion/FaqMotion.jsx`
+
+Contenido bajo `faq` en `es.json`.
+
+### Conversion
+
+Archivos:
+
+- `src/components/Conversion.astro`
+- `src/components/motion/ConversionMotion.jsx`
+
+Contenido bajo `ctaFinal` y `formulario` en `es.json`.
+
+Diseno:
+
+- Cierre oscuro con CTA y formulario.
+- Es la seccion final de conversion.
 
 ## Styleguide
 
@@ -219,17 +305,16 @@ Mantenerla actualizada cuando se cambien primitives globales.
 2. Hero
 3. Resultados
 4. ProblemaSolucion
+5. Servicios
+6. Especializacion
+7. Proceso
+8. Entregables
+9. ParaQuien
+10. FAQ
+11. Conversion
 
-Componentes de secciones futuras existen como archivos, pero siguen vacios o pendientes:
+Componentes restantes siguen vacios o pendientes:
 
-- Servicios
-- Especializacion
-- Proceso
-- Entregables
-- ParaQuien
-- FAQ
-- CTAFinal
-- Formulario
 - Footer
 
 Build verificada con:
