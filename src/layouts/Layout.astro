@@ -87,8 +87,9 @@ const faqSchema = {
     {alternates.map(({ lang, href }) => <link rel="alternate" hreflang={lang} href={href} />)}
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
 
-    <link rel="icon" type="image/jpeg" href="/og-image.jpg" />
-    <link rel="apple-touch-icon" href="/og-image.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/tab-logo.svg" />
+    <link rel="icon" type="image/png" href="/tab-logo-512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="/tab-logo-512.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
     {includeFaqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
