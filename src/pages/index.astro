@@ -1,33 +1,278 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Resultados from "../components/Resultados.astro";
-import ProblemaSolucion from "../components/ProblemaSolucion.astro";
-import Servicios from "../components/Servicios.astro";
-import Faceless from "../components/Faceless.astro";
-import Especializacion from "../components/Especializacion.astro";
-import Proceso from "../components/Proceso.astro";
-import Entregables from "../components/Entregables.astro";
-import ParaQuien from "../components/ParaQuien.astro";
-import FAQ from "../components/FAQ.astro";
-import Conversion from "../components/Conversion.astro";
-import content from "../content/es.json";
+import siteContent from "../content/es.json";
+import home from "../content/es/home.json";
+import AnimatedSection from "../components/fe/AnimatedSection.astro";
+import AnimatedPipeline from "../components/fe/AnimatedPipeline.astro";
+import FAQAccordion from "../components/fe/FAQAccordion.astro";
+import Footer from "../components/fe/Footer.astro";
+import MagneticButton from "../components/fe/MagneticButton.astro";
+import NavBar from "../components/fe/NavBar.astro";
+import ParticleField from "../components/fe/ParticleField.astro";
+import PremiumHeroVisual from "../components/fe/PremiumHeroVisual.astro";
+import PremiumLoader from "../components/fe/PremiumLoader.astro";
+import TiltCard from "../components/fe/TiltCard.astro";
+import {
+  ArrowRight,
+  Calendar,
+  Check,
+  Clock,
+  Image as ImageIcon,
+  MousePointerClick,
+  Search,
+  Settings,
+  Sparkles,
+  Target,
+  Video,
+} from "lucide-react";
+
+const iconMap = {
+  Calendar,
+  Check,
+  Clock,
+  Image: ImageIcon,
+  MousePointerClick,
+  Search,
+  Settings,
+  Sparkles,
+  Target,
+  Video,
+};
 ---
 
-<Layout title={content.site.title} description={content.site.description || undefined} includeFaqSchema>
-  <Header />
-  <main id="main-content">
-    <Hero />
-    <Resultados />
-    <ProblemaSolucion />
-    <Servicios />
-    <Faceless />
-    <Especializacion />
-    <Proceso />
-    <Entregables />
-    <ParaQuien />
-    <FAQ />
-    <Conversion />
+<Layout title={siteContent.site.title} description={siteContent.site.description || undefined} includeFaqSchema>
+  <PremiumLoader label={home.loader.label} />
+  <NavBar {...home.nav} />
+
+  <main class="overflow-hidden">
+    <section class="relative isolate min-h-screen overflow-hidden bg-background pt-28" aria-labelledby="hero-title">
+      <ParticleField variant="ambient" count={56} className="opacity-70" />
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_18%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_85%_16%,rgba(230,33,23,0.045),transparent_24rem),radial-gradient(circle_at_60%_90%,rgba(120,113,108,0.12),transparent_28rem)]"></div>
+      <div class="absolute inset-0 -z-10 opacity-[0.22] [background-image:radial-gradient(circle_at_1px_1px,rgba(68,64,60,0.28)_1px,transparent_0)] [background-size:28px_28px]"></div>
+
+      <div class="container-page grid min-h-[calc(100vh-7rem)] items-center gap-14 py-16 lg:grid-cols-[1fr_0.92fr]">
+        <AnimatedSection as="div" className="grid gap-8">
+          <div class="inline-flex items-center gap-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.hero.eyebrow}</p>
+          </div>
+
+          <div class="grid gap-6">
+            <h1 id="hero-title" class="max-w-5xl font-heading text-6xl font-semibold leading-[0.92] text-stone-950 sm:text-7xl lg:text-8xl">
+              {home.hero.title.before}<span class="gradient-text">{home.hero.title.highlight}</span>{home.hero.title.after}
+            </h1>
+            <p class="max-w-2xl text-xl leading-8 text-stone-600">{home.hero.subtitle}</p>
+          </div>
+
+          <div class="flex flex-col gap-4 sm:flex-row">
+            <MagneticButton href={home.hero.primaryCta.href} label={home.hero.primaryCta.label} />
+            <MagneticButton href={home.hero.secondaryCta.href} label={home.hero.secondaryCta.label} variant="secondary" />
+          </div>
+
+          <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div class="flex -space-x-3">
+              {home.hero.socialProof.avatars.map((avatar) => (
+                <span class="grid h-11 w-11 place-items-center rounded-full border-2 border-background bg-stone-950 text-[0.68rem] font-bold text-background">
+                  {avatar}
+                </span>
+              ))}
+            </div>
+            <p class="max-w-md text-sm leading-6 text-stone-500">{home.hero.socialProof.text}</p>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection as="div" delay={0.12}>
+          <PremiumHeroVisual {...home.hero.visual} />
+        </AnimatedSection>
+      </div>
+    </section>
+
+    <section class="section-y bg-background" aria-labelledby="social-proof-title">
+      <div class="container-page grid gap-10">
+        <AnimatedSection as="div" className="grid max-w-3xl gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.pruebaSocial.eyebrow}</p>
+          <h2 id="social-proof-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">
+            {home.pruebaSocial.title}
+          </h2>
+          <p class="text-lg leading-8 text-stone-600">{home.pruebaSocial.body}</p>
+        </AnimatedSection>
+
+        <div class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
+          <AnimatedSection as="div">
+            <figure class="overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-[var(--shadow-card)]">
+              <img src={home.pruebaSocial.image.src} alt={home.pruebaSocial.image.alt} class="aspect-[16/9] w-full bg-white object-contain" />
+            </figure>
+          </AnimatedSection>
+
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            {home.pruebaSocial.stats.map((stat, index) => (
+              <AnimatedSection as="article" delay={index * 0.04} className="rounded-[var(--radius)] border border-border bg-background p-5 shadow-[var(--shadow-card)]">
+                <div class="mb-5 flex items-center justify-between gap-4">
+                  <strong class="font-heading text-4xl font-semibold text-stone-950">{stat.value}</strong>
+                  <span class="rounded-full bg-success-soft px-3 py-1 text-xs font-bold text-success">{stat.delta}</span>
+                </div>
+                <p class="text-sm leading-6 text-stone-500">{stat.label}</p>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+        <p class="max-w-3xl text-sm leading-6 text-stone-500">{home.pruebaSocial.note}</p>
+      </div>
+    </section>
+
+    <section class="border-y border-border bg-stone-950 py-8 text-background" aria-label="stats">
+      <div class="container-page grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {home.statsBar.items.map((item) => (
+          <AnimatedSection as="div" className="text-center">
+            <strong class="font-heading text-5xl font-semibold text-background">{item.value}</strong>
+            <p class="mt-2 text-sm font-medium uppercase tracking-[0.18em] text-stone-400">{item.label}</p>
+          </AnimatedSection>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-y bg-secondary/35" aria-labelledby="problem-solution-title">
+      <div class="container-page grid gap-8 lg:grid-cols-2">
+        <h2 id="problem-solution-title" class="sr-only">{home.problema.eyebrow}</h2>
+        <TiltCard {...home.problema} />
+        <TiltCard {...home.solucion} className="bg-success-soft/60" />
+      </div>
+    </section>
+
+    <section id="servicios" class="section-y bg-background" aria-labelledby="services-title">
+      <div class="container-page grid gap-12">
+        <AnimatedSection as="div" className="mx-auto grid max-w-3xl gap-4 text-center">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.servicios.eyebrow}</p>
+          <h2 id="services-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.servicios.title}</h2>
+          <p class="text-lg leading-8 text-stone-600">{home.servicios.lead}</p>
+        </AnimatedSection>
+
+        <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {home.servicios.items.map((item, index) => {
+            const Icon = iconMap[item.icon] || Sparkles;
+            const CardTag = item.href ? "a" : "article";
+            return (
+              <AnimatedSection as={CardTag} href={item.href} delay={index * 0.035} className="card-hover group rounded-[var(--radius)] bg-background p-6 no-underline">
+                <div class="mb-6 grid h-11 w-11 place-items-center rounded-lg border border-accent/20 bg-accent/5 text-accent">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <h3 class="font-heading text-2xl font-semibold text-stone-950">{item.title}</h3>
+                <p class="mt-3 text-sm leading-6 text-stone-600">{item.description}</p>
+                {item.href && (
+                  <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent transition group-hover:translate-x-1">
+                    {home.servicios.moreInfoLabel}
+                    <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                )}
+              </AnimatedSection>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-y border-y border-border bg-secondary/35" aria-labelledby="youtube-title">
+      <div class="container-page grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
+        <AnimatedSection as="div" className="grid place-items-center">
+          <div class="grid h-44 w-44 place-items-center rounded-[2rem] border border-accent/20 bg-background shadow-[var(--shadow-card)]">
+            <div class="grid h-24 w-32 place-items-center rounded-[1.4rem] bg-accent text-background">
+              <Video className="h-12 w-12 fill-current" />
+            </div>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection as="div" className="grid gap-7">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.youtubeTrust.eyebrow}</p>
+          <h2 id="youtube-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.youtubeTrust.title}</h2>
+          <p class="max-w-3xl text-lg leading-8 text-stone-600">{home.youtubeTrust.body}</p>
+          <div class="grid gap-4 sm:grid-cols-3">
+            {home.youtubeTrust.items.map((item) => {
+              const Icon = iconMap[item.icon] || Sparkles;
+              return (
+                <div class="rounded-[var(--radius)] border border-border bg-background p-5">
+                  <Icon className="mb-4 h-6 w-6 text-accent" />
+                  <p class="font-semibold text-stone-950">{item.label}</p>
+                </div>
+              );
+            })}
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section-y bg-background" aria-labelledby="pipeline-title">
+      <div class="container-page grid gap-10">
+        <AnimatedSection as="div" className="grid max-w-3xl gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.pipeline.eyebrow}</p>
+          <h2 id="pipeline-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.pipeline.title}</h2>
+          <p class="text-lg leading-8 text-stone-600">{home.pipeline.lead}</p>
+        </AnimatedSection>
+        <AnimatedPipeline steps={home.pipeline.steps} />
+      </div>
+    </section>
+
+    <section class="section-y bg-stone-950 text-background" aria-labelledby="scope-title">
+      <div class="container-page grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <AnimatedSection as="div" className="grid gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.alcance.eyebrow}</p>
+          <h2 id="scope-title" class="font-heading text-4xl font-semibold leading-tight md:text-6xl">{home.alcance.title}</h2>
+          <p class="text-lg leading-8 text-stone-300">{home.alcance.lead}</p>
+        </AnimatedSection>
+        <div class="grid gap-3 sm:grid-cols-2">
+          {home.alcance.items.map((item, index) => (
+            <AnimatedSection as="div" delay={index * 0.025} className="flex items-center gap-3 rounded-[var(--radius)] border border-white/10 bg-white/[0.035] p-4">
+              <span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-success-soft text-success">
+                <Check className="h-4 w-4" />
+              </span>
+              <p class="text-sm font-medium text-stone-200">{item}</p>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="para-quien" class="section-y bg-secondary/35" aria-labelledby="fit-title">
+      <div class="container-page grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+        <AnimatedSection as="div" className="grid content-start gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.paraQuien.eyebrow}</p>
+          <h2 id="fit-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.paraQuien.title}</h2>
+          <p class="text-lg leading-8 text-stone-600">{home.paraQuien.lead}</p>
+        </AnimatedSection>
+        <div class="grid gap-4">
+          {home.paraQuien.items.map((item, index) => (
+            <AnimatedSection as="div" delay={index * 0.03} className="flex gap-4 rounded-[var(--radius)] border border-border bg-background p-5 shadow-sm">
+              <span class="mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-accent"></span>
+              <p class="text-base leading-7 text-stone-700">{item}</p>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section-y bg-background" aria-labelledby="faq-title">
+      <div class="container-page grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+        <AnimatedSection as="div" className="grid gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.faq.eyebrow}</p>
+          <h2 id="faq-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.faq.title}</h2>
+        </AnimatedSection>
+        <FAQAccordion items={home.faq.items} />
+      </div>
+    </section>
+
+    <section class="section-y bg-stone-950 text-background" aria-labelledby="final-cta-title">
+      <div class="container-page grid gap-8 text-center">
+        <AnimatedSection as="div" className="mx-auto grid max-w-4xl gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.ctaFinal.eyebrow}</p>
+          <h2 id="final-cta-title" class="font-heading text-5xl font-semibold leading-tight md:text-7xl">{home.ctaFinal.title}</h2>
+          <p class="mx-auto max-w-2xl text-lg leading-8 text-stone-300">{home.ctaFinal.lead}</p>
+          <div class="flex flex-col justify-center gap-4 sm:flex-row">
+            <MagneticButton href={home.ctaFinal.primaryCta.href} label={home.ctaFinal.primaryCta.label} />
+            <MagneticButton href={home.ctaFinal.secondaryCta.href} label={home.ctaFinal.secondaryCta.label} variant={home.ctaFinal.secondaryCta.variant} />
+          </div>
+          <p class="text-sm text-stone-400">{home.ctaFinal.trust}</p>
+        </AnimatedSection>
+      </div>
+    </section>
   </main>
+
+  <Footer {...home.footer} />
 </Layout>

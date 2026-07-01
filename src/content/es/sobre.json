@@ -1,0 +1,241 @@
+{
+  "slug": "sobre-nosotros",
+  "meta": {
+    "title": "Sobre Contenido Propio | Agencia YouTube faceless",
+    "description": "Quiénes somos en Contenido Propio: una agencia especializada en estrategia, edición, miniaturas, SEO y gestión de canales de YouTube faceless."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Sobre nosotros",
+    "title": "Una agencia de YouTube centrada en operación, criterio y constancia.",
+    "lead": "Contenido Propio nace para resolver el problema que frena a muchos canales: no faltan ideas, falta un sistema que convierta ideas en publicaciones sostenibles.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver proceso",
+        "href": "/proceso"
+      }
+    ],
+    "panel": {
+      "kicker": "En números",
+      "items": [
+        "+40 canales acompañados con procesos de contenido.",
+        "+500 vídeos producidos, editados o empaquetados.",
+        "2 años refinando sistemas de publicación para YouTube."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "quienes-somos",
+      "eyebrow": "Quiénes somos",
+      "title": "No somos una agencia genérica de contenido.",
+      "layout": "split",
+      "body": [
+        "Trabajamos alrededor de una plataforma concreta: YouTube. Eso cambia las decisiones de guion, edición, miniatura, título, publicación y medición.",
+        "Nuestro enfoque combina sensibilidad editorial y operación. Queremos que el canal tenga una voz clara, pero también que la producción sea suficientemente ordenada como para repetirse.",
+        "Nos interesan los proyectos que entienden YouTube como un activo de largo plazo. No vendemos atajos ni resultados garantizados; construimos sistemas de contenido que se puedan medir y mejorar."
+      ]
+    },
+    {
+      "id": "stats",
+      "eyebrow": "Datos internos",
+      "title": "Tres señales de cómo trabajamos.",
+      "columns": 3,
+      "items": [
+        {
+          "title": "+40 canales",
+          "badge": "operación",
+          "body": "Proyectos acompañados con estrategia, edición, packaging o gestión."
+        },
+        {
+          "title": "+500 vídeos",
+          "badge": "producción",
+          "body": "Piezas trabajadas desde guion, montaje, miniatura, SEO o publicación."
+        },
+        {
+          "title": "0 promesas mágicas",
+          "badge": "criterio",
+          "body": "YouTube exige constancia, aprendizaje y ajustes. Lo decimos desde el principio."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Explorar",
+    "title": "Conoce cómo trabajamos.",
+    "items": [
+      {
+        "label": "Proceso",
+        "href": "/proceso",
+        "description": "Los pasos que usamos para convertir estrategia en publicaciones.",
+        "action": "Ver proceso"
+      },
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "La operación completa para canales que necesitan continuidad.",
+        "action": "Ver gestión"
+      },
+      {
+        "label": "Contacto",
+        "href": "/contacto",
+        "description": "La forma directa de contarnos el proyecto y resolver dudas.",
+        "action": "Contactar"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Proyecto",
+    "title": "Si buscas una operación sobria para YouTube, hablemos.",
+    "lead": "Revisamos tu punto de partida y te diremos con claridad si vemos recorrido.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Contactar",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

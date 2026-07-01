@@ -1,8 +1,16 @@
 ---
-import "@fontsource-variable/inter";
-import "@fontsource-variable/fraunces/full.css";
+import "@fontsource/playfair-display/latin-400.css";
+import "@fontsource/playfair-display/latin-600.css";
+import "@fontsource/playfair-display/latin-700.css";
+import "@fontsource/playfair-display/latin-800.css";
+import "@fontsource/playfair-display/latin-900.css";
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/inter/latin-700.css";
+import "@fontsource/inter/latin-800.css";
 import content from "../content/es.json";
-import "../styles/tokens.css";
+import "../styles/index.css";
 import "../styles/base.css";
 
 interface AlternateLanguage {
@@ -97,6 +105,37 @@ const faqSchema = {
   <body>
     <slot />
     <script>
+      const setupReveal = () => {
+        const revealElements = document.querySelectorAll(".reveal:not(.is-visible)");
+        const shouldReduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        if (shouldReduceMotion || !("IntersectionObserver" in window)) {
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (!entry.isIntersecting) {
+                return;
+              }
+
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            });
+          },
+          { rootMargin: "0px 0px -10% 0px", threshold: 0.05 }
+        );
+
+        revealElements.forEach((element) => observer.observe(element));
+      };
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupReveal, { once: true });
+      } else {
+        setupReveal();
+      }
+
       import Lenis from "lenis";
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");

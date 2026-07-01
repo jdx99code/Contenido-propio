@@ -1,0 +1,256 @@
+{
+  "slug": "miniaturas-seo-youtube",
+  "meta": {
+    "title": "Miniaturas, títulos y SEO para YouTube | Contenido Propio",
+    "description": "Diseño de miniaturas, títulos y SEO para YouTube: packaging completo para que cada vídeo se entienda y compita mejor."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Miniaturas y SEO",
+    "title": "El vídeo empieza antes del play: miniatura, título y SEO.",
+    "lead": "Diseñamos el packaging de cada vídeo para que la idea se entienda rápido, tenga una promesa clara y encaje con cómo se consume YouTube.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver edición",
+        "href": "/edicion-videos-faceless"
+      }
+    ],
+    "panel": {
+      "kicker": "Packaging",
+      "items": [
+        "Miniatura y título deben prometer lo mismo.",
+        "El SEO ayuda cuando el tema tiene intención de búsqueda.",
+        "La claridad suele ganar a la decoración."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "tres-columnas",
+      "eyebrow": "Tres capas",
+      "title": "Miniaturas, títulos y SEO como un sistema.",
+      "columns": 3,
+      "items": [
+        {
+          "title": "Miniaturas",
+          "body": "Diseñamos imágenes con contraste, jerarquía visual y una idea entendible en segundos.",
+          "points": [
+            "Promesa clara",
+            "Lectura rápida",
+            "Coherencia de canal",
+            "Variantes cuando tiene sentido"
+          ]
+        },
+        {
+          "title": "Títulos",
+          "body": "Trabajamos títulos que conectan intención, curiosidad y precisión sin vender algo que el vídeo no entrega.",
+          "points": [
+            "Ángulo específico",
+            "Lenguaje natural",
+            "Evitar exageración",
+            "Encaje con miniatura"
+          ]
+        },
+        {
+          "title": "SEO",
+          "body": "Optimizamos la información del vídeo para ayudar a YouTube y al usuario a entender de qué trata.",
+          "points": [
+            "Descripción",
+            "Etiquetas",
+            "Capítulos",
+            "Términos de búsqueda"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "criterio",
+      "eyebrow": "Criterio",
+      "title": "No buscamos clicks vacíos.",
+      "layout": "split",
+      "body": [
+        "Un buen CTR no sirve si la promesa rompe la confianza del espectador. El packaging debe atraer, pero también preparar correctamente el contenido.",
+        "Por eso trabajamos miniatura, título y SEO juntos. Si cada pieza cuenta una historia distinta, el vídeo compite peor.",
+        "El objetivo es mejorar la presentación y aprender de los datos, no garantizar visualizaciones."
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "El packaging necesita una buena pieza detrás.",
+    "items": [
+      {
+        "label": "Edición faceless",
+        "href": "/edicion-videos-faceless",
+        "description": "El vídeo debe cumplir la promesa que miniatura y título anuncian.",
+        "action": "Ver edición"
+      },
+      {
+        "label": "Vídeos faceless",
+        "href": "/videos-faceless-youtube",
+        "description": "Producción completa con packaging incluido.",
+        "action": "Ver producción"
+      },
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "Packaging recurrente dentro de una estrategia de canal.",
+        "action": "Ver gestión"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Packaging",
+    "title": "Si tus vídeos no se entienden en el feed, hay que revisar el packaging.",
+    "lead": "Analizamos miniatura, título y SEO como una sola decisión editorial.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Contactar",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContentPage from "../components/fe/ContentPage.astro";
+import page from "../content/es/videos.json";
+---
+
+<Layout title={page.meta.title} description={page.meta.description}>
+  <ContentPage page={page} />
+</Layout>

@@ -1,0 +1,182 @@
+---
+import { Check, Mail, Sparkles } from "lucide-react";
+import AnimatedSection from "./AnimatedSection.astro";
+import Footer from "./Footer.astro";
+import MagneticButton from "./MagneticButton.astro";
+import NavBar from "./NavBar.astro";
+
+interface Props {
+  page: Record<string, any>;
+}
+
+const { page } = Astro.props;
+const heroId = `${page.slug}-title`;
+---
+
+<NavBar {...page.nav} />
+
+<main class="overflow-hidden bg-background pt-20">
+  <section class="relative isolate border-b border-border bg-background py-20 md:py-28" aria-labelledby={heroId}>
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_10%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_82%_18%,rgba(230,33,23,0.045),transparent_24rem)]"></div>
+    <div class="absolute inset-0 -z-10 opacity-[0.18] [background-image:radial-gradient(circle_at_1px_1px,rgba(68,64,60,0.25)_1px,transparent_0)] [background-size:30px_30px]"></div>
+    <div class="container-page grid gap-10 lg:grid-cols-[1.05fr_0.7fr] lg:items-end">
+      <AnimatedSection as="div" className="grid gap-7">
+        <div class="inline-flex items-center gap-3">
+          <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.hero.eyebrow}</p>
+        </div>
+        <div class="grid gap-5">
+          <h1 id={heroId} class="max-w-5xl font-heading text-5xl font-semibold leading-[0.96] text-stone-950 md:text-7xl">
+            {page.hero.title}
+          </h1>
+          <p class="max-w-3xl text-lg leading-8 text-stone-600 md:text-xl">{page.hero.lead}</p>
+        </div>
+        {page.hero.ctas?.length > 0 && (
+          <div class="flex flex-col gap-4 sm:flex-row">
+            {page.hero.ctas.map((cta, index) => (
+              <MagneticButton href={cta.href} label={cta.label} variant={index === 0 ? "primary" : "secondary"} />
+            ))}
+          </div>
+        )}
+      </AnimatedSection>
+
+      {page.hero.panel && (
+        <AnimatedSection as="aside" delay={0.08} className="rounded-[1.5rem] border border-border bg-background/82 p-6 shadow-[var(--shadow-card)] backdrop-blur">
+          <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">{page.hero.panel.kicker}</p>
+          <div class="mt-6 grid gap-4">
+            {page.hero.panel.items.map((item) => (
+              <div class="flex items-start gap-3 rounded-[var(--radius)] border border-border bg-secondary/35 p-4">
+                <span class="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent"></span>
+                <p class="text-sm leading-6 text-stone-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </AnimatedSection>
+      )}
+    </div>
+  </section>
+
+  {page.sections?.map((section, sectionIndex) => (
+    <section class:list={["section-y border-t border-border", section.theme === "dark" ? "bg-stone-950 text-background" : sectionIndex % 2 === 0 ? "bg-background" : "bg-secondary/35"]} aria-labelledby={`${page.slug}-${section.id}`}>
+      <div class:list={["container-page grid gap-10", section.layout === "split" && "lg:grid-cols-[0.82fr_1.18fr] lg:items-start"]}>
+        <AnimatedSection as="div" className="grid content-start gap-4">
+          {section.eyebrow && <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{section.eyebrow}</p>}
+          <h2 id={`${page.slug}-${section.id}`} class:list={["font-heading text-4xl font-semibold leading-tight md:text-6xl", section.theme === "dark" ? "text-background" : "text-stone-950"]}>
+            {section.title}
+          </h2>
+          {section.lead && <p class:list={["max-w-3xl text-lg leading-8", section.theme === "dark" ? "text-stone-300" : "text-stone-600"]}>{section.lead}</p>}
+        </AnimatedSection>
+
+        {section.body?.length > 0 && (
+          <div class="grid gap-5">
+            {section.body.map((paragraph, index) => (
+              <AnimatedSection as="p" delay={index * 0.03} className={`text-lg leading-8 ${section.theme === "dark" ? "text-stone-300" : "text-stone-700"}`}>
+                {paragraph}
+              </AnimatedSection>
+            ))}
+          </div>
+        )}
+
+        {section.items?.length > 0 && (
+          <div class:list={["grid gap-4", section.columns === 3 ? "md:grid-cols-3" : section.columns === 2 ? "md:grid-cols-2" : ""]}>
+            {section.items.map((item, index) => (
+              <AnimatedSection as="article" delay={index * 0.025} className={`card-hover rounded-[var(--radius)] p-6 ${section.theme === "dark" ? "border-white/10 bg-white/[0.035]" : "bg-background"}`}>
+                <div class="mb-5 flex items-center justify-between gap-4">
+                  {item.number && <span class="font-heading text-4xl font-semibold text-stone-400">{item.number}</span>}
+                  {!item.number && <span class="grid h-10 w-10 place-items-center rounded-lg border border-accent/20 bg-accent/5 text-accent"><Sparkles className="h-4 w-4" /></span>}
+                  {item.badge && <span class="rounded-full bg-success-soft px-3 py-1 text-xs font-bold text-success">{item.badge}</span>}
+                </div>
+                <h3 class:list={["font-heading text-2xl font-semibold", section.theme === "dark" ? "text-background" : "text-stone-950"]}>{item.title}</h3>
+                {item.body && <p class:list={["mt-3 text-sm leading-6", section.theme === "dark" ? "text-stone-300" : "text-stone-600"]}>{item.body}</p>}
+                {item.points?.length > 0 && (
+                  <ul class="mt-5 grid gap-3">
+                    {item.points.map((point) => (
+                      <li class="flex gap-3 text-sm leading-6">
+                        <Check className="mt-1 h-4 w-4 shrink-0 text-success" />
+                        <span class={section.theme === "dark" ? "text-stone-300" : "text-stone-700"}>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </AnimatedSection>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  ))}
+
+  {page.related && (
+    <section class="section-y border-t border-border bg-background" aria-labelledby={`${page.slug}-related`}>
+      <div class="container-page grid gap-8">
+        <AnimatedSection as="div" className="grid max-w-3xl gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.related.eyebrow}</p>
+          <h2 id={`${page.slug}-related`} class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-5xl">{page.related.title}</h2>
+        </AnimatedSection>
+        <div class="grid gap-4 md:grid-cols-3">
+          {page.related.items.map((item, index) => (
+            <AnimatedSection as="a" href={item.href} delay={index * 0.03} className="card-hover group rounded-[var(--radius)] bg-background p-6 no-underline">
+              <h3 class="font-heading text-2xl font-semibold text-stone-950">{item.label}</h3>
+              <p class="mt-3 text-sm leading-6 text-stone-600">{item.description}</p>
+              <span class="mt-5 inline-flex text-sm font-semibold text-accent transition group-hover:translate-x-1">{item.action}</span>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {page.contactForm && (
+    <section id={page.contactForm.id} class="section-y border-t border-border bg-secondary/35" aria-labelledby={`${page.slug}-contact`}>
+      <div class="container-page grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+        <AnimatedSection as="div" className="grid content-start gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.contactForm.eyebrow}</p>
+          <h2 id={`${page.slug}-contact`} class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{page.contactForm.title}</h2>
+          <p class="text-lg leading-8 text-stone-600">{page.contactForm.lead}</p>
+          <div class="mt-4 grid gap-3">
+            {page.contactForm.info.map((item) => (
+              <a href={item.href} class="inline-flex items-center gap-3 text-sm font-semibold text-stone-800 no-underline transition hover:text-accent">
+                <Mail className="h-4 w-4 text-accent" />
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </AnimatedSection>
+        <AnimatedSection as="form" action={page.contactForm.action} method="post" enctype="text/plain" className="grid gap-4 rounded-[1.5rem] border border-border bg-background p-6 shadow-[var(--shadow-card)]">
+          {page.contactForm.fields.map((field) => (
+            <label class="grid gap-2 text-sm font-semibold text-stone-800">
+              {field.label}
+              {field.type === "textarea" ? (
+                <textarea name={field.name} rows={field.rows || 5} placeholder={field.placeholder} class="min-h-36 rounded-[var(--radius)] border border-border bg-background px-4 py-3 text-base font-normal text-stone-900 outline-none transition focus:border-accent" required={field.required}></textarea>
+              ) : (
+                <input name={field.name} type={field.type} placeholder={field.placeholder} class="rounded-[var(--radius)] border border-border bg-background px-4 py-3 text-base font-normal text-stone-900 outline-none transition focus:border-accent" required={field.required} />
+              )}
+            </label>
+          ))}
+          <button type="submit" class="mt-2 rounded-[var(--radius)] border border-primary bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-stone-800">
+            {page.contactForm.submit}
+          </button>
+        </AnimatedSection>
+      </div>
+    </section>
+  )}
+
+  {page.cta && (
+    <section class="section-y border-t border-border bg-stone-950 text-background" aria-labelledby={`${page.slug}-cta`}>
+      <div class="container-page grid gap-7 text-center">
+        <AnimatedSection as="div" className="mx-auto grid max-w-4xl gap-6">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.cta.eyebrow}</p>
+          <h2 id={`${page.slug}-cta`} class="font-heading text-5xl font-semibold leading-tight md:text-7xl">{page.cta.title}</h2>
+          <p class="mx-auto max-w-2xl text-lg leading-8 text-stone-300">{page.cta.lead}</p>
+          <div class="flex flex-col justify-center gap-4 sm:flex-row">
+            {page.cta.links.map((link, index) => (
+              <MagneticButton href={link.href} label={link.label} variant={index === 0 ? "primary" : "inverse"} />
+            ))}
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+  )}
+</main>
+
+<Footer {...page.footer} />

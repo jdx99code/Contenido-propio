@@ -1,0 +1,262 @@
+{
+  "slug": "proceso",
+  "meta": {
+    "title": "Proceso de trabajo para canales de YouTube | Contenido Propio",
+    "description": "Los 7 pasos con los que Contenido Propio investiga, produce, empaqueta, publica y mide vídeos para canales de YouTube faceless."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Proceso",
+    "title": "Un sistema de YouTube pensado para publicar sin improvisar.",
+    "lead": "Ordenamos la operación de un canal faceless en pasos claros: investigación, calendario, producción, edición, empaquetado, publicación y aprendizaje.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver servicios",
+        "href": "/#servicios"
+      }
+    ],
+    "panel": {
+      "kicker": "Modo de trabajo",
+      "items": [
+        "Tú apruebas dirección, tono y decisiones importantes.",
+        "Nosotros convertimos la estrategia en vídeos listos para publicar.",
+        "Cada ciclo deja datos para mejorar el siguiente."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "pasos",
+      "eyebrow": "7 pasos",
+      "title": "De idea a vídeo publicado.",
+      "lead": "No se trata de hacer más tareas. Se trata de que cada tarea tenga un lugar dentro del sistema.",
+      "columns": 2,
+      "items": [
+        {
+          "number": "01",
+          "title": "Diagnóstico del canal",
+          "body": "Revisamos punto de partida, nicho, recursos disponibles, competencia y objetivos realistas antes de proponer una cadencia."
+        },
+        {
+          "number": "02",
+          "title": "Investigación de nicho",
+          "body": "Buscamos demanda, formatos repetibles, ángulos editoriales y señales de búsqueda para no crear vídeos a ciegas."
+        },
+        {
+          "number": "03",
+          "title": "Calendario editorial",
+          "body": "Convertimos la estrategia en una planificación mensual con temas, prioridad y enfoque de cada pieza."
+        },
+        {
+          "number": "04",
+          "title": "Guion y estructura",
+          "body": "Preparamos la promesa, el recorrido narrativo y los recursos necesarios para que el vídeo sostenga la atención."
+        },
+        {
+          "number": "05",
+          "title": "Edición faceless",
+          "body": "Montamos ritmo, voz, recursos visuales, subtítulos, música y sonido con criterio de retención."
+        },
+        {
+          "number": "06",
+          "title": "Miniatura, título y SEO",
+          "body": "Diseñamos el empaquetado para que el vídeo se entienda rápido y tenga opciones de competir en YouTube."
+        },
+        {
+          "number": "07",
+          "title": "Publicación y medición",
+          "body": "Subimos, organizamos, programamos y revisamos señales para ajustar temas, ritmo y packaging en el siguiente ciclo."
+        }
+      ]
+    },
+    {
+      "id": "principios",
+      "eyebrow": "Criterio",
+      "title": "Qué hace que el proceso funcione.",
+      "layout": "split",
+      "body": [
+        "Trabajamos con una lógica editorial: cada vídeo necesita una razón de existir, una promesa entendible y un empaquetado coherente con el nicho.",
+        "No prometemos ingresos ni resultados garantizados. Nuestro trabajo es construir una operación consistente, medible y preparada para mejorar con datos.",
+        "El objetivo es reducir fricción: menos proveedores sueltos, menos decisiones improvisadas y más continuidad en la publicación."
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "Piezas que encajan con este proceso.",
+    "items": [
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "La operación completa cuando quieres delegar el canal de principio a fin.",
+        "action": "Ver servicio"
+      },
+      {
+        "label": "Vídeos faceless",
+        "href": "/videos-faceless-youtube",
+        "description": "Producción de vídeos sin aparecer en cámara, con estructura y ritmo.",
+        "action": "Ver producción"
+      },
+      {
+        "label": "Miniaturas y SEO",
+        "href": "/miniaturas-seo-youtube",
+        "description": "El empaquetado que ayuda a que cada vídeo se entienda y compita.",
+        "action": "Ver packaging"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Siguiente paso",
+    "title": "Si quieres publicar con método, empecemos por el diagnóstico.",
+    "lead": "Cuéntanos tu canal o la idea de nicho y revisamos qué operación tendría sentido.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Contactar",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

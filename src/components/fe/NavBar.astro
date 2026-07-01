@@ -1,0 +1,119 @@
+---
+import { ChevronDown, Menu } from "lucide-react";
+
+interface LinkItem {
+  label: string;
+  href: string;
+  children?: LinkItem[];
+}
+
+interface Props {
+  logoAlt?: string;
+  links?: LinkItem[];
+  cta?: LinkItem;
+  menuLabel?: string;
+  closeLabel?: string;
+}
+
+const {
+  logoAlt = "",
+  links = [],
+  cta,
+  menuLabel = "Menu",
+  closeLabel = "Close",
+} = Astro.props;
+---
+
+<header data-navbar class="fixed inset-x-0 top-0 z-40 transition-all duration-300 bg-transparent">
+  <nav class="container-page flex h-20 items-center justify-between gap-6">
+    <a href="/" class="flex items-center gap-3 no-underline" aria-label={logoAlt}>
+      <img src="/logo.svg" alt="" class="h-9 w-9" />
+      <span class="font-heading text-2xl font-semibold text-stone-950">{logoAlt}</span>
+    </a>
+
+    <div class="hidden items-center gap-7 md:flex">
+      {links.map((link) =>
+        link.children?.length ? (
+          <div class="group relative">
+            <a href={link.href} class="inline-flex items-center gap-2 text-sm font-medium text-stone-600 no-underline transition-colors hover:text-accent">
+              <span>{link.label}</span>
+              <ChevronDown className="h-3.5 w-3.5 text-stone-400 transition group-hover:text-accent" aria-hidden="true" />
+            </a>
+            <div class="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+              <div class="min-w-80 rounded-[1rem] border border-border bg-background p-2 shadow-[var(--shadow-card)]">
+                {link.children.map((child) => (
+                  <a href={child.href} class="block rounded-[0.65rem] px-4 py-3 text-sm font-medium text-stone-700 no-underline transition hover:bg-secondary hover:text-accent">
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a href={link.href} class="text-sm font-medium text-stone-600 no-underline transition-colors hover:text-accent">
+            {link.label}
+          </a>
+        )
+      )}
+    </div>
+
+    {cta && (
+      <a href={cta.href || "/aplicar"} class="hidden rounded-[var(--radius)] border border-primary bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground no-underline transition hover:bg-stone-800 md:inline-flex">
+        {cta.label}
+      </a>
+    )}
+
+    <details class="relative md:hidden">
+      <summary class="grid h-11 w-11 list-none place-items-center rounded-[var(--radius)] border border-border bg-background" aria-label={menuLabel}>
+        <Menu className="h-5 w-5" />
+      </summary>
+      <div class="absolute right-0 top-full mt-3 w-[min(92vw,20rem)] rounded-[1rem] border border-border bg-background p-2 shadow-[var(--shadow-card)]">
+        {links.map((link) =>
+          link.children?.length ? (
+            <details class="group rounded-[0.75rem] border border-transparent">
+              <summary class="flex list-none items-center justify-between gap-3 rounded-[0.65rem] px-4 py-3 text-base font-medium text-stone-700">
+                <span>{link.label}</span>
+                <ChevronDown className="h-4 w-4 text-stone-400 transition group-open:rotate-180" aria-hidden="true" />
+              </summary>
+              <div class="grid gap-1 px-2 pb-2">
+                {link.children.map((child) => (
+                  <a href={child.href} class="rounded-[0.65rem] px-4 py-3 text-sm font-medium text-stone-700 no-underline transition hover:bg-secondary hover:text-accent">
+                    {child.label}
+                  </a>
+                ))}
+              </div>
+            </details>
+          ) : (
+            <a href={link.href} class="block rounded-[0.65rem] px-4 py-3 text-base font-medium text-stone-700 no-underline transition hover:bg-secondary hover:text-accent">
+              {link.label}
+            </a>
+          )
+        )}
+        {cta && (
+          <a href={cta.href || "/aplicar"} class="mt-2 block rounded-[var(--radius)] border border-primary bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground no-underline">
+            {cta.label}
+          </a>
+        )}
+      </div>
+    </details>
+  </nav>
+
+</header>
+
+<script>
+  const navbar = document.querySelector("[data-navbar]");
+
+  const setScrolled = () => {
+    if (!navbar) return;
+    const scrolled = window.scrollY > 50;
+    navbar.classList.toggle("border-b", scrolled);
+    navbar.classList.toggle("border-border", scrolled);
+    navbar.classList.toggle("bg-background/86", scrolled);
+    navbar.classList.toggle("shadow-sm", scrolled);
+    navbar.classList.toggle("backdrop-blur-xl", scrolled);
+    navbar.classList.toggle("bg-transparent", !scrolled);
+  };
+
+  setScrolled();
+  window.addEventListener("scroll", setScrolled, { passive: true });
+</script>

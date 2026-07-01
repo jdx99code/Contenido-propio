@@ -1,0 +1,288 @@
+{
+  "slug": "nichos-youtube-faceless",
+  "meta": {
+    "title": "Nichos para YouTube faceless: ideas y criterio | Contenido Propio",
+    "description": "12 nichos para canales de YouTube faceless y una guía práctica para elegir nicho sin depender de promesas vacías."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Nichos faceless",
+    "title": "12 nichos de YouTube faceless y cómo elegir uno con criterio.",
+    "lead": "Un canal sin mostrar la cara necesita algo más que una lista de ideas: demanda, repetición, diferenciación y capacidad real de producción.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver proceso",
+        "href": "/proceso"
+      }
+    ],
+    "panel": {
+      "kicker": "Regla base",
+      "items": [
+        "Un buen nicho permite crear muchas piezas sin agotarse.",
+        "La demanda debe poder validarse antes de producir.",
+        "La operación tiene que ser sostenible con recursos razonables."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "nichos",
+      "eyebrow": "Ideas",
+      "title": "12 nichos que pueden funcionar en formato faceless.",
+      "lead": "No todos sirven para todas las personas. La clave está en elegir uno que puedas sostener y diferenciar.",
+      "columns": 3,
+      "items": [
+        {
+          "title": "Finanzas personales",
+          "body": "Educación financiera, ahorro, hábitos y conceptos explicados con claridad."
+        },
+        {
+          "title": "Tecnología y software",
+          "body": "Herramientas, IA, productividad, comparativas y tutoriales visuales."
+        },
+        {
+          "title": "Historia y geopolítica",
+          "body": "Relatos documentales, mapas, contexto y explicaciones de largo recorrido."
+        },
+        {
+          "title": "Negocios digitales",
+          "body": "Modelos, casos, análisis de empresas y aprendizajes accionables."
+        },
+        {
+          "title": "Salud y bienestar",
+          "body": "Hábitos, entrenamiento, descanso y nutrición con enfoque informativo responsable."
+        },
+        {
+          "title": "Psicología práctica",
+          "body": "Ideas sobre comportamiento, toma de decisiones y relaciones explicadas sin simplificar en exceso."
+        },
+        {
+          "title": "Educación y estudio",
+          "body": "Métodos, resúmenes, técnicas de aprendizaje y contenido evergreen."
+        },
+        {
+          "title": "Ciencia divulgativa",
+          "body": "Conceptos complejos convertidos en piezas visuales comprensibles."
+        },
+        {
+          "title": "Lujo y estilo de vida",
+          "body": "Análisis cultural, consumo aspiracional y narrativas visuales cuidadas."
+        },
+        {
+          "title": "Misterio y curiosidades",
+          "body": "Historias, datos y formatos seriables con mucho cuidado en fuentes."
+        },
+        {
+          "title": "Automoción",
+          "body": "Comparativas, historia de marcas, tecnología y análisis de mercado."
+        },
+        {
+          "title": "Carrera profesional",
+          "body": "Empleo, habilidades, productividad y decisiones laborales explicadas de forma útil."
+        }
+      ]
+    },
+    {
+      "id": "elegir",
+      "eyebrow": "Cómo elegir",
+      "title": "El nicho correcto no es el que suena más rentable, sino el que puedes ejecutar mejor.",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Demanda visible",
+          "body": "Debe existir búsqueda, conversación o consumo recurrente. Si nadie mira ese tipo de contenido, el diseño no compensa."
+        },
+        {
+          "title": "Ángulos repetibles",
+          "body": "Un nicho útil permite crear series, comparativas, listas, guías y piezas de análisis sin repetir siempre lo mismo."
+        },
+        {
+          "title": "Diferenciación",
+          "body": "No basta con copiar formatos que ya funcionan. Hay que definir tono, enfoque, profundidad y promesa editorial."
+        },
+        {
+          "title": "Producción viable",
+          "body": "Algunos nichos exigen investigación, gráficos o licencias más complejas. El sistema debe poder sostener la calidad semana a semana."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "Si ya tienes nicho, el siguiente paso es convertirlo en operación.",
+    "items": [
+      {
+        "label": "Crear canal sin mostrar la cara",
+        "href": "/crear-canal-youtube-sin-mostrar-la-cara",
+        "description": "Diseño inicial del canal, enfoque y piezas necesarias para salir con orden.",
+        "action": "Ver servicio"
+      },
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "Producción y gestión continua para canales que quieren publicar con constancia.",
+        "action": "Ver gestión"
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso",
+        "description": "Los pasos que usamos para pasar de nicho a vídeo publicado.",
+        "action": "Ver proceso"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Diagnóstico",
+    "title": "Revisamos si tu nicho tiene recorrido antes de producir.",
+    "lead": "No todos los nichos merecen el mismo nivel de inversión. Empezamos por separar intuición de señales reales.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Contactar",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

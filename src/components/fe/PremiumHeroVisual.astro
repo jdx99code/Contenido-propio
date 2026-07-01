@@ -1,0 +1,76 @@
+---
+import { Play, TrendingUp, Video } from "lucide-react";
+
+interface Stat {
+  label: string;
+  value?: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  metricLabel?: string;
+  metricValue?: string;
+  badge?: string;
+  stats?: Stat[];
+}
+
+const { title, subtitle, metricLabel, metricValue, badge, stats = [] } = Astro.props;
+const bars = [34, 58, 42, 74, 46, 66, 38, 82, 54, 62, 44, 70];
+---
+
+<div class="hero-visual-lite relative mx-auto w-full max-w-xl">
+  <div aria-hidden="true" class="absolute -inset-10 rounded-full bg-stone-500/10 blur-3xl"></div>
+  <div aria-hidden="true" class="absolute -right-8 top-8 h-40 w-40 rounded-full bg-accent/[0.045] blur-3xl"></div>
+  <article class="relative overflow-hidden rounded-2xl border border-border bg-background p-5 shadow-[var(--shadow-card-hover)]">
+    <div class="mb-5 flex items-center justify-between gap-4 border-b border-border pb-4">
+      <div class="flex items-center gap-3">
+        <img src="/logo.svg" alt="" class="h-8 w-8" />
+        <div>
+          <h3 class="font-heading text-2xl font-semibold text-stone-950">{title}</h3>
+          <p class="text-sm text-stone-500">{subtitle}</p>
+        </div>
+      </div>
+      {badge && <span class="rounded-full border border-accent/20 bg-accent/5 px-3 py-1 text-xs font-bold text-accent">{badge}</span>}
+    </div>
+
+    <div class="grid gap-4 md:grid-cols-[1.05fr_0.95fr]">
+      <div class="relative overflow-hidden rounded-xl border border-border bg-stone-950 p-4 text-background">
+        <div class="aspect-video rounded-lg bg-gradient-to-br from-stone-800 to-stone-950 p-4">
+          <div class="grid h-full place-items-center rounded-md border border-white/10 bg-white/[0.03]">
+            <div class="hero-play-pulse grid h-16 w-16 place-items-center rounded-full bg-accent text-white shadow-[0_18px_44px_rgba(230,33,23,0.25)]">
+              <Play className="ml-1 h-7 w-7 fill-current" />
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-end justify-between">
+          <div>
+            <p class="text-xs text-stone-400">{metricLabel}</p>
+            <p class="mt-1 font-heading text-4xl font-semibold text-success">{metricValue}</p>
+          </div>
+          <TrendingUp className="h-5 w-5 text-accent" />
+        </div>
+      </div>
+
+      <div class="grid gap-4">
+        <div class="rounded-xl border border-border bg-secondary/45 p-4">
+          <div class="mb-4 flex items-center gap-2 text-sm font-semibold text-stone-700">
+            <Video className="h-4 w-4 text-accent" />
+            <span>{stats[0]?.label}</span>
+          </div>
+          <div class="flex h-24 items-end gap-2">
+            {bars.map((height, index) => (
+              <span class:list={["hero-bar flex-1 rounded-t-sm", index === 7 ? "bg-success" : "bg-stone-300"]} style={`height:${height}%;--bar-delay:${index * 80}ms;`}></span>
+            ))}
+          </div>
+        </div>
+        {stats.slice(1).map((stat) => (
+          <div class="flex items-center justify-between rounded-xl border border-border bg-background p-4">
+            <span class="text-sm text-stone-500">{stat.label}</span>
+            <strong class="text-base font-bold text-success">{stat.value}</strong>
+          </div>
+        ))}
+      </div>
+    </div>
+  </article>
+</div>

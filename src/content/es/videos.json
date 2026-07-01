@@ -1,0 +1,256 @@
+{
+  "slug": "videos-faceless-youtube",
+  "meta": {
+    "title": "Producción de vídeos faceless para YouTube | Contenido Propio",
+    "description": "Producción de vídeos faceless para YouTube en 6 pasos: guion, voz, recursos, edición, packaging y publicación."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Vídeos faceless",
+    "title": "Vídeos de YouTube sin aparecer en cámara, producidos con sistema.",
+    "lead": "Creamos piezas faceless que combinan estructura, ritmo, recursos visuales, voz, miniatura y SEO para que el canal publique sin depender de grabarte.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver edición",
+        "href": "/edicion-videos-faceless"
+      }
+    ],
+    "panel": {
+      "kicker": "Qué buscamos",
+      "items": [
+        "Que la promesa del vídeo se entienda rápido.",
+        "Que el montaje sostenga atención sin ruido innecesario.",
+        "Que cada pieza forme parte de una estrategia editorial."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "produccion",
+      "eyebrow": "6 pasos",
+      "title": "La producción completa de un vídeo faceless.",
+      "columns": 2,
+      "items": [
+        {
+          "number": "01",
+          "title": "Tema y ángulo",
+          "body": "Elegimos una idea con demanda y una promesa concreta para evitar vídeos genéricos."
+        },
+        {
+          "number": "02",
+          "title": "Guion o estructura",
+          "body": "Definimos apertura, desarrollo, puntos clave y cierre para que la pieza avance con lógica."
+        },
+        {
+          "number": "03",
+          "title": "Voz y recursos",
+          "body": "Organizamos locución, material visual, gráficos, capturas y referencias necesarias."
+        },
+        {
+          "number": "04",
+          "title": "Edición",
+          "body": "Montamos ritmo, subtítulos, transiciones, sonido y recursos con intención editorial."
+        },
+        {
+          "number": "05",
+          "title": "Miniatura y título",
+          "body": "Creamos el empaquetado para que el vídeo sea entendible y clicable sin exagerar promesas."
+        },
+        {
+          "number": "06",
+          "title": "Publicación",
+          "body": "Subimos el vídeo con descripción, capítulos, etiquetas y programación cuando el servicio lo incluye."
+        }
+      ]
+    },
+    {
+      "id": "enfoque",
+      "eyebrow": "Enfoque",
+      "title": "Un vídeo faceless no es un collage de clips.",
+      "layout": "split",
+      "body": [
+        "La ausencia de una cara obliga a cuidar más la estructura. El espectador necesita entender rápido qué va a obtener y por qué merece seguir mirando.",
+        "Por eso tratamos cada pieza como una combinación de guion, edición y packaging. Si una parte falla, el resto trabaja con más dificultad.",
+        "No usamos fórmulas milagrosas. Construimos piezas consistentes y revisables para que el canal mejore con el tiempo."
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "Producción, edición y empaquetado trabajando juntos.",
+    "items": [
+      {
+        "label": "Edición faceless",
+        "href": "/edicion-videos-faceless",
+        "description": "Montaje, ritmo, subtítulos, sonido y recursos para vídeos sin cámara.",
+        "action": "Ver edición"
+      },
+      {
+        "label": "Miniaturas y SEO",
+        "href": "/miniaturas-seo-youtube",
+        "description": "La capa de packaging que acompaña cada publicación.",
+        "action": "Ver packaging"
+      },
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "Producción recurrente dentro de una operación completa.",
+        "action": "Ver gestión"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Producción",
+    "title": "Si el canal necesita vídeos constantes, ordenemos la línea de producción.",
+    "lead": "Cuéntanos el nicho, la frecuencia y el nivel de producción que tienes en mente.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver proceso",
+        "href": "/proceso"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

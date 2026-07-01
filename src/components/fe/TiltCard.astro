@@ -1,0 +1,27 @@
+---
+interface Props {
+  eyebrow?: string;
+  title?: string;
+  body?: string;
+  metric?: string;
+  meta?: string;
+  className?: string;
+}
+
+const { eyebrow, title, body, metric, meta, className = "" } = Astro.props;
+---
+
+<article class:list={["tilt-lite group relative overflow-hidden rounded-[var(--radius)] border border-border bg-background p-7 shadow-[var(--shadow-card)]", className]}>
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(circle_at_50%_50%,rgba(230,33,23,0.06),transparent_42%)]"></div>
+  <div class="relative grid gap-5">
+    {eyebrow && <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{eyebrow}</p>}
+    {title && <h3 class="font-heading text-3xl font-semibold leading-tight text-stone-950">{title}</h3>}
+    {body && <p class="text-base leading-7 text-stone-600">{body}</p>}
+    {(metric || meta) && (
+      <div class="flex items-end justify-between gap-4 border-t border-border pt-5">
+        {metric && <strong class="font-heading text-4xl font-semibold text-success">{metric}</strong>}
+        {meta && <span class="max-w-36 text-right text-sm leading-5 text-stone-500">{meta}</span>}
+      </div>
+    )}
+  </div>
+</article>

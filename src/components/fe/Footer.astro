@@ -1,0 +1,57 @@
+---
+interface LinkItem {
+  label: string;
+  href: string;
+}
+
+interface Column {
+  title: string;
+  links?: LinkItem[];
+}
+
+interface Props {
+  logoAlt?: string;
+  columns?: Column[];
+  legal?: LinkItem[];
+  copyright?: string;
+}
+
+const { logoAlt = "", columns = [], legal = [], copyright } = Astro.props;
+---
+
+<footer class="border-t border-border bg-stone-950 py-14 text-background">
+  <div class="container-page grid gap-10 lg:grid-cols-[1.1fr_1.4fr]">
+    <div class="grid content-start gap-5">
+      <a href="/" class="flex items-center gap-3 no-underline">
+        <img src="/logo.svg" alt="" class="h-10 w-10 invert" />
+        <span class="font-heading text-2xl font-semibold">{logoAlt}</span>
+      </a>
+      {copyright && <p class="max-w-sm text-sm leading-6 text-stone-400">{copyright}</p>}
+    </div>
+    <div class="grid gap-8 sm:grid-cols-3">
+      {columns.map((column) => (
+        <div>
+          <h3 class="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-stone-300">{column.title}</h3>
+          <ul class="grid gap-3">
+            {column.links?.map((link) => (
+              <li>
+                <a href={link.href} class="text-sm text-stone-400 no-underline transition hover:text-accent">
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+  {legal.length > 0 && (
+    <div class="container-page mt-10 flex flex-wrap gap-4 border-t border-white/10 pt-6">
+      {legal.map((link) => (
+        <a href={link.href} class="text-xs text-stone-500 no-underline transition hover:text-accent">
+          {link.label}
+        </a>
+      ))}
+    </div>
+  )}
+</footer>

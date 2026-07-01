@@ -3,12 +3,6 @@ import { motion, useInView, useReducedMotion } from "framer-motion";
 import { signatureSpring, reducedTransition } from "./motionConfig";
 
 const revealVariants = {
-  hidden: {
-    opacity: 0,
-    y: 24,
-    clipPath: "inset(0 0 100% 0)",
-    filter: "blur(8px)",
-  },
   visible: {
     opacity: 1,
     y: 0,
@@ -27,7 +21,7 @@ const MotionReveal = forwardRef(function MotionReveal(
   const isInView = useInView(localRef, { once: true, margin: "0px 0px -10% 0px" });
   const Component = motion[as] || motion.div;
   const shouldAnimate = mounted && !shouldReduceMotion;
-  const animationState = !shouldAnimate || isInView ? "visible" : "hidden";
+  const animationState = !shouldAnimate || isInView ? "visible" : "visible";
 
   useEffect(() => {
     setMounted(true);

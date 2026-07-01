@@ -1,0 +1,287 @@
+{
+  "slug": "crear-canal-youtube-sin-mostrar-la-cara",
+  "meta": {
+    "title": "Crear un canal de YouTube sin mostrar la cara | Contenido Propio",
+    "description": "Servicio para crear un canal de YouTube sin mostrar la cara: nicho, estrategia, branding, producción, miniaturas, SEO y publicación."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Crear canal faceless",
+    "title": "Crea un canal de YouTube sin mostrar la cara y sin montar la operación desde cero.",
+    "lead": "Diseñamos la base estratégica, visual y operativa de un canal faceless para que puedas empezar con una dirección clara.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver nichos",
+        "href": "/nichos-youtube-faceless"
+      }
+    ],
+    "panel": {
+      "kicker": "Antes de publicar",
+      "items": [
+        "Definimos nicho, posicionamiento y tipo de contenido.",
+        "Preparamos la identidad mínima para que el canal no parezca improvisado.",
+        "Construimos una primera línea editorial accionable."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "incluye",
+      "eyebrow": "Incluye",
+      "title": "12 piezas para arrancar con orden.",
+      "columns": 3,
+      "items": [
+        {
+          "title": "Análisis de nicho",
+          "body": "Demanda, competencia, formatos y señales de oportunidad."
+        },
+        {
+          "title": "Posicionamiento",
+          "body": "Definición de tono, promesa editorial y ángulo diferencial."
+        },
+        {
+          "title": "Nombre y enfoque",
+          "body": "Revisión del concepto del canal y coherencia con el nicho."
+        },
+        {
+          "title": "Identidad visual base",
+          "body": "Dirección de estilo para miniaturas, cabecera y presencia del canal."
+        },
+        {
+          "title": "Configuración inicial",
+          "body": "Estructura del canal, apartados básicos y criterios de publicación."
+        },
+        {
+          "title": "Calendario de arranque",
+          "body": "Primeros temas organizados por prioridad y dificultad."
+        },
+        {
+          "title": "Guías de formato",
+          "body": "Tipos de vídeo, duración estimada y estructura recomendada."
+        },
+        {
+          "title": "Producción de vídeos",
+          "body": "Preparación de las primeras piezas según el alcance contratado."
+        },
+        {
+          "title": "Edición faceless",
+          "body": "Montaje con ritmo, recursos visuales, subtítulos y sonido."
+        },
+        {
+          "title": "Miniaturas",
+          "body": "Sistema visual para que cada vídeo se lea rápido en el feed."
+        },
+        {
+          "title": "Títulos y SEO",
+          "body": "Optimización de títulos, descripciones, etiquetas y capítulos."
+        },
+        {
+          "title": "Publicación inicial",
+          "body": "Subida y programación de contenidos cuando forma parte del plan."
+        }
+      ]
+    },
+    {
+      "id": "para-quien",
+      "eyebrow": "Para quién",
+      "title": "Tiene sentido si quieres construir un activo, no probar una moda.",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Emprendedores",
+          "body": "Personas que quieren crear un canal sin convertirse en editores ni aparecer en cámara."
+        },
+        {
+          "title": "Negocios",
+          "body": "Equipos que quieren abrir una vía de contenido evergreen alrededor de su conocimiento."
+        },
+        {
+          "title": "Inversores de contenido",
+          "body": "Perfiles que entienden YouTube como un proyecto de largo plazo y quieren una operación delegada."
+        },
+        {
+          "title": "Creadores ocupados",
+          "body": "Personas con ideas o criterio de nicho que no tienen tiempo para producir cada pieza."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "Después de crear el canal, toca mantenerlo vivo.",
+    "items": [
+      {
+        "label": "Gestión de canales",
+        "href": "/gestion-canales-youtube",
+        "description": "Continuidad editorial y producción recurrente para que el canal no se quede en el lanzamiento.",
+        "action": "Ver gestión"
+      },
+      {
+        "label": "Vídeos faceless",
+        "href": "/videos-faceless-youtube",
+        "description": "Producción de cada vídeo dentro del sistema del canal.",
+        "action": "Ver producción"
+      },
+      {
+        "label": "Nichos faceless",
+        "href": "/nichos-youtube-faceless",
+        "description": "Ideas y criterios para elegir el nicho antes de empezar.",
+        "action": "Ver nichos"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Arranque",
+    "title": "Si quieres crear el canal, empecemos por validar el nicho.",
+    "lead": "Revisamos tu idea, el nivel de producción necesario y si tiene sentido construir el sistema.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver proceso",
+        "href": "/proceso"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

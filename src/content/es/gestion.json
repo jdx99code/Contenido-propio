@@ -1,0 +1,279 @@
+{
+  "slug": "gestion-canales-youtube",
+  "meta": {
+    "title": "Gestión de canales de YouTube faceless | Contenido Propio",
+    "description": "Gestión de canales de YouTube: estrategia, calendario, producción, edición, miniaturas, SEO, publicación y seguimiento."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Gestión de canales",
+    "title": "Gestionamos tu canal de YouTube para que publicar no dependa de tu agenda.",
+    "lead": "Una operación continua para canales que necesitan estrategia, producción, empaquetado, publicación y seguimiento en un mismo sistema.",
+    "ctas": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Ver proceso",
+        "href": "/proceso"
+      }
+    ],
+    "panel": {
+      "kicker": "Gestión continua",
+      "items": [
+        "Calendario editorial con prioridades claras.",
+        "Producción coordinada de cada vídeo.",
+        "Publicación y revisión de señales para mejorar."
+      ]
+    }
+  },
+  "sections": [
+    {
+      "id": "incluye",
+      "eyebrow": "Incluye",
+      "title": "10 responsabilidades dentro de una sola operación.",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Estrategia del canal",
+          "body": "Definimos dirección, prioridades y criterios editoriales."
+        },
+        {
+          "title": "Investigación de temas",
+          "body": "Buscamos ideas con demanda, intención y encaje con el nicho."
+        },
+        {
+          "title": "Calendario mensual",
+          "body": "Organizamos producción y publicación con una cadencia sostenible."
+        },
+        {
+          "title": "Guion y estructura",
+          "body": "Preparamos el recorrido de cada vídeo antes de editar."
+        },
+        {
+          "title": "Producción faceless",
+          "body": "Coordinamos voz, recursos, gráficos y materiales necesarios."
+        },
+        {
+          "title": "Edición",
+          "body": "Montaje orientado a ritmo, claridad y retención."
+        },
+        {
+          "title": "Miniaturas",
+          "body": "Diseño de miniaturas con lectura rápida y coherencia visual."
+        },
+        {
+          "title": "Títulos y SEO",
+          "body": "Optimización del packaging y metadatos de cada publicación."
+        },
+        {
+          "title": "Subida y programación",
+          "body": "Preparación del vídeo dentro de YouTube Studio cuando aplica."
+        },
+        {
+          "title": "Seguimiento",
+          "body": "Revisión de señales para ajustar próximos temas y formatos."
+        }
+      ]
+    },
+    {
+      "id": "canales",
+      "eyebrow": "Para qué canales",
+      "title": "Funciona mejor cuando el canal tiene intención de continuidad.",
+      "columns": 2,
+      "items": [
+        {
+          "title": "Canales faceless nuevos",
+          "body": "Proyectos que necesitan arrancar con una base clara y una cadencia realista."
+        },
+        {
+          "title": "Canales estancados",
+          "body": "Canales con publicaciones sueltas que necesitan orden editorial y consistencia."
+        },
+        {
+          "title": "Marcas personales",
+          "body": "Creadores que quieren delegar la parte operativa sin perder criterio."
+        },
+        {
+          "title": "Negocios con conocimiento",
+          "body": "Empresas que pueden convertir experiencia interna en contenido evergreen."
+        }
+      ]
+    }
+  ],
+  "related": {
+    "eyebrow": "Servicios relacionados",
+    "title": "La gestión reúne producción, edición y packaging.",
+    "items": [
+      {
+        "label": "Vídeos faceless",
+        "href": "/videos-faceless-youtube",
+        "description": "La línea de producción de cada pieza del canal.",
+        "action": "Ver producción"
+      },
+      {
+        "label": "Edición faceless",
+        "href": "/edicion-videos-faceless",
+        "description": "Montaje y acabado visual de los vídeos.",
+        "action": "Ver edición"
+      },
+      {
+        "label": "Miniaturas y SEO",
+        "href": "/miniaturas-seo-youtube",
+        "description": "Packaging para competir en búsqueda, sugeridos y feed.",
+        "action": "Ver packaging"
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "Gestión",
+    "title": "Si el canal se frena por operación, delega el sistema completo.",
+    "lead": "Analizamos tu situación y proponemos una cadencia sensata según nicho, recursos y objetivos.",
+    "links": [
+      {
+        "label": "Solicitar información",
+        "href": "/aplicar"
+      },
+      {
+        "label": "Contactar",
+        "href": "/contacto"
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+---
+interface Props {
+  count?: number;
+  label?: string;
+  className?: string;
+  variant?: "ambient" | "contained";
+}
+
+const { count = 38, label, className = "", variant = "contained" } = Astro.props;
+const isAmbient = variant === "ambient";
+const particles = Array.from({ length: count }, (_, index) => ({
+  id: index,
+  x: (index * 37) % 100,
+  y: (index * 61) % 100,
+  size: 2 + (index % 4),
+  duration: 5.5 + (index % 7) * 0.45,
+  delay: (index % 9) * 0.18,
+}));
+---
+
+<div class:list={[
+  isAmbient
+    ? "pointer-events-none absolute inset-0 overflow-hidden"
+    : "relative min-h-72 overflow-hidden rounded-[var(--radius)] border border-border bg-secondary/35",
+  className,
+]}>
+  <div aria-hidden="true" class="absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(120,113,108,0.16),transparent_38rem)]"></div>
+  {particles.map((particle) => (
+    <span
+      aria-hidden="true"
+      class="particle-dot absolute rounded-full bg-stone-500/25"
+      style={`left:${particle.x}%;top:${particle.y}%;width:${particle.size}px;height:${particle.size}px;--particle-duration:${particle.duration}s;--particle-delay:${particle.delay}s;--particle-x:${particle.id % 2 ? "8px" : "-8px"};`}
+    ></span>
+  ))}
+  {label && !isAmbient && (
+    <div class="absolute inset-x-6 bottom-6 rounded-lg border border-border/70 bg-background/75 p-4 text-sm font-medium text-stone-600 backdrop-blur-md">
+      {label}
+    </div>
+  )}
+</div>

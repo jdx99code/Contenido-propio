@@ -1,0 +1,35 @@
+---
+interface Props {
+  active?: boolean;
+  label?: string;
+  duration?: number;
+}
+
+const { active = true, label, duration = 900 } = Astro.props;
+---
+
+{active && (
+  <div data-premium-loader data-duration={duration} hidden class="fixed inset-0 z-50 grid place-items-center bg-stone-950 text-background">
+    <div class="grid min-w-64 gap-5 text-center">
+      <img src="/logo.svg" alt="" class="mx-auto h-12 w-12 invert" />
+      {label && <p class="text-sm font-semibold tracking-[0.18em] text-stone-300 uppercase">{label}</p>}
+      <div class="h-px overflow-hidden rounded-full bg-white/10">
+        <div class="premium-loader-line h-full bg-accent"></div>
+      </div>
+    </div>
+  </div>
+)}
+
+<script>
+  const loader = document.querySelector("[data-premium-loader]");
+
+  if (loader) {
+    const duration = Number(loader.getAttribute("data-duration") || "900");
+    loader.hidden = false;
+
+    window.setTimeout(() => {
+      loader.classList.add("premium-loader-exit");
+      window.setTimeout(() => loader.remove(), 420);
+    }, duration);
+  }
+</script>

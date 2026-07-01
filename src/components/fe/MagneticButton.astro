@@ -1,0 +1,30 @@
+---
+import { ArrowRight } from "lucide-react";
+
+interface Props {
+  href?: string;
+  label?: string;
+  variant?: "primary" | "secondary" | "inverse";
+  className?: string;
+}
+
+const { href = "#", label = "", variant = "primary", className = "" } = Astro.props;
+const classes =
+  variant === "inverse"
+    ? "border-background bg-background text-stone-950 hover:bg-stone-200"
+    : variant === "secondary"
+      ? "border-stone-300 bg-transparent text-stone-950 hover:border-accent/30 hover:bg-stone-950/5"
+      : "border-primary bg-primary text-primary-foreground hover:bg-stone-800";
+---
+
+<a
+  href={href}
+  class:list={[
+    "magnetic-lite group inline-flex min-h-12 items-center justify-center gap-2 rounded-[var(--radius)] border px-5 py-3 text-sm font-semibold no-underline shadow-sm transition duration-200",
+    classes,
+    className,
+  ]}
+>
+  <span>{label}</span>
+  <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
+</a>

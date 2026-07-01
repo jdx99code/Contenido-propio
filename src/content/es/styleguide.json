@@ -1,0 +1,263 @@
+{
+  "meta": {
+    "title": "Styleguide",
+    "description": "Fundación visual de Contenido Propio para revisar tokens, tipografía, botones y acentos."
+  },
+  "hero": {
+    "eyebrow": "Fundación visual",
+    "title": "Sistema editorial",
+    "highlight": "con acento rojo disciplinado.",
+    "lead": "Base de diseño para replicar la referencia: crema cálido, piedra profunda, Playfair Display para titulares e Inter para interfaz."
+  },
+  "palette": {
+    "eyebrow": "Paleta completa",
+    "title": "Códigos visibles para revisión",
+    "items": [
+      {
+        "label": "Fondo global crema",
+        "token": "--background / --cream",
+        "value": "#faf8f4"
+      },
+      {
+        "label": "Crema profundo",
+        "token": "--cream-deep",
+        "value": "#f1ece4"
+      },
+      {
+        "label": "Crema muted",
+        "token": "--cream-muted",
+        "value": "#e8dfd2"
+      },
+      {
+        "label": "Texto stone 950",
+        "token": "--stone-950",
+        "value": "#0c0a09"
+      },
+      {
+        "label": "Texto stone 900",
+        "token": "--stone-900",
+        "value": "#1c1917"
+      },
+      {
+        "label": "Texto stone 800",
+        "token": "--stone-800",
+        "value": "#292524"
+      },
+      {
+        "label": "Secundario stone 500",
+        "token": "--stone-500",
+        "value": "#78716c"
+      },
+      {
+        "label": "Secundario stone 400",
+        "token": "--stone-400",
+        "value": "#a8a29e"
+      },
+      {
+        "label": "Acento YouTube",
+        "token": "--accent / --youtube-red",
+        "value": "#E62117"
+      },
+      {
+        "label": "Verde éxito",
+        "token": "--success",
+        "value": "#15803d"
+      },
+      {
+        "label": "Verde éxito suave",
+        "token": "--success-soft",
+        "value": "#f0fdf4"
+      },
+      {
+        "label": "Rojo profundo degradado",
+        "token": "--youtube-red-deep",
+        "value": "#7a1410"
+      },
+      {
+        "label": "Rojo hover",
+        "token": "--youtube-red-dark",
+        "value": "#b91c14"
+      },
+      {
+        "label": "Borde cálido",
+        "token": "--border",
+        "value": "#d9d2c8"
+      }
+    ]
+  },
+  "typography": {
+    "eyebrow": "Tipografía",
+    "title": "Playfair para titulares, Inter para lectura",
+    "items": [
+      {
+        "label": "Display",
+        "role": "display",
+        "sample": "Canales que crecen con criterio editorial."
+      },
+      {
+        "label": "H1",
+        "role": "h1",
+        "sample": "Tu canal deja de improvisar."
+      },
+      {
+        "label": "H2",
+        "role": "h2",
+        "sample": "Estrategia, edición y publicación en un sistema."
+      },
+      {
+        "label": "H3",
+        "role": "h3",
+        "sample": "Miniaturas con intención antes del primer clic."
+      },
+      {
+        "label": "Lead",
+        "role": "lead",
+        "sample": "Una frase de apertura con aire suficiente para explicar la promesa sin parecer una plantilla."
+      },
+      {
+        "label": "Body",
+        "role": "body",
+        "sample": "Texto de cuerpo para explicar procesos, beneficios y criterios con una lectura clara en español."
+      },
+      {
+        "label": "Small",
+        "role": "small",
+        "sample": "Notas, estados, metadatos y detalles de interfaz con jerarquía secundaria."
+      }
+    ]
+  },
+  "components": {
+    "eyebrow": "Componentes base",
+    "title": "Botones y tarjeta",
+    "lead": "El primario usa tinta oscura; el rojo queda en acentos, enlaces, hovers y datos destacados."
+  },
+  "buttons": {
+    "items": [
+      {
+        "label": "Primario oscuro",
+        "variant": "primary",
+        "base": "Base",
+        "hover": "Hover"
+      },
+      {
+        "label": "Secundario contorno",
+        "variant": "secondary",
+        "base": "Base",
+        "hover": "Hover"
+      },
+      {
+        "label": "Inverso sobre oscuro",
+        "variant": "inverse",
+        "base": "Base",
+        "hover": "Hover"
+      }
+    ]
+  },
+  "card": {
+    "eyebrow": "Card hover",
+    "title": "Elevación cálida con borde sutil",
+    "body": "La tarjeta gana profundidad y apenas un tinte rojo en hover; el acento no se convierte en una superficie dominante."
+  },
+  "accent": {
+    "eyebrow": "Rojo disciplinado",
+    "title": "Datos en verde, marca en rojo",
+    "body": "Regla global: el verde éxito marca rendimiento y crecimiento; el rojo queda para identidad de marca, enlaces, hovers, play y subrayados.",
+    "demo": {
+      "label": "Ejemplo de uso correcto",
+      "items": [
+        {
+          "label": "CTR de miniatura",
+          "value": "+18%",
+          "tone": "success"
+        },
+        {
+          "label": "Retención inicial",
+          "value": "72%",
+          "tone": "success"
+        },
+        {
+          "label": "Señal visual",
+          "value": "Play",
+          "tone": "brand"
+        }
+      ],
+      "note": "Los datos de rendimiento se leen en verde. El rojo sigue presente como señal de marca."
+    }
+  },
+  "islands": {
+    "eyebrow": "Componentes",
+    "title": "Islas React con movimiento",
+    "lead": "Demos aisladas de las piezas animadas que se usarán para ensamblar las páginas en la siguiente fase.",
+    "tiltCard": {
+      "eyebrow": "Tilt 3D",
+      "title": "Tarjeta editorial sensible al cursor",
+      "body": "La elevación responde al movimiento sin convertir el rojo en un bloque dominante.",
+      "metric": "8,4%",
+      "meta": "CTR de miniatura en revisión semanal"
+    },
+    "magneticButton": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    },
+    "particleField": {
+      "label": "Partículas en piedra cálida a baja opacidad; el rojo se reserva para acentos funcionales."
+    },
+    "pipeline": {
+      "steps": [
+        {
+          "title": "Estrategia",
+          "body": "Definimos ángulo, promesa y formato antes de editar una sola pieza."
+        },
+        {
+          "title": "Producción",
+          "body": "Convertimos material bruto en una narrativa clara y retenedora."
+        },
+        {
+          "title": "Packaging",
+          "body": "Miniatura, título y SEO se diseñan como sistema de entrada."
+        },
+        {
+          "title": "Publicación",
+          "body": "El canal mantiene cadencia con datos visibles para iterar."
+        }
+      ]
+    },
+    "heroVisual": {
+      "title": "Contenido Propio",
+      "subtitle": "Dashboard editorial",
+      "badge": "Semana activa",
+      "metricLabel": "CTR medio",
+      "metricValue": "9,8%",
+      "stats": [
+        {
+          "label": "Retención por minuto",
+          "value": ""
+        },
+        {
+          "label": "Visualizaciones",
+          "value": "+42K"
+        },
+        {
+          "label": "Suscriptores",
+          "value": "+1,8K"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿La animación queda visible si falla JavaScript?",
+          "answer": "Sí. Los reveals renderizan visibles por defecto y solo aplican estados animados después de hidratar."
+        },
+        {
+          "question": "¿Dónde se usa el rojo?",
+          "answer": "En puntos, iconos, datos y estados. Los fondos grandes se mantienen en crema o piedra cálida."
+        },
+        {
+          "question": "¿Estos componentes montan páginas?",
+          "answer": "No. En esta fase solo se revisan en aislamiento dentro del styleguide."
+        }
+      ]
+    }
+  }
+}

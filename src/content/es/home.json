@@ -1,0 +1,424 @@
+{
+  "loader": {
+    "label": "Contenido Propio"
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Agencia YouTube faceless",
+    "title": {
+      "before": "Un canal de YouTube que ",
+      "highlight": "crece",
+      "after": " sin que aparezcas."
+    },
+    "subtitle": "Creamos, editamos, empaquetamos y gestionamos canales de YouTube pensados para crecer sin que tengas que enseñar la cara ni convertirte en editor.",
+    "primaryCta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    },
+    "secondaryCta": {
+      "label": "Ver cómo funciona",
+      "href": "/#como-funciona"
+    },
+    "socialProof": {
+      "avatars": [
+        "CP",
+        "YT",
+        "SEO",
+        "CTR"
+      ],
+      "text": "+40 canales acompañados con un sistema de publicación constante"
+    },
+    "visual": {
+      "title": "Contenido Propio",
+      "subtitle": "Dashboard editorial",
+      "badge": "Semana activa",
+      "metricLabel": "CTR medio",
+      "metricValue": "9,8%",
+      "stats": [
+        {
+          "label": "Retención por minuto",
+          "value": ""
+        },
+        {
+          "label": "Visualizaciones",
+          "value": "+42K"
+        },
+        {
+          "label": "Suscriptores",
+          "value": "+1,8K"
+        }
+      ]
+    }
+  },
+  "pruebaSocial": {
+    "eyebrow": "Prueba social",
+    "title": "Resultados reales de canales que gestionamos.",
+    "body": "Una operación completa de YouTube: estrategia, edición, miniatura, SEO y publicación funcionando con una cadencia clara.",
+    "image": {
+      "src": "/social-proof.png",
+      "alt": "Captura de YouTube Studio con resultados de un canal gestionado",
+      "placeholder": "Sube la captura real a public/social-proof.png"
+    },
+    "stats": [
+      {
+        "value": "4,3M",
+        "label": "Visualizaciones",
+        "delta": "+16%"
+      },
+      {
+        "value": "328,5K",
+        "label": "Horas de visualización",
+        "delta": "+14%"
+      },
+      {
+        "value": "+40,2K",
+        "label": "Nuevos suscriptores",
+        "delta": "+18%"
+      },
+      {
+        "value": "10.341 €",
+        "label": "Ingresos estimados",
+        "delta": "+17%"
+      }
+    ],
+    "note": "Datos agregados de canales gestionados. Los resultados individuales varían según nicho, consistencia y punto de partida."
+  },
+  "statsBar": {
+    "items": [
+      {
+        "value": "+40",
+        "label": "canales"
+      },
+      {
+        "value": "+500",
+        "label": "vídeos"
+      },
+      {
+        "value": "2 años",
+        "label": "de sistema"
+      },
+      {
+        "value": "0€",
+        "label": "en anuncios"
+      }
+    ]
+  },
+  "problema": {
+    "eyebrow": "El problema",
+    "title": "Quieres crecer en YouTube, pero el proceso te come.",
+    "body": "Investigar temas, escribir guiones, editar vídeos, diseñar miniaturas, optimizar títulos, publicar y revisar datos. Cada vídeo se convierte en un proyecto entero, y cuando no hay tiempo el canal se para.",
+    "metric": "-12h",
+    "meta": "por semana perdidas en tareas operativas"
+  },
+  "solucion": {
+    "eyebrow": "La solución",
+    "title": "Tú apruebas la dirección. Nosotros hacemos el resto.",
+    "body": "Un sistema completo para crear, empaquetar y publicar contenido en YouTube sin que aparezcas. Nosotros gestionamos la operación; tú solo ves cómo crece semana tras semana.",
+    "metric": "+34%",
+    "meta": "crecimiento mensual en canales activos"
+  },
+  "servicios": {
+    "eyebrow": "Servicios",
+    "title": "Todo lo que necesita un canal faceless para publicar mejor.",
+    "lead": "No hacemos piezas sueltas sin contexto. Construimos una operación completa para que cada vídeo tenga estrategia, producción y empaquetado.",
+    "moreInfoLabel": "Más información",
+    "items": [
+      {
+        "icon": "Video",
+        "title": "Edición de vídeos faceless",
+        "description": "Montaje dinámico, ritmo, recursos visuales, subtítulos y sonido para sostener la atención sin depender de una cara en cámara.",
+        "href": "/edicion-videos-faceless"
+      },
+      {
+        "icon": "Image",
+        "title": "Miniaturas que convierten",
+        "description": "Diseñamos miniaturas con una promesa clara, contraste y lectura rápida para mejorar el CTR sin caer en lo barato.",
+        "href": "/miniaturas-seo-youtube"
+      },
+      {
+        "icon": "Search",
+        "title": "SEO para YouTube",
+        "description": "Títulos, descripciones, etiquetas, capítulos y estructura para que cada vídeo tenga más opciones de ser encontrado.",
+        "href": "/miniaturas-seo-youtube"
+      },
+      {
+        "icon": "Calendar",
+        "title": "Calendario editorial",
+        "description": "Planificamos temas con demanda real para que el canal publique con constancia y no dependa de la inspiración.",
+        "href": "/proceso"
+      },
+      {
+        "icon": "Settings",
+        "title": "Gestión completa del canal",
+        "description": "Llevamos tu canal de principio a fin: producción, subida, organización y seguimiento. Tú ves crecer el canal mientras nosotros lo gestionamos.",
+        "href": "/gestion-canales-youtube"
+      },
+      {
+        "icon": "Target",
+        "title": "Estrategia de nicho",
+        "description": "Analizamos demanda, competencia, ángulos y formatos para construir un canal con recorrido, no una colección de vídeos sueltos.",
+        "href": "/nichos-youtube-faceless"
+      }
+    ]
+  },
+  "youtubeTrust": {
+    "eyebrow": "Especializados en YouTube",
+    "title": "No somos una agencia genérica de contenido.",
+    "body": "YouTube tiene sus propias reglas: retención, CTR, intención de búsqueda, frecuencia y empaquetado. Nuestro sistema está diseñado para esa plataforma.",
+    "brand": "YouTube",
+    "items": [
+      {
+        "icon": "Clock",
+        "label": "Retención"
+      },
+      {
+        "icon": "MousePointerClick",
+        "label": "CTR"
+      },
+      {
+        "icon": "Search",
+        "label": "SEO"
+      }
+    ]
+  },
+  "pipeline": {
+    "eyebrow": "Cómo funciona",
+    "title": "De idea a vídeo publicado en 6 pasos.",
+    "lead": "Una secuencia clara para que el canal avance cada semana sin improvisar ni perseguir proveedores.",
+    "steps": [
+      {
+        "title": "Investigamos el nicho",
+        "body": "Detectamos demanda, competencia, temas y formatos con potencial real."
+      },
+      {
+        "title": "Diseñamos el calendario",
+        "body": "Convertimos la estrategia en una planificación mensual aprobable."
+      },
+      {
+        "title": "Preparamos el contenido",
+        "body": "Guion, estructura, recursos y enfoque para que el vídeo tenga una promesa clara."
+      },
+      {
+        "title": "Editamos el vídeo",
+        "body": "Montaje, ritmo, subtítulos, sonido y recursos visuales orientados a retención."
+      },
+      {
+        "title": "Creamos el packaging",
+        "body": "Miniatura, título, descripción y SEO preparados para competir en YouTube."
+      },
+      {
+        "title": "Publicamos y medimos",
+        "body": "Subimos, organizamos, programamos y revisamos datos para mejorar la siguiente pieza."
+      }
+    ]
+  },
+  "alcance": {
+    "eyebrow": "Alcance",
+    "title": "Nosotros lo hacemos todo.",
+    "lead": "La idea es sencilla: que no tengas que convertirte en productor, editor, diseñador y gestor para tener un canal serio.",
+    "items": [
+      "Investigación de nicho y temas",
+      "Calendario editorial",
+      "Guion y estructura del contenido",
+      "Edición del vídeo",
+      "Subtítulos y recursos visuales",
+      "Diseño de miniaturas",
+      "Títulos y SEO",
+      "Publicación programada",
+      "Revisión de métricas"
+    ]
+  },
+  "paraQuien": {
+    "eyebrow": "Para quién",
+    "title": "Es para ti si…",
+    "lead": "Trabajamos mejor con perfiles que quieren construir un activo de contenido con visión de largo plazo.",
+    "items": [
+      "Quieres crear un canal de YouTube sin mostrar tu cara.",
+      "Tienes claro el nicho, pero no quieres gestionar toda la operación.",
+      "Buscas publicar con constancia sin contratar a cinco perfiles distintos.",
+      "Quieres que miniatura, título, edición y SEO trabajen como un sistema.",
+      "Prefieres una operación sobria, clara y orientada a datos.",
+      "Ves YouTube como un activo, no como un experimento de fin de semana."
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Lo que necesitas saber antes de empezar.",
+    "items": [
+      {
+        "question": "¿Qué es exactamente un canal faceless?",
+        "answer": "Un canal donde no apareces en cámara. El valor está en el contenido: guion, voz, imágenes, edición, miniatura y estrategia."
+      },
+      {
+        "question": "¿Puedo tener un canal sin mostrar mi cara?",
+        "answer": "Sí. Podemos trabajar canales completamente faceless o modelos donde tú solo aportas dirección, voz o aprobación."
+      },
+      {
+        "question": "¿Funciona en cualquier nicho?",
+        "answer": "Lo estudiamos antes de decir que sí. Analizamos demanda, competencia y formatos; si no vemos recorrido, también te lo diremos."
+      },
+      {
+        "question": "¿Cuánto cuesta?",
+        "answer": "Depende del volumen, el tipo de canal y el nivel de producción. En la llamada inicial te damos un presupuesto claro."
+      },
+      {
+        "question": "¿Pierdo el control del canal?",
+        "answer": "No. Tú apruebas dirección y decisiones importantes. Nosotros ejecutamos la operación para que el canal avance."
+      },
+      {
+        "question": "¿Cuándo se ven resultados?",
+        "answer": "YouTube premia constancia y mejora acumulada. Construimos un sistema para publicar bien de forma sostenida, no promesas mágicas."
+      }
+    ]
+  },
+  "ctaFinal": {
+    "eyebrow": "Solicitar información",
+    "title": "Construyamos un canal que pueda crecer sin depender de tu cara.",
+    "lead": "Cuéntanos el nicho que tienes en mente y revisamos si hay recorrido para construir una operación faceless seria.",
+    "primaryCta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    },
+    "secondaryCta": {
+      "label": "Ver proceso",
+      "href": "/#como-funciona",
+      "variant": "inverse"
+    },
+    "trust": "Respuesta en 24-48h · Sin compromiso · Diagnóstico claro"
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}
