@@ -9,6 +9,11 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: 'https://contenido-propio.vercel.app',
   adapter: vercel(),
+  // Inline el CSS critico para eliminar el request bloqueante de render
+  // y acelerar FCP/LCP (mejora el swap de la fuente del H1).
+  build: {
+    inlineStylesheets: 'always',
+  },
   integrations: [
     react(),
     tailwind(),

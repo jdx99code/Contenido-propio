@@ -112,6 +112,10 @@
     "body": "Una operación completa de YouTube: estrategia, edición, miniatura, SEO y publicación funcionando con una cadencia clara.",
     "image": {
       "src": "/social-proof.png",
+      "srcAvif": "/social-proof.avif",
+      "srcWebp": "/social-proof.webp",
+      "width": 1400,
+      "height": 786,
       "alt": "Captura de YouTube Studio con resultados de un canal gestionado",
       "placeholder": "Sube la captura real a public/social-proof.png"
     },

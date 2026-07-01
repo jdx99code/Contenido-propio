@@ -48,7 +48,7 @@ const { logoAlt = "", columns = [], legal = [], copyright } = Astro.props;
   {legal.length > 0 && (
     <div class="container-page mt-10 flex flex-wrap gap-4 border-t border-white/10 pt-6">
       {legal.map((link) => (
-        <a href={link.href} class="text-xs text-stone-500 no-underline transition hover:text-accent">
+        <a href={link.href} class="text-xs text-stone-400 no-underline transition hover:text-accent">
           {link.label}
         </a>
       ))}

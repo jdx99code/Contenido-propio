@@ -22,7 +22,7 @@ const { steps = [] } = Astro.props;
             <span class:list={["grid h-9 w-9 place-items-center rounded-full", index === 0 ? "bg-accent text-white" : "bg-stone-200 text-stone-500"]}>
               {index === 0 ? <Check className="h-4 w-4" /> : <CircleDot className="h-4 w-4" />}
             </span>
-            <span class="text-xs font-bold uppercase tracking-[0.18em] text-stone-400">{String(index + 1).padStart(2, "0")}</span>
+            <span class="text-xs font-bold uppercase tracking-[0.18em] text-stone-600">{String(index + 1).padStart(2, "0")}</span>
           </div>
           <h3 class="font-heading text-2xl font-semibold text-stone-950">{step.title}</h3>
           <p class="mt-3 text-sm leading-6 text-stone-600">{step.body}</p>

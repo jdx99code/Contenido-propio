@@ -100,7 +100,19 @@ const iconMap = {
         <div class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
           <AnimatedSection as="div">
             <figure class="overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-[var(--shadow-card)]">
-              <img src={home.pruebaSocial.image.src} alt={home.pruebaSocial.image.alt} class="aspect-[16/9] w-full bg-white object-contain" />
+              <picture>
+                {home.pruebaSocial.image.srcAvif && <source type="image/avif" srcset={home.pruebaSocial.image.srcAvif} />}
+                {home.pruebaSocial.image.srcWebp && <source type="image/webp" srcset={home.pruebaSocial.image.srcWebp} />}
+                <img
+                  src={home.pruebaSocial.image.src}
+                  alt={home.pruebaSocial.image.alt}
+                  width={home.pruebaSocial.image.width}
+                  height={home.pruebaSocial.image.height}
+                  loading="lazy"
+                  decoding="async"
+                  class="aspect-[16/9] w-full bg-white object-contain"
+                />
+              </picture>
             </figure>
           </AnimatedSection>
 

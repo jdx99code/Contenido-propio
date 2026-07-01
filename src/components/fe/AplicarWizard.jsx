@@ -257,7 +257,7 @@ export default function AplicarWizard({ content }) {
                 className={`flex items-center gap-3 rounded-[var(--radius)] border px-3 py-3 text-sm transition ${
                   isActive || isDone
                     ? "border-accent/30 bg-accent/5 text-accent"
-                    : "border-border bg-secondary/30 text-stone-500"
+                    : "border-border bg-secondary/30 text-stone-600"
                 }`}
               >
                 <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-current/20">

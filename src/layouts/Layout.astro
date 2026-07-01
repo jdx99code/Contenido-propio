@@ -1,14 +1,14 @@
 ---
-import "@fontsource/playfair-display/latin-400.css";
+// Solo se cargan los pesos realmente usados:
+// Playfair Display 600 (unico peso de titulares) e Inter 400/500/600/700.
 import "@fontsource/playfair-display/latin-600.css";
-import "@fontsource/playfair-display/latin-700.css";
-import "@fontsource/playfair-display/latin-800.css";
-import "@fontsource/playfair-display/latin-900.css";
 import "@fontsource/inter/latin-400.css";
 import "@fontsource/inter/latin-500.css";
 import "@fontsource/inter/latin-600.css";
 import "@fontsource/inter/latin-700.css";
-import "@fontsource/inter/latin-800.css";
+// Preload de los dos pesos criticos del primer render (H1 Playfair + cuerpo Inter).
+import playfair600 from "@fontsource/playfair-display/files/playfair-display-latin-600-normal.woff2";
+import inter400 from "@fontsource/inter/files/inter-latin-400-normal.woff2";
 import content from "../content/es.json";
 import "../styles/index.css";
 import "../styles/base.css";
@@ -73,6 +73,9 @@ const faqSchema = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+
+    <link rel="preload" href={playfair600} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={inter400} as="font" type="font/woff2" crossorigin />
 
     <title>{pageTitle}</title>
     {description && <meta name="description" content={description} />}

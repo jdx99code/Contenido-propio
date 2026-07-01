@@ -50,6 +50,14 @@
   --youtube-red-deep: #7a1410;
   --youtube-red-dark: #b91c14;
   --youtube-red-soft: rgba(230, 33, 23, 0.1);
+  /*
+    Rojo accesible SOLO para texto (AA). El fondo/borde/relleno de marca
+    (bg-accent, puntos, icono play) mantiene el #e62117 exacto via --accent.
+    Sobre crema el texto rojo se oscurece; sobre secciones oscuras se aclara,
+    porque un unico rojo no cumple AA en ambos fondos.
+  */
+  --accent-text: #c61e15;
+  --accent-text-on-dark: #ef5a4f;
   --success: #15803d;
   --success-soft: #f0fdf4;
   --warm-neutral-glow: rgba(120, 113, 108, 0.18);
@@ -115,6 +123,15 @@
 
   .text-success {
     color: var(--success);
+  }
+
+  /* Texto rojo accesible (AA). No afecta a bg-accent/border-accent/fill. */
+  .text-accent {
+    color: var(--accent-text);
+  }
+
+  .bg-stone-950 .text-accent {
+    color: var(--accent-text-on-dark);
   }
 
   .bg-success {
