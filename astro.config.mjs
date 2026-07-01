@@ -18,7 +18,7 @@ export default defineConfig({
     react(),
     tailwind(),
     sitemap({
-      filter: (page) => !page.endsWith('/styleguide/'),
+      filter: (page) => !page.endsWith('/styleguide/') && !page.endsWith('/gracias/'),
     }),
   ],
 });

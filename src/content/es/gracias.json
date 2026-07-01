@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Solicitud recibida | Contenido Propio",
+    "description": "Hemos recibido tu solicitud. Revisaremos tu canal y te contactamos en 24-48 h."
+  },
+  "eyebrow": "GRACIAS",
+  "title": "Solicitud recibida",
+  "body": "Gracias. Revisaremos tu solicitud y te contactamos en 24–48 h.",
+  "back": {
+    "label": "Volver al inicio",
+    "href": "/"
+  }
+}

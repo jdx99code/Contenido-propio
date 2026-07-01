@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/fe/NavBar.astro";
+import Footer from "../components/fe/Footer.astro";
+import MagneticButton from "../components/fe/MagneticButton.astro";
+import home from "../content/es/home.json";
+import page from "../content/es/gracias.json";
+---
+
+<Layout title={page.meta.title} description={page.meta.description} noindex>
+  <NavBar {...home.nav} />
+
+  <main class="overflow-hidden bg-background pt-20">
+    <section class="relative isolate flex min-h-[70vh] items-center border-b border-border bg-background py-24 md:py-32" aria-labelledby="gracias-title">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_84%_10%,rgba(230,33,23,0.045),transparent_22rem)]"></div>
+      <div class="absolute inset-0 -z-10 opacity-[0.18] [background-image:radial-gradient(circle_at_1px_1px,rgba(68,64,60,0.25)_1px,transparent_0)] [background-size:30px_30px]"></div>
+
+      <div class="container-page grid max-w-3xl gap-6">
+        <div class="inline-flex items-center gap-3">
+          <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.eyebrow}</p>
+        </div>
+        <h1 id="gracias-title" class="font-heading text-5xl font-semibold leading-[0.96] text-stone-950 md:text-7xl">
+          {page.title}
+        </h1>
+        <p class="max-w-2xl text-lg leading-8 text-stone-600 md:text-xl">{page.body}</p>
+        <div class="mt-2">
+          <MagneticButton href={page.back.href} label={page.back.label} variant="secondary" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer {...home.footer} />
+</Layout>

@@ -14,19 +14,19 @@
     "items": [
       {
         "label": "Servicios",
-        "href": "#servicios"
+        "href": "/#servicios"
       },
       {
         "label": "Cómo funciona",
-        "href": "#proceso"
+        "href": "/#como-funciona"
       },
       {
         "label": "Para quién",
-        "href": "#para-quien"
+        "href": "/#para-quien"
       },
       {
         "label": "Preguntas",
-        "href": "#faq"
+        "href": "/#faq"
       }
     ]
   },
@@ -34,7 +34,7 @@
     "logoLabel": "Contenido Propio",
     "cta": {
       "label": "Hablemos",
-      "href": "#formulario"
+      "href": "/aplicar"
     }
   },
   "hero": {

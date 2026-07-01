@@ -67,6 +67,22 @@ function jsonResponse(body: { ok: boolean; error?: string }, status = 200) {
   });
 }
 
+// Envío con JS (fetch) manda `Accept: application/json`; el envío nativo sin JS no.
+function wantsJson(request: Request) {
+  return (request.headers.get("accept") || "").includes("application/json");
+}
+
+// Éxito: con JS mantenemos 200 {"ok":true}; sin JS redirigimos a /gracias (303).
+function successResponse(request: Request) {
+  if (wantsJson(request)) {
+    return jsonResponse({ ok: true });
+  }
+  return new Response(null, {
+    status: 303,
+    headers: { Location: "/gracias" },
+  });
+}
+
 function clean(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
 }
@@ -238,7 +254,7 @@ export const POST: APIRoute = async ({ request }) => {
   const data = await parseRequest(request);
 
   if (clean(data.website)) {
-    return jsonResponse({ ok: true });
+    return successResponse(request);
   }
 
   const validationError = validate(data);
@@ -269,5 +285,5 @@ export const POST: APIRoute = async ({ request }) => {
     console.error("Resend lead notification failed", error instanceof Error ? error.message : "unknown_error");
   }
 
-  return jsonResponse({ ok: true });
+  return successResponse(request);
 };
