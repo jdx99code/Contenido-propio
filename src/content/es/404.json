@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Página no encontrada | Contenido Propio",
+    "description": "Esta página no existe o ha cambiado de dirección. Vuelve al inicio para seguir navegando."
+  },
+  "eyebrow": "ERROR 404",
+  "title": "Esta página no existe.",
+  "body": "Puede que el enlace haya cambiado o que la dirección esté mal escrita. Desde el inicio llegas a todo lo demás; y si buscabas hablar con nosotros, el formulario sigue en su sitio.",
+  "primaryCta": {
+    "label": "Volver al inicio",
+    "href": "/"
+  },
+  "secondaryCta": {
+    "label": "Solicitar información",
+    "href": "/aplicar"
+  }
+}

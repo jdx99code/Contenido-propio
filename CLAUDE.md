@@ -99,6 +99,7 @@ src/
     Layout.astro
   pages/
     index.astro
+    404.astro               # pagina de error personalizada (noindex, copy en es/404.json)
     aplicar.astro
     contacto.astro
     sobre-nosotros.astro
