@@ -1,5 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import AplicarWizard from "../components/fe/AplicarWizard.jsx";
+import Footer from "../components/fe/Footer.astro";
+import NavBar from "../components/fe/NavBar.astro";
+import content from "../content/es/aplicar.json";
 ---
 
-<Layout />
+<Layout title={content.meta.title} description={content.meta.description}>
+  <script is:inline>
+    document.documentElement.classList.add("js");
+  </script>
+
+  <NavBar {...content.nav} />
+
+  <main class="overflow-hidden bg-background pt-20">
+    <section class="relative isolate border-b border-border bg-background py-16 md:py-24" aria-labelledby="aplicar-title">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_12%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_84%_8%,rgba(230,33,23,0.045),transparent_22rem)]"></div>
+      <div class="container-page grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+        <div class="reveal grid gap-5 lg:sticky lg:top-28">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{content.hero.eyebrow}</p>
+          <h1 id="aplicar-title" class="font-heading text-5xl font-semibold leading-[0.96] text-stone-950 md:text-7xl">
+            {content.hero.title}
+          </h1>
+          <p class="max-w-xl text-lg leading-8 text-stone-600">{content.hero.lead}</p>
+        </div>
+
+        <div>
+          <AplicarWizard content={content.form} client:load />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer {...content.footer} />
+</Layout>

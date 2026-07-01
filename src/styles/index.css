@@ -161,6 +161,10 @@
     animation-delay: var(--reveal-delay, 0ms);
   }
 
+  .js [data-aplicar-wizard] [data-step-panel][data-active-step="false"] {
+    display: none;
+  }
+
   .magnetic-lite:hover {
     transform: translateY(-2px);
   }

@@ -1,1 +1,402 @@
-{}
+{
+  "meta": {
+    "title": "Solicitar información | Contenido Propio",
+    "description": "Formulario para solicitar una revisión de canal o proyecto de YouTube faceless con Contenido Propio."
+  },
+  "nav": {
+    "logoAlt": "Contenido Propio",
+    "menuLabel": "Abrir menú",
+    "closeLabel": "Cerrar menú",
+    "links": [
+      {
+        "label": "Servicios",
+        "href": "/#servicios",
+        "children": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "label": "Proceso",
+        "href": "/proceso"
+      },
+      {
+        "label": "Nichos",
+        "href": "/nichos-youtube-faceless"
+      },
+      {
+        "label": "Cómo funciona",
+        "href": "/#como-funciona"
+      },
+      {
+        "label": "Para quién",
+        "href": "/#para-quien"
+      },
+      {
+        "label": "Sobre nosotros",
+        "href": "/sobre-nosotros"
+      }
+    ],
+    "cta": {
+      "label": "Solicitar información",
+      "href": "/aplicar"
+    }
+  },
+  "hero": {
+    "eyebrow": "Solicitud",
+    "title": "Cuéntanos qué canal quieres construir.",
+    "lead": "Usamos estas respuestas para revisar si el proyecto encaja y preparar una conversación útil, sin promesas vacías."
+  },
+  "form": {
+    "action": "/api/aplicar",
+    "method": "POST",
+    "honeypot": {
+      "name": "website",
+      "label": "No rellenar este campo"
+    },
+    "progressLabel": "Paso {current} de {total}",
+    "buttons": {
+      "back": "Atrás",
+      "continue": "Continuar",
+      "submit": "Enviar solicitud",
+      "submitting": "Enviando..."
+    },
+    "messages": {
+      "successTitle": "Solicitud recibida.",
+      "successBody": "Te contactamos en 24-48 h.",
+      "error": "No hemos podido enviar la solicitud. Revisa los campos e inténtalo de nuevo."
+    },
+    "steps": [
+      {
+        "id": "sobre-ti",
+        "icon": "User",
+        "label": "Sobre ti",
+        "title": "Sobre ti",
+        "subtitle": "Datos básicos para personalizar la revisión.",
+        "fields": [
+          {
+            "kind": "input",
+            "type": "text",
+            "name": "nombre",
+            "label": "Nombre completo",
+            "placeholder": "Nombre y apellidos",
+            "required": true,
+            "autocomplete": "name"
+          },
+          {
+            "kind": "input",
+            "type": "email",
+            "name": "email",
+            "label": "Email",
+            "placeholder": "tucorreo@empresa.com",
+            "required": true,
+            "autocomplete": "email"
+          },
+          {
+            "kind": "input",
+            "type": "tel",
+            "name": "telefono",
+            "label": "WhatsApp / Teléfono",
+            "placeholder": "+34 600 000 000",
+            "required": false,
+            "autocomplete": "tel"
+          },
+          {
+            "kind": "input",
+            "type": "text",
+            "name": "pais",
+            "label": "País",
+            "placeholder": "España",
+            "required": true,
+            "autocomplete": "country-name"
+          },
+          {
+            "kind": "input",
+            "type": "text",
+            "name": "negocio",
+            "label": "Negocio / Marca",
+            "placeholder": "Nombre de tu empresa o marca",
+            "required": false,
+            "autocomplete": "organization"
+          },
+          {
+            "kind": "input",
+            "type": "text",
+            "name": "situacion_youtube",
+            "label": "Situación actual en YouTube",
+            "placeholder": "Sin canal aún / canal existente...",
+            "required": false
+          }
+        ]
+      },
+      {
+        "id": "tu-canal",
+        "icon": "Youtube",
+        "label": "Tu canal",
+        "title": "Tu canal",
+        "subtitle": "Ayúdanos a entender la dirección del proyecto.",
+        "fields": [
+          {
+            "kind": "radio",
+            "name": "estado_canal",
+            "label": "¿Empezar de cero o escalar uno existente?",
+            "required": false,
+            "options": [
+              {
+                "value": "empezar_de_cero",
+                "label": "Empezar de cero"
+              },
+              {
+                "value": "escalar_canal_existente",
+                "label": "Escalar un canal existente"
+              }
+            ]
+          },
+          {
+            "kind": "radio",
+            "name": "numero_canales",
+            "label": "¿Uno o varios canales?",
+            "required": false,
+            "options": [
+              {
+                "value": "un_canal",
+                "label": "Un canal"
+              },
+              {
+                "value": "varios_canales",
+                "label": "Varios canales"
+              }
+            ]
+          },
+          {
+            "kind": "radio",
+            "name": "tipo_canal",
+            "label": "¿Qué tipo de canal te interesa?",
+            "required": false,
+            "options": [
+              {
+                "value": "finanzas_inversion",
+                "label": "Finanzas e inversión"
+              },
+              {
+                "value": "negocios_emprendimiento",
+                "label": "Negocios y emprendimiento"
+              },
+              {
+                "value": "desarrollo_personal",
+                "label": "Desarrollo personal"
+              },
+              {
+                "value": "educacion_divulgacion",
+                "label": "Educación y divulgación"
+              },
+              {
+                "value": "tecnologia",
+                "label": "Tecnología"
+              },
+              {
+                "value": "salud_bienestar",
+                "label": "Salud y bienestar"
+              },
+              {
+                "value": "otro",
+                "label": "Otro (abierto a investigar)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "inversion",
+        "icon": "Euro",
+        "label": "Inversión",
+        "title": "Inversión y objetivos",
+        "subtitle": "Esto nos ayuda a encajarte en el plan adecuado.",
+        "fields": [
+          {
+            "kind": "radio",
+            "name": "presupuesto_mensual",
+            "label": "Rango de presupuesto mensual",
+            "required": true,
+            "options": [
+              {
+                "value": "1000_2500",
+                "label": "1.000-2.500 €/mes"
+              },
+              {
+                "value": "2500_5000",
+                "label": "2.500-5.000 €/mes"
+              },
+              {
+                "value": "5000_10000",
+                "label": "5.000-10.000 €/mes"
+              },
+              {
+                "value": "10000_mas",
+                "label": "10.000+ €/mes"
+              },
+              {
+                "value": "hablemoslo",
+                "label": "Hablémoslo"
+              }
+            ]
+          },
+          {
+            "kind": "radio",
+            "name": "objetivo_principal",
+            "label": "Objetivo principal",
+            "required": false,
+            "options": [
+              {
+                "value": "monetizar_canal",
+                "label": "Monetizar un canal"
+              },
+              {
+                "value": "autoridad_marca",
+                "label": "Construir autoridad de marca"
+              },
+              {
+                "value": "leads_entrantes",
+                "label": "Generar leads entrantes"
+              },
+              {
+                "value": "activo_digital",
+                "label": "Crear un activo digital"
+              },
+              {
+                "value": "escalar_varios_canales",
+                "label": "Escalar varios canales"
+              },
+              {
+                "value": "otro",
+                "label": "Otro"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "detalles",
+        "icon": "FileText",
+        "label": "Detalles finales",
+        "title": "Detalles finales",
+        "subtitle": "Cualquier cosa que quieras contarnos.",
+        "fields": [
+          {
+            "kind": "textarea",
+            "name": "mensaje",
+            "label": "Notas / mensaje",
+            "placeholder": "Cuéntanos brevemente tu situación o lo que buscas...",
+            "required": false,
+            "rows": 6
+          },
+          {
+            "kind": "consent",
+            "name": "consentimiento_privacidad",
+            "label": "Acepto la política de privacidad y el tratamiento de mis datos para gestionar mi solicitud.",
+            "linkLabel": "política de privacidad",
+            "linkHref": "/privacidad",
+            "required": true
+          }
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "logoAlt": "Contenido Propio",
+    "copyright": "Sistema de contenido para canales de YouTube faceless.",
+    "columns": [
+      {
+        "title": "Servicios",
+        "links": [
+          {
+            "label": "Crear canal sin mostrar la cara",
+            "href": "/crear-canal-youtube-sin-mostrar-la-cara"
+          },
+          {
+            "label": "Vídeos faceless",
+            "href": "/videos-faceless-youtube"
+          },
+          {
+            "label": "Edición de vídeos",
+            "href": "/edicion-videos-faceless"
+          },
+          {
+            "label": "Miniaturas y SEO",
+            "href": "/miniaturas-seo-youtube"
+          },
+          {
+            "label": "Gestión de canales",
+            "href": "/gestion-canales-youtube"
+          }
+        ]
+      },
+      {
+        "title": "Páginas",
+        "links": [
+          {
+            "label": "Inicio",
+            "href": "/"
+          },
+          {
+            "label": "Proceso",
+            "href": "/proceso"
+          },
+          {
+            "label": "Nichos",
+            "href": "/nichos-youtube-faceless"
+          },
+          {
+            "label": "Sobre nosotros",
+            "href": "/sobre-nosotros"
+          },
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      },
+      {
+        "title": "Contacto",
+        "links": [
+          {
+            "label": "Contacto",
+            "href": "/contacto"
+          },
+          {
+            "label": "Solicitar información",
+            "href": "/aplicar"
+          }
+        ]
+      }
+    ],
+    "legal": [
+      {
+        "label": "Privacidad",
+        "href": "/privacidad"
+      }
+    ]
+  }
+}
