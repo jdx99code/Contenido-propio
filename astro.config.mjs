@@ -7,7 +7,7 @@ import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://contenido-propio.vercel.app',
+  site: 'https://contenidopropios.com',
   adapter: vercel(),
   // Inline el CSS critico para eliminar el request bloqueante de render
   // y acelerar FCP/LCP (mejora el swap de la fuente del H1).
