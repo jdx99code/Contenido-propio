@@ -63,115 +63,12 @@
   },
   "hero": {
     "eyebrow": "Contacto",
-    "title": "Cuéntanos qué canal quieres construir o mejorar.",
-    "lead": "Puedes escribirnos para revisar una idea de nicho, una operación faceless, la edición de vídeos o la gestión completa de un canal.",
+    "title": "Hablemos de tu canal.",
+    "lead": "¿Quieres que revisemos tu canal o tu idea? Cuéntanos tu proyecto y te respondemos en 24–48 h.",
     "ctas": [
       {
-        "label": "Ir al formulario",
-        "href": "#formulario"
-      },
-      {
-        "label": "Solicitar información",
+        "label": "Solicitar información →",
         "href": "/aplicar"
-      }
-    ],
-    "panel": {
-      "kicker": "Antes de escribir",
-      "items": [
-        "Incluye el nicho o tipo de canal si ya lo tienes claro.",
-        "Cuéntanos la frecuencia de publicación que te gustaría sostener.",
-        "Si existe canal actual, añade el enlace para poder revisarlo."
-      ]
-    }
-  },
-  "sections": [
-    {
-      "id": "informacion",
-      "eyebrow": "Información",
-      "title": "Qué necesitamos para responder con criterio.",
-      "columns": 3,
-      "items": [
-        {
-          "title": "Contexto",
-          "body": "Canal actual, idea de nicho, público objetivo o situación de partida."
-        },
-        {
-          "title": "Objetivo",
-          "body": "Qué quieres resolver: publicar más, delegar edición, crear canal o mejorar packaging."
-        },
-        {
-          "title": "Alcance",
-          "body": "Frecuencia deseada, nivel de producción y si buscas piezas sueltas o gestión continua."
-        }
-      ]
-    }
-  ],
-  "contactForm": {
-    "id": "formulario",
-    "eyebrow": "Formulario",
-    "title": "Escríbenos por email desde esta página.",
-    "lead": "El formulario usa correo del sistema mediante mailto. Si prefieres, puedes escribir directamente al email.",
-    "action": "mailto:hola@contenidopropio.com",
-    "info": [
-      {
-        "label": "hola@contenidopropio.com",
-        "href": "mailto:hola@contenidopropio.com"
-      }
-    ],
-    "fields": [
-      {
-        "label": "Nombre",
-        "name": "nombre",
-        "type": "text",
-        "placeholder": "Tu nombre",
-        "required": true
-      },
-      {
-        "label": "Email",
-        "name": "email",
-        "type": "email",
-        "placeholder": "tu@email.com",
-        "required": true
-      },
-      {
-        "label": "Canal o nicho",
-        "name": "canal",
-        "type": "text",
-        "placeholder": "Enlace del canal o idea de nicho",
-        "required": false
-      },
-      {
-        "label": "Mensaje",
-        "name": "mensaje",
-        "type": "textarea",
-        "placeholder": "Cuéntanos qué necesitas",
-        "rows": 6,
-        "required": true
-      }
-    ],
-    "submit": "Enviar email"
-  },
-  "related": {
-    "eyebrow": "También puedes revisar",
-    "title": "Páginas útiles antes de escribir.",
-    "items": [
-      {
-        "label": "Proceso",
-        "href": "/proceso",
-        "description": "Cómo trabajamos de idea a vídeo publicado.",
-        "action": "Ver proceso"
-      },
-      {
-        "label": "Nichos faceless",
-        "href": "/nichos-youtube-faceless",
-        "description": "Criterios para elegir un nicho de YouTube sin mostrar la cara.",
-        "action": "Ver nichos"
-      },
-      {
-        "label": "Gestión de canales",
-        "href": "/gestion-canales-youtube",
-        "description": "Qué incluye delegar la operación completa.",
-        "action": "Ver gestión"
       }
     ]
   },
