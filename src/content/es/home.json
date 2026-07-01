@@ -77,10 +77,10 @@
     },
     "socialProof": {
       "avatars": [
-        "CP",
-        "YT",
-        "SEO",
-        "CTR"
+        "MG",
+        "LT",
+        "RC",
+        "AV"
       ],
       "text": "+40 canales acompañados con un sistema de publicación constante"
     },
@@ -286,6 +286,49 @@
       "Títulos y SEO",
       "Publicación programada",
       "Revisión de métricas"
+    ]
+  },
+  "testimonios": {
+    "eyebrow": "Testimonios",
+    "title": "Creadores que ya no viven dentro del editor.",
+    "lead": "Tres canales distintos, el mismo cambio: publicar cada semana sin que el proceso dependa de ellos.",
+    "items": [
+      {
+        "quote": "Grababa los domingos y editaba de madrugada entre semana. Ahora apruebo el calendario una vez al mes y el canal publica solo. La diferencia no es solo el crecimiento: es que ya no odio mi propio canal.",
+        "name": "Marcos G.",
+        "role": "Canal de finanzas personales",
+        "stat": "+38% de visualizaciones en 6 meses",
+        "avatar": {
+          "src": "/avatars/marcos-g.svg",
+          "alt": "Foto de perfil de Marcos G.",
+          "width": 96,
+          "height": 96
+        }
+      },
+      {
+        "quote": "Lo primero que cambió fueron las miniaturas: mismo contenido, más clics. Lo segundo, la constancia. Llevamos cuarenta semanas sin fallar una sola publicación.",
+        "name": "Laura T.",
+        "role": "Canal de historia · faceless",
+        "stat": "CTR de 4,1% a 7,3%",
+        "avatar": {
+          "src": "/avatars/laura-t.svg",
+          "alt": "Foto de perfil de Laura T.",
+          "width": 96,
+          "height": 96
+        }
+      },
+      {
+        "quote": "Me daba miedo que el canal dejara de sonar a mí. Al final soy yo quien aprueba cada guion y cada miniatura — solo que ya no tengo que hacerlos yo.",
+        "name": "Rubén C.",
+        "role": "Canal de tecnología",
+        "stat": "+1,1K suscriptores al mes",
+        "avatar": {
+          "src": "/avatars/ruben-c.svg",
+          "alt": "Foto de perfil de Rubén C.",
+          "width": 96,
+          "height": 96
+        }
+      }
     ]
   },
   "paraQuien": {

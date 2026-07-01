@@ -4,6 +4,9 @@
     "title": "Proceso de trabajo para canales de YouTube | Contenido Propio",
     "description": "Los 7 pasos con los que Contenido Propio investiga, produce, empaqueta, publica y mide vídeos para canales de YouTube faceless."
   },
+  "breadcrumb": {
+    "label": "Proceso"
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -141,6 +144,24 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales sobre el proceso.",
+    "items": [
+      {
+        "question": "¿Cuánto se tarda en publicar el primer vídeo?",
+        "answer": "Depende del punto de partida: validar el nicho y montar el sistema lleva sus semanas. Preferimos arrancar con una base sólida a publicar rápido y mal."
+      },
+      {
+        "question": "¿Qué tengo que hacer yo en cada paso?",
+        "answer": "Aprobar: el nicho, el calendario y las piezas clave. El trabajo operativo — guion, edición, miniatura, SEO y publicación — lo llevamos nosotros."
+      },
+      {
+        "question": "¿Cómo se coordinan las entregas?",
+        "answer": "Con un calendario editorial compartido: cada vídeo tiene fecha de producción, revisión y publicación. Sabes qué sale y cuándo, sin perseguir a nadie."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "Piezas que encajan con este proceso.",

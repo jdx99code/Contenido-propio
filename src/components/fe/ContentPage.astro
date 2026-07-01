@@ -1,6 +1,8 @@
 ---
-import { Check, Mail, Sparkles } from "lucide-react";
+import { Check, ChevronRight, Sparkles } from "lucide-react";
+import siteContent from "../../content/es.json";
 import AnimatedSection from "./AnimatedSection.astro";
+import FAQAccordion from "./FAQAccordion.astro";
 import Footer from "./Footer.astro";
 import MagneticButton from "./MagneticButton.astro";
 import NavBar from "./NavBar.astro";
@@ -15,12 +17,25 @@ const heroId = `${page.slug}-title`;
 
 <NavBar {...page.nav} />
 
-<main class="overflow-hidden bg-background pt-20">
+<main id="contenido" class="overflow-hidden bg-background pt-20">
   <section class="relative isolate border-b border-border bg-background py-20 md:py-28" aria-labelledby={heroId}>
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_18%_10%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_82%_18%,rgba(230,33,23,0.045),transparent_24rem)]"></div>
     <div class="absolute inset-0 -z-10 opacity-[0.18] [background-image:radial-gradient(circle_at_1px_1px,rgba(68,64,60,0.25)_1px,transparent_0)] [background-size:30px_30px]"></div>
     <div class="container-page grid gap-10 lg:grid-cols-[1.05fr_0.7fr] lg:items-end">
       <AnimatedSection as="div" className="grid gap-7">
+        {page.breadcrumb && (
+          <nav aria-label={siteContent.breadcrumbs.ariaLabel}>
+            <ol class="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.14em] text-stone-500">
+              <li>
+                <a href="/" class="no-underline transition-colors hover:text-accent">{siteContent.breadcrumbs.homeLabel}</a>
+              </li>
+              <li aria-hidden="true" class="text-stone-400">
+                <ChevronRight className="h-3.5 w-3.5" />
+              </li>
+              <li aria-current="page" class="text-stone-700">{page.breadcrumb.label}</li>
+            </ol>
+          </nav>
+        )}
         <div class="inline-flex items-center gap-3">
           <span class="h-2.5 w-2.5 rounded-full bg-accent"></span>
           <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.hero.eyebrow}</p>
@@ -41,7 +56,7 @@ const heroId = `${page.slug}-title`;
       </AnimatedSection>
 
       {page.hero.panel && (
-        <AnimatedSection as="aside" delay={0.08} className="rounded-[1.5rem] border border-border bg-background/82 p-6 shadow-[var(--shadow-card)] backdrop-blur">
+        <AnimatedSection as="aside" delay={0.08} className="rounded-[1.5rem] border border-border bg-background/82 p-6 shadow-warm-card backdrop-blur">
           <p class="text-xs font-bold uppercase tracking-[0.2em] text-stone-500">{page.hero.panel.kicker}</p>
           <div class="mt-6 grid gap-4">
             {page.hero.panel.items.map((item) => (
@@ -126,37 +141,14 @@ const heroId = `${page.slug}-title`;
     </section>
   )}
 
-  {page.contactForm && (
-    <section id={page.contactForm.id} class="section-y border-t border-border bg-secondary/35" aria-labelledby={`${page.slug}-contact`}>
-      <div class="container-page grid gap-10 lg:grid-cols-[0.82fr_1.18fr]">
+  {page.faq && (
+    <section class="section-y border-t border-border bg-secondary/35" aria-labelledby={`${page.slug}-faq`}>
+      <div class="container-page grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <AnimatedSection as="div" className="grid content-start gap-4">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.contactForm.eyebrow}</p>
-          <h2 id={`${page.slug}-contact`} class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{page.contactForm.title}</h2>
-          <p class="text-lg leading-8 text-stone-600">{page.contactForm.lead}</p>
-          <div class="mt-4 grid gap-3">
-            {page.contactForm.info.map((item) => (
-              <a href={item.href} class="inline-flex items-center gap-3 text-sm font-semibold text-stone-800 no-underline transition hover:text-accent">
-                <Mail className="h-4 w-4 text-accent" />
-                {item.label}
-              </a>
-            ))}
-          </div>
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{page.faq.eyebrow}</p>
+          <h2 id={`${page.slug}-faq`} class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-5xl">{page.faq.title}</h2>
         </AnimatedSection>
-        <AnimatedSection as="form" action={page.contactForm.action} method="post" enctype="text/plain" className="grid gap-4 rounded-[1.5rem] border border-border bg-background p-6 shadow-[var(--shadow-card)]">
-          {page.contactForm.fields.map((field) => (
-            <label class="grid gap-2 text-sm font-semibold text-stone-800">
-              {field.label}
-              {field.type === "textarea" ? (
-                <textarea name={field.name} rows={field.rows || 5} placeholder={field.placeholder} class="min-h-36 rounded-[var(--radius)] border border-border bg-background px-4 py-3 text-base font-normal text-stone-900 outline-none transition focus:border-accent" required={field.required}></textarea>
-              ) : (
-                <input name={field.name} type={field.type} placeholder={field.placeholder} class="rounded-[var(--radius)] border border-border bg-background px-4 py-3 text-base font-normal text-stone-900 outline-none transition focus:border-accent" required={field.required} />
-              )}
-            </label>
-          ))}
-          <button type="submit" class="mt-2 rounded-[var(--radius)] border border-primary bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-stone-800">
-            {page.contactForm.submit}
-          </button>
-        </AnimatedSection>
+        <FAQAccordion items={page.faq.items} />
       </div>
     </section>
   )}

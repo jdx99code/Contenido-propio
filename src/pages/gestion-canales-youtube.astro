@@ -4,6 +4,6 @@ import ContentPage from "../components/fe/ContentPage.astro";
 import page from "../content/es/gestion.json";
 ---
 
-<Layout title={page.meta.title} description={page.meta.description}>
+<Layout title={page.meta.title} description={page.meta.description} breadcrumb={page.breadcrumb} faqItems={page.faq.items} service={page.schemaService}>
   <ContentPage page={page} />
 </Layout>

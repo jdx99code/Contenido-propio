@@ -220,7 +220,7 @@ export default function AplicarWizard({ content }) {
 
   if (status === "success") {
     return (
-      <div className="rounded-[1.5rem] border border-border bg-background p-8 text-center shadow-[var(--shadow-card)] md:p-12">
+      <div className="rounded-[1.5rem] border border-border bg-background p-8 text-center shadow-warm-card md:p-12">
         <span className="mx-auto grid h-12 w-12 place-items-center rounded-full border border-accent/20 bg-accent/5 text-accent">
           <Check className="h-5 w-5" aria-hidden="true" />
         </span>
@@ -238,7 +238,7 @@ export default function AplicarWizard({ content }) {
       action={content.action}
       method={content.method}
       onSubmit={handleSubmit}
-      className="relative rounded-[1.5rem] border border-border bg-background p-5 shadow-[var(--shadow-card)] md:p-8"
+      className="relative rounded-[1.5rem] border border-border bg-background p-5 shadow-warm-card md:p-8"
       data-aplicar-wizard
       data-enhanced={enhanced ? "true" : "false"}
     >

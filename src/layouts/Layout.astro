@@ -18,6 +18,21 @@ interface AlternateLanguage {
   href: string;
 }
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+interface Breadcrumb {
+  label: string;
+}
+
+interface ServiceSchema {
+  name: string;
+  serviceType?: string;
+  description?: string;
+}
+
 interface Props {
   title?: string;
   description?: string;
@@ -25,7 +40,9 @@ interface Props {
   canonical?: string;
   alternates?: AlternateLanguage[];
   noindex?: boolean;
-  includeFaqSchema?: boolean;
+  faqItems?: FaqItem[];
+  breadcrumb?: Breadcrumb;
+  service?: ServiceSchema;
 }
 
 const {
@@ -35,13 +52,16 @@ const {
   canonical,
   alternates = [],
   noindex = false,
-  includeFaqSchema = false,
+  faqItems = [],
+  breadcrumb,
+  service,
 } = Astro.props;
 
 const siteName = content.site.name;
 const pageTitle = title;
 const canonicalUrl = canonical ? new URL(canonical, Astro.site).toString() : new URL(Astro.url.pathname, Astro.site).toString();
 const ogImageUrl = new URL(ogImage, Astro.site).toString();
+const ogImageAlt = content.site.ogImageAlt || content.site.description;
 const siteUrl = new URL("/", Astro.site).toString();
 const logoUrl = new URL(content.site.logo || "/logo-512.png", Astro.site).toString();
 const organizationSchema = {
@@ -53,18 +73,55 @@ const organizationSchema = {
   description: content.site.description,
   sameAs: content.site.sameAs || [],
 };
-const faqSchema = {
+const websiteSchema = {
   "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: content.faq.items.map((item) => ({
-    "@type": "Question",
-    name: item.question,
-    acceptedAnswer: {
-      "@type": "Answer",
-      text: item.answer,
-    },
-  })),
+  "@type": "WebSite",
+  name: siteName,
+  url: siteUrl,
+  inLanguage: content.site.locale,
 };
+// El schema de FAQ se construye desde los items que la pagina realmente
+// renderiza (Google exige que el JSON-LD coincida con el contenido visible).
+const faqSchema = faqItems.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    }
+  : null;
+const breadcrumbSchema = breadcrumb
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: content.breadcrumbs.homeLabel, item: siteUrl },
+        { "@type": "ListItem", position: 2, name: breadcrumb.label, item: canonicalUrl },
+      ],
+    }
+  : null;
+const serviceSchema = service
+  ? {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: service.name,
+      serviceType: service.serviceType || service.name,
+      description: service.description || description,
+      url: canonicalUrl,
+      inLanguage: content.site.locale,
+      provider: {
+        "@type": "Organization",
+        name: siteName,
+        url: siteUrl,
+      },
+    }
+  : null;
 ---
 
 <!doctype html>
@@ -81,6 +138,7 @@ const faqSchema = {
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <meta name="theme-color" content="#FAF8F4" />
 
     <meta property="og:site_name" content={siteName} />
     <meta property="og:type" content="website" />
@@ -89,6 +147,9 @@ const faqSchema = {
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={pageTitle} />
@@ -96,16 +157,20 @@ const faqSchema = {
     <meta name="twitter:image" content={ogImageUrl} />
 
     {alternates.map(({ lang, href }) => <link rel="alternate" hreflang={lang} href={href} />)}
-    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+    {alternates.length > 0 && <link rel="alternate" hreflang="x-default" href={canonicalUrl} />}
 
     <link rel="icon" type="image/svg+xml" href="/tab-logo.svg" />
     <link rel="icon" type="image/png" href="/tab-logo-512.png" sizes="512x512" />
     <link rel="apple-touch-icon" href="/tab-logo-512.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
-    {includeFaqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {serviceSchema && <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />}
   </head>
   <body>
+    <a href="#contenido" class="skip-link">{content.a11y.skipToContent}</a>
     <slot />
     <script>
       const setupReveal = () => {

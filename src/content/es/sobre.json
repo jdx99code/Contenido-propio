@@ -4,6 +4,9 @@
     "title": "Sobre Contenido Propio | Agencia YouTube faceless",
     "description": "Quiénes somos en Contenido Propio: una agencia especializada en estrategia, edición, miniaturas, SEO y gestión de canales de YouTube faceless."
   },
+  "breadcrumb": {
+    "label": "Sobre nosotros"
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",

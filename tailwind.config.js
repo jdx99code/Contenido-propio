@@ -43,6 +43,13 @@ export default {
           foreground: "hsl(var(--destructive-foreground))",
         },
       },
+      // Elevaciones calidas del sistema (tokens en src/styles/index.css).
+      // OJO: no usar shadow-[var(--x)] — Tailwind interpreta la var como
+      // color de sombra y la utilidad no pinta nada.
+      boxShadow: {
+        "warm-card": "var(--shadow-card)",
+        "warm-card-hover": "var(--shadow-card-hover)",
+      },
       // Base radius requested by the reference system.
       borderRadius: {
         lg: "var(--radius)",

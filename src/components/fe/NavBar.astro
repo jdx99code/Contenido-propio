@@ -40,7 +40,7 @@ const {
               <ChevronDown className="h-3.5 w-3.5 text-stone-400 transition group-hover:text-accent" aria-hidden="true" />
             </a>
             <div class="invisible absolute left-0 top-full z-50 pt-3 opacity-0 transition duration-200 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
-              <div class="min-w-80 rounded-[1rem] border border-border bg-background p-2 shadow-[var(--shadow-card)]">
+              <div class="min-w-80 rounded-[1rem] border border-border bg-background p-2 shadow-warm-card">
                 {link.children.map((child) => (
                   <a href={child.href} class="block rounded-[0.65rem] px-4 py-3 text-sm font-medium text-stone-700 no-underline transition hover:bg-secondary hover:text-accent">
                     {child.label}
@@ -63,11 +63,11 @@ const {
       </a>
     )}
 
-    <details class="relative md:hidden">
+    <details data-mobile-menu class="relative md:hidden">
       <summary class="grid h-11 w-11 list-none place-items-center rounded-[var(--radius)] border border-border bg-background" aria-label={menuLabel}>
         <Menu className="h-5 w-5" />
       </summary>
-      <div class="absolute right-0 top-full mt-3 w-[min(92vw,20rem)] rounded-[1rem] border border-border bg-background p-2 shadow-[var(--shadow-card)]">
+      <div class="absolute right-0 top-full mt-3 w-[min(92vw,20rem)] rounded-[1rem] border border-border bg-background p-2 shadow-warm-card">
         {links.map((link) =>
           link.children?.length ? (
             <details class="group rounded-[0.75rem] border border-transparent">
@@ -116,4 +116,28 @@ const {
 
   setScrolled();
   window.addEventListener("scroll", setScrolled, { passive: true });
+
+  // El menu movil es un <details> (funciona sin JS). Con JS lo cerramos al
+  // navegar, con Escape o al tocar fuera, que es lo que se espera de un menu.
+  const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+  if (mobileMenu instanceof HTMLDetailsElement) {
+    mobileMenu.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) {
+        mobileMenu.open = false;
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        mobileMenu.open = false;
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (mobileMenu.open && event.target instanceof Node && !mobileMenu.contains(event.target)) {
+        mobileMenu.open = false;
+      }
+    });
+  }
 </script>

@@ -4,6 +4,14 @@
     "title": "Crear un canal de YouTube sin mostrar la cara | Contenido Propio",
     "description": "Servicio para crear un canal de YouTube sin mostrar la cara: nicho, estrategia, branding, producción, miniaturas, SEO y publicación."
   },
+  "breadcrumb": {
+    "label": "Crear canal faceless"
+  },
+  "schemaService": {
+    "name": "Creación de canales de YouTube sin mostrar la cara",
+    "serviceType": "Creación de canales de YouTube",
+    "description": "Servicio para crear un canal de YouTube sin mostrar la cara: nicho, estrategia, branding, producción, miniaturas, SEO y publicación."
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -166,6 +174,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales antes de crear el canal.",
+    "items": [
+      {
+        "question": "¿Se puede crecer en YouTube sin mostrar la cara?",
+        "answer": "Sí. Nichos como finanzas, historia, tecnología o educación llevan años funcionando en formato faceless. El valor está en el guion, la voz, la edición y el packaging, no en la cara."
+      },
+      {
+        "question": "¿YouTube penaliza los canales sin cara?",
+        "answer": "No. YouTube penaliza el contenido reciclado y sin valor añadido, tenga cara o no. Un canal faceless con contenido original y bien producido compite en igualdad de condiciones."
+      },
+      {
+        "question": "¿Qué necesito para empezar un canal faceless?",
+        "answer": "Un nicho con demanda validada, una dirección clara y un sistema de producción sostenible. Nosotros montamos las tres cosas; tú apruebas la dirección."
+      },
+      {
+        "question": "¿De quién es el canal si lo creáis vosotros?",
+        "answer": "Tuyo, siempre. La cuenta, el canal y el contenido te pertenecen; nosotros operamos con permisos delegados que puedes revocar en cualquier momento."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "Después de crear el canal, toca mantenerlo vivo.",

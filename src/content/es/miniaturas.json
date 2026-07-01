@@ -4,6 +4,14 @@
     "title": "Miniaturas, títulos y SEO para YouTube | Contenido Propio",
     "description": "Diseño de miniaturas, títulos y SEO para YouTube: packaging completo para que cada vídeo se entienda y compita mejor."
   },
+  "breadcrumb": {
+    "label": "Miniaturas y SEO"
+  },
+  "schemaService": {
+    "name": "Miniaturas, títulos y SEO para YouTube",
+    "serviceType": "Diseño de miniaturas y SEO para YouTube",
+    "description": "Diseño de miniaturas, títulos y SEO para YouTube: packaging completo para que cada vídeo se entienda y compita mejor."
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -135,6 +143,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales sobre miniaturas y SEO.",
+    "items": [
+      {
+        "question": "¿Por qué importa tanto la miniatura en YouTube?",
+        "answer": "Porque decide el CTR: es lo primero que la audiencia ve en el feed y determina si el vídeo recibe siquiera la oportunidad de retener. Un buen vídeo con mala miniatura simplemente no se reproduce."
+      },
+      {
+        "question": "¿Qué incluye el SEO de un vídeo de YouTube?",
+        "answer": "Título, descripción, etiquetas, capítulos y metadatos coherentes con la intención de búsqueda del tema. No son trucos: es que YouTube y Google entiendan de qué va el vídeo y a quién mostrárselo."
+      },
+      {
+        "question": "¿Probáis variantes de miniatura?",
+        "answer": "Sí. Revisamos el CTR de cada pieza y, cuando el canal lo permite, probamos variantes para aprender qué promesa y qué composición funcionan mejor en ese nicho."
+      },
+      {
+        "question": "¿Puedo contratar solo las miniaturas?",
+        "answer": "Nuestro enfoque funciona mejor como sistema, con miniatura, título y SEO trabajando juntos. Si tu canal ya tiene una operación montada, cuéntanos el caso y lo valoramos con honestidad."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "El packaging necesita una buena pieza detrás.",

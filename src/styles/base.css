@@ -104,6 +104,27 @@ ol {
   outline-offset: 4px;
 }
 
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.6rem;
+  background: var(--stone-950, #0c0a09);
+  color: #faf8f4;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(calc(-100% - 1rem));
+  transition: transform 180ms var(--ease-premium);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+  color: #faf8f4;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(230, 33, 23, 0.46) rgba(232, 223, 210, 0.7);

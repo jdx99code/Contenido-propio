@@ -6,8 +6,16 @@
     "title": "Agencia de YouTube — Edición y faceless | Contenido Propio",
     "description": "Agencia de YouTube para creadores: edición, miniaturas, SEO y canales faceless listos para publicar sin que el canal se frene.",
     "ogImage": "/og-image.jpg",
+    "ogImageAlt": "Contenido Propio — agencia de contenido para canales de YouTube faceless",
     "logo": "/logo-512.png",
     "sameAs": []
+  },
+  "a11y": {
+    "skipToContent": "Saltar al contenido"
+  },
+  "breadcrumbs": {
+    "ariaLabel": "Migas de pan",
+    "homeLabel": "Inicio"
   },
   "navigation": {
     "label": "Navegación principal",

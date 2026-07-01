@@ -4,6 +4,14 @@
     "title": "Gestión de canales de YouTube faceless | Contenido Propio",
     "description": "Gestión de canales de YouTube: estrategia, calendario, producción, edición, miniaturas, SEO, publicación y seguimiento."
   },
+  "breadcrumb": {
+    "label": "Gestión de canales"
+  },
+  "schemaService": {
+    "name": "Gestión de canales de YouTube",
+    "serviceType": "Gestión de canales de YouTube",
+    "description": "Gestión de canales de YouTube: estrategia, calendario, producción, edición, miniaturas, SEO, publicación y seguimiento."
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -158,6 +166,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales sobre la gestión.",
+    "items": [
+      {
+        "question": "¿Qué incluye la gestión completa de un canal de YouTube?",
+        "answer": "Estrategia, calendario, producción, edición, packaging, publicación y revisión de métricas. Todo el ciclo del contenido, con tus aprobaciones en los puntos importantes."
+      },
+      {
+        "question": "¿Tengo que daros la contraseña de mi cuenta?",
+        "answer": "No. Trabajamos con permisos delegados de YouTube Studio, que puedes conceder y revocar cuando quieras. El canal y la propiedad son tuyos siempre."
+      },
+      {
+        "question": "¿Con qué frecuencia se publica?",
+        "answer": "La que el nicho y el presupuesto sostengan de forma realista. Preferimos una cadencia constante y sostenida antes que un arranque ambicioso que muere al mes."
+      },
+      {
+        "question": "¿Cómo sé si el canal progresa?",
+        "answer": "Con los datos de YouTube Studio: visualizaciones, retención, CTR y suscriptores. Revisamos las métricas de forma periódica y ajustamos la estrategia con lo aprendido."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "La gestión reúne producción, edición y packaging.",

@@ -4,6 +4,14 @@
     "title": "Edición de vídeos faceless para YouTube | Contenido Propio",
     "description": "Edición de vídeos faceless para YouTube: montaje, ritmo, subtítulos, recursos visuales, sonido y acabado editorial."
   },
+  "breadcrumb": {
+    "label": "Edición de vídeos"
+  },
+  "schemaService": {
+    "name": "Edición de vídeos faceless para YouTube",
+    "serviceType": "Edición de vídeo para YouTube",
+    "description": "Edición de vídeos faceless para YouTube: montaje, ritmo, subtítulos, recursos visuales, sonido y acabado editorial."
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -142,6 +150,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales sobre la edición.",
+    "items": [
+      {
+        "question": "¿Qué estilo de edición hacéis?",
+        "answer": "El que pida el contenido y el canal: documental sobrio, listas dinámicas, explicativos con gráficos. Definimos un estilo por canal y lo mantenemos consistente pieza a pieza, porque la audiencia también reconoce el acabado."
+      },
+      {
+        "question": "¿Cuánto tarda la edición de un vídeo de YouTube?",
+        "answer": "Depende de la duración y la complejidad, pero trabajamos con calendario: cada pieza tiene fecha de entrega y de publicación. La edición no debería ser nunca el cuello de botella del canal."
+      },
+      {
+        "question": "¿Editáis material que yo grabo o solo vídeos faceless?",
+        "answer": "Ambos. Si grabas voz o pantalla, editamos sobre tu material; si el canal es completamente faceless, producimos la pieza entera con recursos visuales y locución."
+      },
+      {
+        "question": "¿La edición incluye subtítulos y miniatura?",
+        "answer": "Los subtítulos y el texto en pantalla van incluidos en la edición. La miniatura y el título forman parte del packaging, que trabaja coordinado con el montaje para que la promesa del vídeo se cumpla."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "La edición funciona mejor cuando el packaging acompaña.",

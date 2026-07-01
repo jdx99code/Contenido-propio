@@ -4,6 +4,14 @@
     "title": "Producción de vídeos faceless para YouTube | Contenido Propio",
     "description": "Producción de vídeos faceless para YouTube en 6 pasos: guion, voz, recursos, edición, packaging y publicación."
   },
+  "breadcrumb": {
+    "label": "Vídeos faceless"
+  },
+  "schemaService": {
+    "name": "Producción de vídeos faceless para YouTube",
+    "serviceType": "Producción de vídeo para YouTube",
+    "description": "Producción de vídeos faceless para YouTube en 6 pasos: guion, voz, recursos, edición, packaging y publicación."
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -135,6 +143,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales sobre la producción.",
+    "items": [
+      {
+        "question": "¿Cómo se hace un vídeo faceless?",
+        "answer": "Con un proceso en seis pasos: idea validada, guion, voz, recursos visuales, edición y packaging. Cada pieza sale con una promesa clara y una estructura pensada para retener."
+      },
+      {
+        "question": "¿Quién pone la voz en los vídeos?",
+        "answer": "Depende del canal: puede ser tu voz, una locución profesional o una voz generada con herramientas de calidad, siempre revisada. Lo decidimos contigo según el nicho y el presupuesto."
+      },
+      {
+        "question": "¿Usáis inteligencia artificial para producir?",
+        "answer": "Como herramienta, sí; como sustituto del criterio, no. La IA acelera partes del proceso, pero el guion, la edición y el control de calidad pasan por personas que entienden YouTube."
+      },
+      {
+        "question": "¿Cuántos vídeos al mes necesita un canal?",
+        "answer": "YouTube premia la constancia, y la cifra concreta depende del nicho y del formato. En la llamada inicial te proponemos una cadencia realista que se pueda sostener."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "Producción, edición y empaquetado trabajando juntos.",

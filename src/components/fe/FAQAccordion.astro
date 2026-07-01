@@ -13,7 +13,7 @@ interface Props {
 const { items = [] } = Astro.props;
 ---
 
-<div class="divide-y divide-border rounded-[var(--radius)] border border-border bg-background shadow-[var(--shadow-card)]">
+<div class="divide-y divide-border rounded-[var(--radius)] border border-border bg-background shadow-warm-card">
   {items.map((item, index) => (
     <details class="faq-details group" open={index === 0}>
       <summary class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 text-left">

@@ -4,6 +4,9 @@
     "title": "Contacto | Contenido Propio",
     "description": "Contacta con Contenido Propio para revisar tu canal de YouTube, tu idea de nicho faceless o una operación de contenido."
   },
+  "breadcrumb": {
+    "label": "Contacto"
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",

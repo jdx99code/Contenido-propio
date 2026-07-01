@@ -23,13 +23,36 @@ const { active = true, label, duration = 900 } = Astro.props;
 <script>
   const loader = document.querySelector("[data-premium-loader]");
 
-  if (loader) {
-    const duration = Number(loader.getAttribute("data-duration") || "900");
-    loader.hidden = false;
+  // Solo en la primera vista de la sesion: en visitas repetidas el loader
+  // cuesta ~1,3s de percepcion sin aportar nada. Tambien se omite con
+  // prefers-reduced-motion.
+  const alreadySeen = (() => {
+    try {
+      return sessionStorage.getItem("cp-loader-seen") === "1";
+    } catch {
+      return false;
+    }
+  })();
 
-    window.setTimeout(() => {
-      loader.classList.add("premium-loader-exit");
-      window.setTimeout(() => loader.remove(), 420);
-    }, duration);
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (loader) {
+    if (alreadySeen || reduceMotion) {
+      loader.remove();
+    } else {
+      try {
+        sessionStorage.setItem("cp-loader-seen", "1");
+      } catch {
+        // sin sessionStorage (modo privado estricto) el loader se muestra igual
+      }
+
+      const duration = Number(loader.getAttribute("data-duration") || "900");
+      loader.hidden = false;
+
+      window.setTimeout(() => {
+        loader.classList.add("premium-loader-exit");
+        window.setTimeout(() => loader.remove(), 420);
+      }, duration);
+    }
   }
 </script>

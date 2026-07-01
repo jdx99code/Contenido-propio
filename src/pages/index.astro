@@ -40,11 +40,11 @@ const iconMap = {
 };
 ---
 
-<Layout title={siteContent.site.title} description={siteContent.site.description || undefined} includeFaqSchema>
+<Layout title={siteContent.site.title} description={siteContent.site.description || undefined} faqItems={home.faq.items}>
   <PremiumLoader label={home.loader.label} />
   <NavBar {...home.nav} />
 
-  <main class="overflow-hidden">
+  <main id="contenido" class="overflow-hidden">
     <section class="relative isolate min-h-screen overflow-hidden bg-background pt-28" aria-labelledby="hero-title">
       <ParticleField variant="ambient" count={56} className="opacity-70" />
       <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_15%_18%,rgba(120,113,108,0.16),transparent_30rem),radial-gradient(circle_at_85%_16%,rgba(230,33,23,0.045),transparent_24rem),radial-gradient(circle_at_60%_90%,rgba(120,113,108,0.12),transparent_28rem)]"></div>
@@ -99,7 +99,7 @@ const iconMap = {
 
         <div class="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
           <AnimatedSection as="div">
-            <figure class="overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-[var(--shadow-card)]">
+            <figure class="overflow-hidden rounded-2xl border border-border bg-secondary/40 shadow-warm-card">
               <picture>
                 {home.pruebaSocial.image.srcAvif && <source type="image/avif" srcset={home.pruebaSocial.image.srcAvif} />}
                 {home.pruebaSocial.image.srcWebp && <source type="image/webp" srcset={home.pruebaSocial.image.srcWebp} />}
@@ -118,7 +118,7 @@ const iconMap = {
 
           <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
             {home.pruebaSocial.stats.map((stat, index) => (
-              <AnimatedSection as="article" delay={index * 0.04} className="rounded-[var(--radius)] border border-border bg-background p-5 shadow-[var(--shadow-card)]">
+              <AnimatedSection as="article" delay={index * 0.04} className="rounded-[var(--radius)] border border-border bg-background p-5 shadow-warm-card">
                 <div class="mb-5 flex items-center justify-between gap-4">
                   <strong class="font-heading text-4xl font-semibold text-stone-950">{stat.value}</strong>
                   <span class="rounded-full bg-success-soft px-3 py-1 text-xs font-bold text-success">{stat.delta}</span>
@@ -186,7 +186,7 @@ const iconMap = {
     <section class="section-y border-y border-border bg-secondary/35" aria-labelledby="youtube-title">
       <div class="container-page grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
         <AnimatedSection as="div" className="grid place-items-center">
-          <div class="grid h-44 w-44 place-items-center rounded-[2rem] border border-accent/20 bg-background shadow-[var(--shadow-card)]">
+          <div class="grid h-44 w-44 place-items-center rounded-[2rem] border border-accent/20 bg-background shadow-warm-card">
             <div class="grid h-24 w-32 place-items-center rounded-[1.4rem] bg-accent text-background">
               <Video className="h-12 w-12 fill-current" />
             </div>
@@ -236,6 +236,45 @@ const iconMap = {
                 <Check className="h-4 w-4" />
               </span>
               <p class="text-sm font-medium text-stone-200">{item}</p>
+            </AnimatedSection>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section-y bg-background" aria-labelledby="testimonials-title">
+      <div class="container-page grid gap-10">
+        <AnimatedSection as="div" className="grid max-w-3xl gap-4">
+          <p class="text-xs font-bold uppercase tracking-[0.22em] text-accent">{home.testimonios.eyebrow}</p>
+          <h2 id="testimonials-title" class="font-heading text-4xl font-semibold leading-tight text-stone-950 md:text-6xl">{home.testimonios.title}</h2>
+          <p class="text-lg leading-8 text-stone-600">{home.testimonios.lead}</p>
+        </AnimatedSection>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          {home.testimonios.items.map((item, index) => (
+            <AnimatedSection as="figure" delay={index * 0.04} className="flex h-full flex-col justify-between gap-8 rounded-[var(--radius)] border border-border bg-background p-6 shadow-warm-card">
+              <blockquote class="grid gap-4">
+                <span aria-hidden="true" class="font-heading text-5xl leading-none text-accent">&ldquo;</span>
+                <p class="text-base leading-7 text-stone-700">{item.quote}</p>
+              </blockquote>
+              <figcaption class="grid gap-4">
+                <p class="text-sm font-semibold text-success">{item.stat}</p>
+                <div class="flex items-center gap-3 border-t border-border pt-4">
+                  <img
+                    src={item.avatar.src}
+                    alt={item.avatar.alt}
+                    width={item.avatar.width}
+                    height={item.avatar.height}
+                    loading="lazy"
+                    decoding="async"
+                    class="h-11 w-11 rounded-full"
+                  />
+                  <div>
+                    <p class="text-sm font-semibold text-stone-950">{item.name}</p>
+                    <p class="text-sm text-stone-500">{item.role}</p>
+                  </div>
+                </div>
+              </figcaption>
             </AnimatedSection>
           ))}
         </div>

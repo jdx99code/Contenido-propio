@@ -46,10 +46,31 @@ SEO tecnico:
 - `astro.config.mjs` define la URL de produccion en `site`.
 - `astro.config.mjs` usa `@astrojs/vercel` para desplegar funciones server-side en Vercel.
 - `Layout.astro` construye canonical, Open Graph, Twitter Cards y JSON-LD a partir de `Astro.site` y `src/content/es.json`.
+- `Layout.astro` emite siempre Organization + WebSite JSON-LD, y ademas acepta
+  props opcionales con datos por pagina: `faqItems` (FAQPage), `breadcrumb`
+  (BreadcrumbList) y `service` (Service). Cada pagina los pasa desde su JSON
+  (`page.faq.items`, `page.breadcrumb`, `page.schemaService`).
+- REGLA: el schema FAQPage debe construirse SIEMPRE desde los items que la
+  pagina renderiza de verdad (Google exige que el JSON-LD coincida con el
+  contenido visible). La home pasa `home.faq.items`; el bloque `faq` de
+  `es.json` es legado y no debe usarse para el schema.
+- Las sub-paginas de `ContentPage.astro` renderizan migas de pan visibles
+  (clave `breadcrumb.label` en su JSON) y una seccion FAQ opcional (clave
+  `faq` con `eyebrow`, `title`, `items`) reutilizando `FAQAccordion`.
 - `@astrojs/sitemap` genera `sitemap-index.xml`.
 - `public/robots.txt` permite rastreo completo y apunta al sitemap absoluto.
 - `public/logo-512.png` es el logo canonico para Organization JSON-LD.
-- `public/og-image.jpg` es la imagen social principal.
+- `public/og-image.jpg` es la imagen social principal (1200x630); su alt vive
+  en `site.ogImageAlt` de `es.json`.
+- El `hreflang x-default` solo se emite cuando hay `alternates` reales.
+
+Accesibilidad global:
+
+- `Layout.astro` pinta un enlace "Saltar al contenido" (`.skip-link` en
+  `base.css`) que apunta a `#contenido`; el `<main>` de cada pagina debe
+  llevar `id="contenido"`.
+- El menu movil de `NavBar.astro` es un `<details>` que funciona sin JS; con
+  JS se cierra al pulsar un enlace, con Escape y al hacer click fuera.
 
 Estructura relevante (limpia; sin componentes muertos):
 
@@ -141,6 +162,10 @@ Primitivos ya existentes:
 
 - Grano de papel sutil sobre el fondo crema.
 - Elevaciones calidas: `raised`, `floating`, `overlay`.
+- Sombras de tarjeta via utilidades Tailwind `shadow-warm-card` y
+  `shadow-warm-card-hover` (mapeadas en `tailwind.config.js` a los tokens
+  `--shadow-card` / `--shadow-card-hover`). NUNCA usar `shadow-[var(--x)]`:
+  Tailwind interpreta la variable como color de sombra y no pinta nada.
 - `--ease-premium`: curva elegante para movimiento.
 - `.gradient-text`, `.card-hover`, `.reveal`.
 - Microinteracciones de botones/enlaces.
@@ -229,6 +254,17 @@ Seccion de 6 pasos con `AnimatedPipeline.astro`.
 Concepto historico. El componente `Entregables.astro` se elimino por no usarse.
 Si se recupera, su copy debe vivir en JSON.
 
+### Testimonios
+
+Parte de `src/pages/index.astro`, entre Alcance y Para Quien.
+
+- Tres tarjetas `figure/blockquote/figcaption` con cita, dato en verde y persona.
+- Copy en `home.json` clave `testimonios`. Los datos actuales son PLACEHOLDERS
+  que el usuario sustituira por testimonios reales (nombres, cifras y fotos).
+- Avatares placeholder en `public/avatars/*.svg` (iniciales); se reemplazan
+  cambiando el fichero o la ruta `avatar.src` del JSON.
+- NO añadir schema Review/AggregateRating mientras los testimonios no sean reales.
+
 ### Para Quien
 
 Parte de `src/pages/index.astro`.
@@ -290,7 +326,8 @@ Mantenerla actualizada cuando se cambien primitives globales.
 
 `src/pages/index.astro` renderiza la home completa con:
 
-1. PremiumLoader
+1. PremiumLoader (solo primera vista de la sesion via sessionStorage
+   `cp-loader-seen`; se omite con prefers-reduced-motion)
 2. NavBar
 3. Hero
 4. Prueba social
@@ -300,10 +337,11 @@ Mantenerla actualizada cuando se cambien primitives globales.
 8. Especializacion
 9. Como funciona
 10. Alcance
-11. Para quien
-12. FAQ
-13. CTA final
-14. Footer
+11. Testimonios (placeholders pendientes de datos reales)
+12. Para quien
+13. FAQ
+14. CTA final
+15. Footer
 
 Header actual:
 
@@ -315,7 +353,10 @@ Contenido y SEO actuales:
 
 - H1 del hero se mantiene como `Un canal de YouTube que crece sin que aparezcas.`
 - Title y meta description viven en `src/content/es.json`.
-- Existe un bloque JSON-LD de Organization y otro de FAQPage en `Layout.astro`.
+- `Layout.astro` emite JSON-LD de Organization y WebSite en todas las paginas;
+  FAQPage, BreadcrumbList y Service se emiten por pagina via props.
+- Las 5 paginas de servicio + nichos + proceso tienen seccion FAQ propia con
+  su FAQPage schema; todas las sub-paginas tienen migas de pan.
 - `site.logo` apunta a `/logo-512.png`.
 - La captura de YouTube Studio vive en `public/social-proof.png`.
 

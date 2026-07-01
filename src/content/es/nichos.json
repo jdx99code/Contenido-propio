@@ -4,6 +4,9 @@
     "title": "Nichos para YouTube faceless: ideas y criterio | Contenido Propio",
     "description": "12 nichos para canales de YouTube faceless y una guía práctica para elegir nicho sin depender de promesas vacías."
   },
+  "breadcrumb": {
+    "label": "Nichos faceless"
+  },
   "nav": {
     "logoAlt": "Contenido Propio",
     "menuLabel": "Abrir menú",
@@ -167,6 +170,28 @@
       ]
     }
   ],
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Dudas habituales al elegir nicho.",
+    "items": [
+      {
+        "question": "¿Cuál es el mejor nicho para un canal faceless?",
+        "answer": "El que combina demanda real, competencia abordable y capacidad de producir con calidad de forma sostenida. No existe un mejor nicho universal: existe el mejor nicho para tu punto de partida."
+      },
+      {
+        "question": "¿Los nichos en español tienen recorrido?",
+        "answer": "Sí. En muchos temas hay menos competencia profesional que en inglés y la audiencia hispanohablante es enorme. La clave es elegir un ángulo con demanda y ejecutarlo mejor que la media."
+      },
+      {
+        "question": "¿Cómo validáis un nicho antes de empezar?",
+        "answer": "Estudiamos búsquedas, canales existentes, formatos que funcionan y monetización del sector. Si no vemos recorrido, te lo decimos antes de que inviertas."
+      },
+      {
+        "question": "¿Puedo cambiar de nicho más adelante?",
+        "answer": "Se puede, pero tiene coste: la audiencia y el algoritmo aprenden de lo que publicas. Por eso preferimos validar bien antes de arrancar en lugar de corregir después."
+      }
+    ]
+  },
   "related": {
     "eyebrow": "Servicios relacionados",
     "title": "Si ya tienes nicho, el siguiente paso es convertirlo en operación.",
